@@ -1,13 +1,8 @@
 {
-  "itemGroup.mineralcraft": "Example Mod Tab",
-  "block.mineralcraft.example_block": "Example Block",
-  "item.mineralcraft.example_item": "Example Item",
-
-  "mineralcraft.configuration.title": "Mineral Craft Configs",
-  "mineralcraft.configuration.section.mineralcraft.common.toml": "Mineral Craft Configs",
-  "mineralcraft.configuration.section.mineralcraft.common.toml.title": "Mineral Craft Configs",
-  "mineralcraft.configuration.items": "Item List",
-  "mineralcraft.configuration.logDirtBlock": "Log Dirt Block",
-  "mineralcraft.configuration.magicNumberIntroduction": "Magic Number Text",
-  "mineralcraft.configuration.magicNumber": "Magic Number"
+	"item.mineralcraft.ruby": "Ruby",
+	"item.mineralcraft.sapphire": "Sapphire",
+	"item.mineralcraft.sharpened_flint": "Sharpened Flint",
+	"item.mineralcraft.tempered_flint": "Tempered Flint",
+	
+	"creativetab.mineralcraft.mineral_craft": "Mineral Craft"
 }

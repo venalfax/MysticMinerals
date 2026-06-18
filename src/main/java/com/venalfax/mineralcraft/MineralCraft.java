@@ -3,8 +3,10 @@ package com.venalfax.mineralcraft;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
+import com.venalfax.mineralcraft.creativemodetab.ModTab;
+import com.venalfax.mineralcraft.items.Mineralitems;
 
-
+import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -30,6 +32,10 @@ public class MineralCraft {
     public MineralCraft(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+        
+        ModTab.register(modEventBus);
+        
+        Mineralitems.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
         // Register the item to a creative tab
@@ -44,7 +50,12 @@ public class MineralCraft {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        
+    	if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+    		event.accept(Mineralitems.RUBY);
+    		event.accept(Mineralitems.SAPPHIRE);
+    		event.accept(Mineralitems.SHARPENED_FLINT);
+    		event.accept(Mineralitems.TEMPERED_FLINT);
+    	}
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
