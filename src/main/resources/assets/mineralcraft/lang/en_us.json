@@ -1,8 +1,113 @@
 {
+	/* ITEMS */
+	
 	"item.mineralcraft.ruby": "Ruby",
 	"item.mineralcraft.sapphire": "Sapphire",
+	"item.mineralcraft.garnet": "Garnet",
 	"item.mineralcraft.sharpened_flint": "Sharpened Flint",
 	"item.mineralcraft.tempered_flint": "Tempered Flint",
+	
+	"item.mineralcraft.ruby_potato": "Ruby Potato",
+	"item.mineralcraft.sapphire_stew": "Sapphire Stew",
+	"item.mineralcraft.emerald_honey": "Emerald Honey",
+		
+	"item.mineralcraft.crystal_resonator": "Crystal Resonator",
+	"item.mineralcraft.crystal_resonator.no_valuables": "No Valuables Found",	
+	
+	/* TOOLS */
+	
+	"item.mineralcraft.ruby_sword": "Ruby Sword",
+	"item.mineralcraft.ruby_pickaxe": "Ruby Pickaxe",
+	"item.mineralcraft.ruby_axe": "Ruby Axe",
+	"item.mineralcraft.ruby_shovel": "Ruby Shovel",
+	"item.mineralcraft.ruby_hoe": "Ruby Hoe",
+	"item.mineralcraft.ruby_spear": "Ruby Spear",
+	
+	"item.mineralcraft.sapphire_sword": "Sapphire Sword",
+	"item.mineralcraft.sapphire_pickaxe": "Sapphire Pickaxe",
+	"item.mineralcraft.sapphire_axe": "Sapphire Axe",
+	"item.mineralcraft.sapphire_shovel": "Sapphire Shovel",
+	"item.mineralcraft.sapphire_hoe": "Sapphire Hoe",
+	"item.mineralcraft.sapphire_spear": "Sapphire Spear",
+	
+	"item.mineralcraft.emerald_sword": "Emerald Sword",
+	"item.mineralcraft.emerald_pickaxe": "Emerald Pickaxe",
+	"item.mineralcraft.emerald_axe": "Emerald Axe",
+	"item.mineralcraft.emerald_shovel": "Emerald Shovel",
+	"item.mineralcraft.emerald_hoe": "Emerald Hoe",
+	"item.mineralcraft.emerald_spear": "Emerald Spear",
+	
+	"item.mineralcraft.flint_sword": "Flint Sword",
+	"item.mineralcraft.flint_pickaxe": "Flint Pickaxe",
+	"item.mineralcraft.flint_axe": "Flint Axe",
+	"item.mineralcraft.flint_shovel": "Flint Shovel",
+	"item.mineralcraft.flint_hoe": "Flint Hoe",
+	"item.mineralcraft.flint_spear": "Flint Spear",
+		
+	"item.mineralcraft.sharpened_flint_sword": "Sharpened Flint Sword",
+	"item.mineralcraft.sharpened_flint_pickaxe": "Sharpened Flint Pickaxe",
+	"item.mineralcraft.sharpened_flint_axe": "Sharpened Flint Axe",
+	"item.mineralcraft.sharpened_flint_shovel": "Sharpened Flint Shovel",
+	"item.mineralcraft.sharpened_flint_hoe": "Sharpened Flint Hoe",
+	"item.mineralcraft.sharpened_flint_spear": "Sharpened Flint Spear",
+	
+	/* ARMOR */
+	
+	"item.mineralcraft.ruby_helmet": "Ruby Helmet",
+	"item.mineralcraft.ruby_chestplate": "Ruby Chestplate",
+	"item.mineralcraft.ruby_leggings": "Ruby Leggings",
+	"item.mineralcraft.ruby_boots": "Ruby Boots",
+	
+	"item.mineralcraft.sapphire_helmet": "Sapphire Helmet",
+	"item.mineralcraft.sapphire_chestplate": "Sapphire Chestplate",
+	"item.mineralcraft.sapphire_leggings": "Sapphire Leggings",
+	"item.mineralcraft.sapphire_boots": "Sapphire Boots",
+	
+	"item.mineralcraft.emerald_helmet": "Emerald Helmet",
+	"item.mineralcraft.emerald_chestplate": "Emerald Chestplate",
+	"item.mineralcraft.emerald_leggings": "Emerald Leggings",
+	"item.mineralcraft.emerald_boots": "Emerald Boots",
+	
+	"item.mineralcraft.flint_helmet": "Flint Helmet",
+	"item.mineralcraft.flint_chestplate": "Flint Chestplate",
+	"item.mineralcraft.flint_leggings": "Flint Leggings",
+	"item.mineralcraft.flint_boots": "Flint Boots",
+	
+	"item.mineralcraft.tempered_flint_helmet": "Tempered Flint Helmet",
+	"item.mineralcraft.tempered_flint_chestplate": "Tempered Flint Chestplate",
+	"item.mineralcraft.tempered_flint_leggings": "Tempered Flint Leggings",
+	"item.mineralcraft.tempered_flint_boots": "Tempered Flint Boots",
+	
+	/* TOOLTIPS */
+	
+	"tooltip.mineralcraft.crystal_resonator.tooltip": "Press §eShift§r for more information",
+	"tooltip.mineralcraft.crystal_resonator.shift_down": "Right click floors or ceilings to detect nearby crystals",
+	"tooltip.mineralcraft.garnet.tooltip": "Mystical fuel",
+	"tooltip.mineralcraft.sharpener_block.tooltip": "The sharp gets sharper",
+	"tooltip.mineralcraft.garnet_block.tooltip": "Super fuel block",
+	
+	
+	/* BLOCKS */
+	
+	"block.mineralcraft.ruby_block": "Block of Ruby",
+	"block.mineralcraft.sapphire_block": "Block of Sapphire",
+	"block.mineralcraft.garnet_block": "Block of Garnet",
+	"block.mineralcraft.ruby_ore": "Ruby Ore",
+	"block.mineralcraft.sapphire_ore": "Sapphire Ore",
+	"block.mineralcraft.garnet_ore": "Garnet Ore",
+	"block.mineralcraft.deepslate_ruby_ore": "Deepslate Ruby Ore",
+	"block.mineralcraft.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+	"block.mineralcraft.deepslate_garnet_ore": "Deepslate Garnet Ore",
+	"block.mineralcraft.flint_block": "Block of Flint",
+	"block.mineralcraft.sharpened_flint_block": "Block of Sharpened Flint",
+	"block.mineralcraft.tempered_flint_block": "Block of Tempered Flint",
+	
+	"block.mineralcraft.sharpener_block": "Sharpener",
+	"block.mineralcraft.gem_lamp": "Gem Lamp",
+	
+	"block.mineralcraft.amethyst_pressure_plate": "Amethyst Pressure Plate",
+	
+	/* TABS */
 	
 	"creativetab.mineralcraft.mineral_craft": "Mineral Craft"
 }

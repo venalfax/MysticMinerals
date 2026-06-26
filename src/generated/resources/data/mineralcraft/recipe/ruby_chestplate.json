@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "ruby_armor",
+  "key": {
+    "R": "mineralcraft:ruby"
+  },
+  "pattern": [
+    "R R",
+    "RRR",
+    "RRR"
+  ],
+  "result": {
+    "id": "mineralcraft:ruby_chestplate"
+  }
+}

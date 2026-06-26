@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "tools",
+  "key": {
+    "A": "minecraft:amethyst_shard",
+    "G": "minecraft:gold_ingot",
+    "R": "minecraft:redstone",
+    "S": "mineralcraft:sapphire"
+  },
+  "pattern": [
+    " GS",
+    "GRG",
+    "AG "
+  ],
+  "result": {
+    "id": "mineralcraft:crystal_resonator"
+  }
+}

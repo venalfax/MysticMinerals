@@ -3,7 +3,8 @@ package com.venalfax.mineralcraft.creativemodetab;
 import java.util.function.Supplier;
 
 import com.venalfax.mineralcraft.MineralCraft;
-import com.venalfax.mineralcraft.items.Mineralitems;
+import com.venalfax.mineralcraft.blocks.MineralBlocks;
+import com.venalfax.mineralcraft.items.MineralItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -16,11 +17,107 @@ public class ModTab {
 			DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MineralCraft.MOD_ID);
 	
 	public static final Supplier<CreativeModeTab> MINERAL_CRAFT = CREATIVE_MODE_TABS.register("mineral_craft_tab",
-			() -> CreativeModeTab.builder().icon(() -> new ItemStack(Mineralitems.SHARPENED_FLINT.get()))
+			() -> CreativeModeTab.builder().icon(() -> new ItemStack(MineralItems.SHARPENED_FLINT.get()))
 					.title(Component.translatable("creativetab.mineralcraft.mineral_craft"))
 					.displayItems((itemDisplayParameters, output) -> {
-						output.accept(Mineralitems.RUBY);
-						output.accept(Mineralitems.SAPPHIRE);
+						
+						/* ITEMS */
+						
+						output.accept(MineralItems.RUBY);
+						output.accept(MineralItems.SAPPHIRE);
+						output.accept(MineralItems.GARNET);
+						output.accept(MineralItems.SHARPENED_FLINT);
+						output.accept(MineralItems.TEMPERED_FLINT);
+						
+						output.accept(MineralItems.RUBY_POTATO);
+						output.accept(MineralItems.SAPPHIRE_STEW);
+						output.accept(MineralItems.EMERALD_HONEY);
+						
+						output.accept(MineralItems.CRYSTAL_RESONATOR);
+
+						/* TOOLS */
+						
+						output.accept(MineralItems.RUBY_SWORD);
+						output.accept(MineralItems.RUBY_PICKAXE);
+						output.accept(MineralItems.RUBY_AXE);
+						output.accept(MineralItems.RUBY_SHOVEL);
+						output.accept(MineralItems.RUBY_HOE);
+						output.accept(MineralItems.RUBY_SPEAR);	
+						
+						output.accept(MineralItems.SAPPHIRE_SWORD);
+						output.accept(MineralItems.SAPPHIRE_PICKAXE);
+						output.accept(MineralItems.SAPPHIRE_AXE);
+						output.accept(MineralItems.SAPPHIRE_SHOVEL);
+						output.accept(MineralItems.SAPPHIRE_HOE);
+						output.accept(MineralItems.SAPPHIRE_SPEAR);	
+						
+						output.accept(MineralItems.EMERALD_SWORD);
+						output.accept(MineralItems.EMERALD_PICKAXE);
+						output.accept(MineralItems.EMERALD_AXE);
+						output.accept(MineralItems.EMERALD_SHOVEL);
+						output.accept(MineralItems.EMERALD_HOE);
+						output.accept(MineralItems.EMERALD_SPEAR);	
+						
+						output.accept(MineralItems.FLINT_SWORD);
+						output.accept(MineralItems.FLINT_PICKAXE);
+						output.accept(MineralItems.FLINT_AXE);
+						output.accept(MineralItems.FLINT_SHOVEL);
+						output.accept(MineralItems.FLINT_HOE);
+						output.accept(MineralItems.FLINT_SPEAR);
+						
+						output.accept(MineralItems.SHARPENED_FLINT_SWORD);
+						output.accept(MineralItems.SHARPENED_FLINT_PICKAXE);
+						output.accept(MineralItems.SHARPENED_FLINT_AXE);
+						output.accept(MineralItems.SHARPENED_FLINT_SHOVEL);
+						output.accept(MineralItems.SHARPENED_FLINT_HOE);
+						output.accept(MineralItems.SHARPENED_FLINT_SPEAR);
+						
+						/* ARMOR */
+						
+						output.accept(MineralItems.RUBY_HELMET);
+						output.accept(MineralItems.RUBY_CHESTPLATE);
+						output.accept(MineralItems.RUBY_LEGGINGS);
+						output.accept(MineralItems.RUBY_BOOTS);
+						
+						output.accept(MineralItems.SAPPHIRE_HELMET);
+						output.accept(MineralItems.SAPPHIRE_CHESTPLATE);
+						output.accept(MineralItems.SAPPHIRE_LEGGINGS);
+						output.accept(MineralItems.SAPPHIRE_BOOTS);
+						
+						output.accept(MineralItems.EMERALD_HELMET);
+						output.accept(MineralItems.EMERALD_CHESTPLATE);
+						output.accept(MineralItems.EMERALD_LEGGINGS);
+						output.accept(MineralItems.EMERALD_BOOTS);
+						
+						output.accept(MineralItems.FLINT_HELMET);
+						output.accept(MineralItems.FLINT_CHESTPLATE);
+						output.accept(MineralItems.FLINT_LEGGINGS);
+						output.accept(MineralItems.FLINT_BOOTS);
+						
+						output.accept(MineralItems.TEMPERED_FLINT_HELMET);
+						output.accept(MineralItems.TEMPERED_FLINT_CHESTPLATE);
+						output.accept(MineralItems.TEMPERED_FLINT_LEGGINGS);
+						output.accept(MineralItems.TEMPERED_FLINT_BOOTS);
+						
+						/* BLOCKS */
+						
+						output.accept(MineralBlocks.RUBY_BLOCK);
+						output.accept(MineralBlocks.SAPPHIRE_BLOCK);
+						output.accept(MineralBlocks.GARNET_BLOCK);
+						output.accept(MineralBlocks.RUBY_ORE);
+						output.accept(MineralBlocks.SAPPHIRE_ORE);
+						output.accept(MineralBlocks.GARNET_ORE);
+						output.accept(MineralBlocks.DEEPSLATE_RUBY_ORE);
+						output.accept(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE);
+						output.accept(MineralBlocks.DEEPSLATE_GARNET_ORE);
+						output.accept(MineralBlocks.FLINT_BLOCK);
+						output.accept(MineralBlocks.SHARPENED_FLINT_BLOCK);
+						output.accept(MineralBlocks.TEMPERED_FLINT_BLOCK);
+						
+						output.accept(MineralBlocks.SHARPENER_BLOCK);
+						output.accept(MineralBlocks.GEM_LAMP);
+						output.accept(MineralBlocks.AMETHYST_PRESSURE_PLATE);
+						
 					})
 					.build());
 	

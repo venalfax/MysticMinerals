@@ -1,0 +1,10 @@
+{
+  "values": {
+    "mineralcraft:garnet": {
+      "burn_time": 3200
+    },
+    "mineralcraft:garnet_block": {
+      "burn_time": 32000
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "food",
+  "key": {
+    "M": "minecraft:mushroom_stew",
+    "S": "mineralcraft:sapphire"
+  },
+  "pattern": [
+    " S ",
+    "SMS",
+    " S "
+  ],
+  "result": {
+    "id": "mineralcraft:sapphire_stew"
+  }
+}

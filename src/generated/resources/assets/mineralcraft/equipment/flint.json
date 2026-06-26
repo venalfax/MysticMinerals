@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mineralcraft:flint"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "mineralcraft:flint"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mineralcraft:flint"
+      }
+    ]
+  }
+}

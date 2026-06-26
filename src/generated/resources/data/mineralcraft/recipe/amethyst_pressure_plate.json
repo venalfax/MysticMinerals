@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "redstone",
+  "group": "amethyst",
+  "key": {
+    "A": "minecraft:amethyst_block"
+  },
+  "pattern": [
+    "AA"
+  ],
+  "result": {
+    "id": "mineralcraft:amethyst_pressure_plate"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "sharpened_flint",
+  "key": {
+    "F": "mineralcraft:sharpened_flint",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "F",
+    "S",
+    "S"
+  ],
+  "result": {
+    "id": "mineralcraft:sharpened_flint_shovel"
+  }
+}

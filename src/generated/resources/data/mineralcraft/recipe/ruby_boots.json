@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "ruby_armor",
+  "key": {
+    "R": "mineralcraft:ruby"
+  },
+  "pattern": [
+    "R R",
+    "R R"
+  ],
+  "result": {
+    "id": "mineralcraft:ruby_boots"
+  }
+}

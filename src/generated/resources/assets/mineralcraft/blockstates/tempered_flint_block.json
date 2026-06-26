@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "mineralcraft:block/tempered_flint_block"
+    }
+  }
+}

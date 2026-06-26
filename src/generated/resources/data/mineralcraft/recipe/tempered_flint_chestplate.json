@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "tflint_armor",
+  "key": {
+    "F": "mineralcraft:tempered_flint"
+  },
+  "pattern": [
+    "F F",
+    "FFF",
+    "FFF"
+  ],
+  "result": {
+    "id": "mineralcraft:tempered_flint_chestplate"
+  }
+}

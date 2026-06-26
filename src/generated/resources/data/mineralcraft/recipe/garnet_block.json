@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "gem_block",
+  "key": {
+    "G": "mineralcraft:garnet"
+  },
+  "pattern": [
+    "GGG",
+    "GGG",
+    "GGG"
+  ],
+  "result": {
+    "id": "mineralcraft:garnet_block"
+  }
+}

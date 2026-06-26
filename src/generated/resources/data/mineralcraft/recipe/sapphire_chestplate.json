@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "sapphire_armor",
+  "key": {
+    "S": "mineralcraft:sapphire"
+  },
+  "pattern": [
+    "S S",
+    "SSS",
+    "SSS"
+  ],
+  "result": {
+    "id": "mineralcraft:sapphire_chestplate"
+  }
+}

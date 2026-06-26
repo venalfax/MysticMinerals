@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mineralcraft:ruby"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "mineralcraft:ruby"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mineralcraft:ruby"
+      }
+    ]
+  }
+}

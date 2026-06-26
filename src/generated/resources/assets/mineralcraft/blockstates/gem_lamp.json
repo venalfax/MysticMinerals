@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "mineralcraft:block/gem_lamp"
+    },
+    "clicked=true": {
+      "model": "mineralcraft:block/gem_lamp_on"
+    }
+  }
+}
