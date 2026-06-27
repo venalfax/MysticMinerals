@@ -1,6 +1,12 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "mysticminerals:block/sharpener_block"
+    "up": "mysticminerals:block/sharpener_top",
+	"down": "mysticminerals:block/sharpener_side",
+	"north": "mysticminerals:block/sharpener_north",
+	"south": "mysticminerals:block/sharpener_south",
+	"east": "mysticminerals:block/sharpener_side",
+	"west": "mysticminerals:block/sharpener_side",
+	"particle": "#north"
   }
 }
