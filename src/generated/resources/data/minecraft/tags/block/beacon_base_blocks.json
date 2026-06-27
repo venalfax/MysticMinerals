@@ -1,7 +1,7 @@
 {
   "values": [
-    "mineralcraft:ruby_block",
-    "mineralcraft:sapphire_block",
-    "mineralcraft:garnet_block"
+    "mysticminerals:ruby_block",
+    "mysticminerals:sapphire_block",
+    "mysticminerals:garnet_block"
   ]
 }

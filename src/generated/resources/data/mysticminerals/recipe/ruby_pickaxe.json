@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "ruby",
+  "key": {
+    "R": "mysticminerals:ruby",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "RRR",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "id": "mysticminerals:ruby_pickaxe"
+  }
+}

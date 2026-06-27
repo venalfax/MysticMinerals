@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "sapphire_armor",
+  "key": {
+    "S": "mysticminerals:sapphire"
+  },
+  "pattern": [
+    "SSS",
+    "S S"
+  ],
+  "result": {
+    "id": "mysticminerals:sapphire_helmet"
+  }
+}

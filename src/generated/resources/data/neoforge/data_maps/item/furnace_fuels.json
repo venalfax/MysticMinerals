@@ -1,9 +1,9 @@
 {
   "values": {
-    "mineralcraft:garnet": {
+    "mysticminerals:garnet": {
       "burn_time": 3200
     },
-    "mineralcraft:garnet_block": {
+    "mysticminerals:garnet_block": {
       "burn_time": 32000
     }
   }

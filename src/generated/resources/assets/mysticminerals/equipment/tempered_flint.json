@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "mysticminerals:tempered_flint"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "mysticminerals:tempered_flint"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "mysticminerals:tempered_flint"
+      }
+    ]
+  }
+}

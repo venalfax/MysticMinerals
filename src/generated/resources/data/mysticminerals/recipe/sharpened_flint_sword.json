@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "sharpened_flint",
+  "key": {
+    "F": "mysticminerals:sharpened_flint",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "F",
+    "F",
+    "S"
+  ],
+  "result": {
+    "id": "mysticminerals:sharpened_flint_sword"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "food",
+  "key": {
+    "P": "minecraft:baked_potato",
+    "R": "mysticminerals:ruby"
+  },
+  "pattern": [
+    " R ",
+    "RPR",
+    " R "
+  ],
+  "result": {
+    "id": "mysticminerals:ruby_potato"
+  }
+}

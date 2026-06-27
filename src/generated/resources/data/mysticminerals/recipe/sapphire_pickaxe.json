@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "sapphire",
+  "key": {
+    "R": "mysticminerals:sapphire",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "RRR",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "id": "mysticminerals:sapphire_pickaxe"
+  }
+}

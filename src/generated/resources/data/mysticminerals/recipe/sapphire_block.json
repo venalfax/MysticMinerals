@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "group": "gem_block",
+  "key": {
+    "S": "mysticminerals:sapphire"
+  },
+  "pattern": [
+    "SSS",
+    "SSS",
+    "SSS"
+  ],
+  "result": {
+    "id": "mysticminerals:sapphire_block"
+  }
+}

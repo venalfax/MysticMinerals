@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "flint_item",
+  "ingredients": [
+    "mysticminerals:tempered_flint_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "mysticminerals:tempered_flint"
+  }
+}

@@ -1,9 +1,9 @@
 {
   "values": [
-    "mineralcraft:ruby_chestplate",
-    "mineralcraft:sapphire_chestplate",
-    "mineralcraft:emerald_chestplate",
-    "mineralcraft:flint_chestplate",
-    "mineralcraft:tempered_flint_chestplate"
+    "mysticminerals:ruby_chestplate",
+    "mysticminerals:sapphire_chestplate",
+    "mysticminerals:emerald_chestplate",
+    "mysticminerals:flint_chestplate",
+    "mysticminerals:tempered_flint_chestplate"
   ]
 }

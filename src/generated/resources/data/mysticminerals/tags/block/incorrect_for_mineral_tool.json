@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#mysticminerals:needs_mineral_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_diamond_tool"
+  ]
+}

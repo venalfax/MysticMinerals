@@ -1,9 +1,9 @@
 {
   "values": [
-    "mineralcraft:ruby_boots",
-    "mineralcraft:sapphire_boots",
-    "mineralcraft:emerald_boots",
-    "mineralcraft:flint_boots",
-    "mineralcraft:tempered_flint_boots"
+    "mysticminerals:ruby_boots",
+    "mysticminerals:sapphire_boots",
+    "mysticminerals:emerald_boots",
+    "mysticminerals:flint_boots",
+    "mysticminerals:tempered_flint_boots"
   ]
 }

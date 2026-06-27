@@ -1,9 +1,9 @@
 {
   "values": [
-    "mineralcraft:ruby_pickaxe",
-    "mineralcraft:sapphire_pickaxe",
-    "mineralcraft:emerald_pickaxe",
-    "mineralcraft:flint_pickaxe",
-    "mineralcraft:sharpened_flint_pickaxe"
+    "mysticminerals:ruby_pickaxe",
+    "mysticminerals:sapphire_pickaxe",
+    "mysticminerals:emerald_pickaxe",
+    "mysticminerals:flint_pickaxe",
+    "mysticminerals:sharpened_flint_pickaxe"
   ]
 }

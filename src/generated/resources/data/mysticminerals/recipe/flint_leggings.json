@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "flint_armor",
+  "key": {
+    "F": "minecraft:flint"
+  },
+  "pattern": [
+    "FFF",
+    "F F",
+    "F F"
+  ],
+  "result": {
+    "id": "mysticminerals:flint_leggings"
+  }
+}

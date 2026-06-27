@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "tflint_armor",
+  "key": {
+    "F": "mysticminerals:tempered_flint"
+  },
+  "pattern": [
+    "F F",
+    "F F"
+  ],
+  "result": {
+    "id": "mysticminerals:tempered_flint_boots"
+  }
+}

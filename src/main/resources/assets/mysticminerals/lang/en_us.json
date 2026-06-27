@@ -1,0 +1,113 @@
+{
+	/* ITEMS */
+	
+	"item.mysticminerals.ruby": "Ruby",
+	"item.mysticminerals.sapphire": "Sapphire",
+	"item.mysticminerals.garnet": "Garnet",
+	"item.mysticminerals.sharpened_flint": "Sharpened Flint",
+	"item.mysticminerals.tempered_flint": "Tempered Flint",
+	
+	"item.mysticminerals.ruby_potato": "Ruby Potato",
+	"item.mysticminerals.sapphire_stew": "Sapphire Stew",
+	"item.mysticminerals.emerald_honey": "Emerald Honey",
+		
+	"item.mysticminerals.crystal_resonator": "Crystal Resonator",
+	"item.mysticminerals.crystal_resonator.no_valuables": "No Valuables Found",	
+	
+	/* TOOLS */
+	
+	"item.mysticminerals.ruby_sword": "Ruby Sword",
+	"item.mysticminerals.ruby_pickaxe": "Ruby Pickaxe",
+	"item.mysticminerals.ruby_axe": "Ruby Axe",
+	"item.mysticminerals.ruby_shovel": "Ruby Shovel",
+	"item.mysticminerals.ruby_hoe": "Ruby Hoe",
+	"item.mysticminerals.ruby_spear": "Ruby Spear",
+	
+	"item.mysticminerals.sapphire_sword": "Sapphire Sword",
+	"item.mysticminerals.sapphire_pickaxe": "Sapphire Pickaxe",
+	"item.mysticminerals.sapphire_axe": "Sapphire Axe",
+	"item.mysticminerals.sapphire_shovel": "Sapphire Shovel",
+	"item.mysticminerals.sapphire_hoe": "Sapphire Hoe",
+	"item.mysticminerals.sapphire_spear": "Sapphire Spear",
+	
+	"item.mysticminerals.emerald_sword": "Emerald Sword",
+	"item.mysticminerals.emerald_pickaxe": "Emerald Pickaxe",
+	"item.mysticminerals.emerald_axe": "Emerald Axe",
+	"item.mysticminerals.emerald_shovel": "Emerald Shovel",
+	"item.mysticminerals.emerald_hoe": "Emerald Hoe",
+	"item.mysticminerals.emerald_spear": "Emerald Spear",
+	
+	"item.mysticminerals.flint_sword": "Flint Sword",
+	"item.mysticminerals.flint_pickaxe": "Flint Pickaxe",
+	"item.mysticminerals.flint_axe": "Flint Axe",
+	"item.mysticminerals.flint_shovel": "Flint Shovel",
+	"item.mysticminerals.flint_hoe": "Flint Hoe",
+	"item.mysticminerals.flint_spear": "Flint Spear",
+		
+	"item.mysticminerals.sharpened_flint_sword": "Sharpened Flint Sword",
+	"item.mysticminerals.sharpened_flint_pickaxe": "Sharpened Flint Pickaxe",
+	"item.mysticminerals.sharpened_flint_axe": "Sharpened Flint Axe",
+	"item.mysticminerals.sharpened_flint_shovel": "Sharpened Flint Shovel",
+	"item.mysticminerals.sharpened_flint_hoe": "Sharpened Flint Hoe",
+	"item.mysticminerals.sharpened_flint_spear": "Sharpened Flint Spear",
+	
+	/* ARMOR */
+	
+	"item.mysticminerals.ruby_helmet": "Ruby Helmet",
+	"item.mysticminerals.ruby_chestplate": "Ruby Chestplate",
+	"item.mysticminerals.ruby_leggings": "Ruby Leggings",
+	"item.mysticminerals.ruby_boots": "Ruby Boots",
+	
+	"item.mysticminerals.sapphire_helmet": "Sapphire Helmet",
+	"item.mysticminerals.sapphire_chestplate": "Sapphire Chestplate",
+	"item.mysticminerals.sapphire_leggings": "Sapphire Leggings",
+	"item.mysticminerals.sapphire_boots": "Sapphire Boots",
+	
+	"item.mysticminerals.emerald_helmet": "Emerald Helmet",
+	"item.mysticminerals.emerald_chestplate": "Emerald Chestplate",
+	"item.mysticminerals.emerald_leggings": "Emerald Leggings",
+	"item.mysticminerals.emerald_boots": "Emerald Boots",
+	
+	"item.mysticminerals.flint_helmet": "Flint Helmet",
+	"item.mysticminerals.flint_chestplate": "Flint Chestplate",
+	"item.mysticminerals.flint_leggings": "Flint Leggings",
+	"item.mysticminerals.flint_boots": "Flint Boots",
+	
+	"item.mysticminerals.tempered_flint_helmet": "Tempered Flint Helmet",
+	"item.mysticminerals.tempered_flint_chestplate": "Tempered Flint Chestplate",
+	"item.mysticminerals.tempered_flint_leggings": "Tempered Flint Leggings",
+	"item.mysticminerals.tempered_flint_boots": "Tempered Flint Boots",
+	
+	/* TOOLTIPS */
+	
+	"tooltip.mysticminerals.crystal_resonator.tooltip": "Press §eShift§r for more information",
+	"tooltip.mysticminerals.crystal_resonator.shift_down": "Right click blocks to detect nearby crystals",
+	"tooltip.mysticminerals.garnet.tooltip": "Mystical fuel",
+	"tooltip.mysticminerals.sharpener_block.tooltip": "The sharp gets sharper",
+	"tooltip.mysticminerals.garnet_block.tooltip": "Super fuel block",
+	
+	
+	/* BLOCKS */
+	
+	"block.mysticminerals.ruby_block": "Block of Ruby",
+	"block.mysticminerals.sapphire_block": "Block of Sapphire",
+	"block.mysticminerals.garnet_block": "Block of Garnet",
+	"block.mysticminerals.ruby_ore": "Ruby Ore",
+	"block.mysticminerals.sapphire_ore": "Sapphire Ore",
+	"block.mysticminerals.garnet_ore": "Garnet Ore",
+	"block.mysticminerals.deepslate_ruby_ore": "Deepslate Ruby Ore",
+	"block.mysticminerals.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+	"block.mysticminerals.deepslate_garnet_ore": "Deepslate Garnet Ore",
+	"block.mysticminerals.flint_block": "Block of Flint",
+	"block.mysticminerals.sharpened_flint_block": "Block of Sharpened Flint",
+	"block.mysticminerals.tempered_flint_block": "Block of Tempered Flint",
+	
+	"block.mysticminerals.sharpener_block": "Sharpener",
+	"block.mysticminerals.gem_lamp": "Gem Lamp",
+	
+	"block.mysticminerals.amethyst_pressure_plate": "Amethyst Pressure Plate",
+	
+	/* TABS */
+	
+	"creativetab.mysticminerals.mystic_minerals": "Mystic Minerals"
+}

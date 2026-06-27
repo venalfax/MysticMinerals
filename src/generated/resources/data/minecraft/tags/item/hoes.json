@@ -1,9 +1,9 @@
 {
   "values": [
-    "mineralcraft:ruby_hoe",
-    "mineralcraft:sapphire_hoe",
-    "mineralcraft:emerald_hoe",
-    "mineralcraft:flint_hoe",
-    "mineralcraft:sharpened_flint_hoe"
+    "mysticminerals:ruby_hoe",
+    "mysticminerals:sapphire_hoe",
+    "mysticminerals:emerald_hoe",
+    "mysticminerals:flint_hoe",
+    "mysticminerals:sharpened_flint_hoe"
   ]
 }

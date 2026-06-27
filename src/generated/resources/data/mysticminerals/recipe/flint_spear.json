@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "flint",
+  "key": {
+    "F": "minecraft:flint",
+    "S": "minecraft:stick"
+  },
+  "pattern": [
+    "  F",
+    " S ",
+    "S  "
+  ],
+  "result": {
+    "id": "mysticminerals:flint_spear"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "ruby_armor",
+  "key": {
+    "R": "mysticminerals:ruby"
+  },
+  "pattern": [
+    "RRR",
+    "R R"
+  ],
+  "result": {
+    "id": "mysticminerals:ruby_helmet"
+  }
+}

@@ -1,9 +1,9 @@
 {
   "values": [
-    "mineralcraft:ruby_spear",
-    "mineralcraft:sapphire_spear",
-    "mineralcraft:emerald_spear",
-    "mineralcraft:flint_spear",
-    "mineralcraft:sharpened_flint_spear"
+    "mysticminerals:ruby_spear",
+    "mysticminerals:sapphire_spear",
+    "mysticminerals:emerald_spear",
+    "mysticminerals:flint_spear",
+    "mysticminerals:sharpened_flint_spear"
   ]
 }

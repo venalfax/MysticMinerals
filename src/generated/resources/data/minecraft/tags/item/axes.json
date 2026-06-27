@@ -1,9 +1,9 @@
 {
   "values": [
-    "mineralcraft:ruby_axe",
-    "mineralcraft:sapphire_axe",
-    "mineralcraft:emerald_axe",
-    "mineralcraft:flint_axe",
-    "mineralcraft:sharpened_flint_axe"
+    "mysticminerals:ruby_axe",
+    "mysticminerals:sapphire_axe",
+    "mysticminerals:emerald_axe",
+    "mysticminerals:flint_axe",
+    "mysticminerals:sharpened_flint_axe"
   ]
 }

@@ -1,9 +1,9 @@
 {
   "values": [
-    "mineralcraft:ruby_helmet",
-    "mineralcraft:sapphire_helmet",
-    "mineralcraft:emerald_helmet",
-    "mineralcraft:flint_helmet",
-    "mineralcraft:tempered_flint_helmet"
+    "mysticminerals:ruby_helmet",
+    "mysticminerals:sapphire_helmet",
+    "mysticminerals:emerald_helmet",
+    "mysticminerals:flint_helmet",
+    "mysticminerals:tempered_flint_helmet"
   ]
 }

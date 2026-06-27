@@ -1,0 +1,8 @@
+{
+  "remove": [
+    "#mysticminerals:needs_sharpened_flint_tool"
+  ],
+  "values": [
+    "#minecraft:incorrect_for_iron_tool"
+  ]
+}

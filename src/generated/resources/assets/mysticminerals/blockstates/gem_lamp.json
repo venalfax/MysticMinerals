@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "clicked=false": {
+      "model": "mysticminerals:block/gem_lamp"
+    },
+    "clicked=true": {
+      "model": "mysticminerals:block/gem_lamp_on"
+    }
+  }
+}

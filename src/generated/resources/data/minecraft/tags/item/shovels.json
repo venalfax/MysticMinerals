@@ -1,9 +1,9 @@
 {
   "values": [
-    "mineralcraft:ruby_shovel",
-    "mineralcraft:sapphire_shovel",
-    "mineralcraft:emerald_shovel",
-    "mineralcraft:flint_shovel",
-    "mineralcraft:sharpened_flint_shovel"
+    "mysticminerals:ruby_shovel",
+    "mysticminerals:sapphire_shovel",
+    "mysticminerals:emerald_shovel",
+    "mysticminerals:flint_shovel",
+    "mysticminerals:sharpened_flint_shovel"
   ]
 }

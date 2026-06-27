@@ -1,0 +1,24 @@
+{
+  "values": [
+    "minecraft:emerald_block",
+    "minecraft:emerald_ore",
+    "minecraft:deepslate_emerald_ore",
+    "minecraft:amethyst_block",
+    "minecraft:amethyst_cluster",
+    "minecraft:budding_amethyst",
+    "minecraft:large_amethyst_bud",
+    "minecraft:medium_amethyst_bud",
+    "minecraft:small_amethyst_bud",
+    "minecraft:quartz_block",
+    "minecraft:nether_quartz_ore",
+    "mysticminerals:ruby_block",
+    "mysticminerals:ruby_ore",
+    "mysticminerals:deepslate_ruby_ore",
+    "mysticminerals:sapphire_block",
+    "mysticminerals:sapphire_ore",
+    "mysticminerals:deepslate_sapphire_ore",
+    "mysticminerals:garnet_block",
+    "mysticminerals:garnet_ore",
+    "mysticminerals:deepslate_garnet_ore"
+  ]
+}

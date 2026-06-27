@@ -1,13 +1,13 @@
 {
   "values": [
-    "mineralcraft:ruby_block",
-    "mineralcraft:ruby_ore",
-    "mineralcraft:deepslate_ruby_ore",
-    "mineralcraft:sapphire_block",
-    "mineralcraft:sapphire_ore",
-    "mineralcraft:deepslate_sapphire_ore",
-    "mineralcraft:garnet_block",
-    "mineralcraft:garnet_ore",
-    "mineralcraft:deepslate_garnet_ore"
+    "mysticminerals:ruby_block",
+    "mysticminerals:ruby_ore",
+    "mysticminerals:deepslate_ruby_ore",
+    "mysticminerals:sapphire_block",
+    "mysticminerals:sapphire_ore",
+    "mysticminerals:deepslate_sapphire_ore",
+    "mysticminerals:garnet_block",
+    "mysticminerals:garnet_ore",
+    "mysticminerals:deepslate_garnet_ore"
   ]
 }
