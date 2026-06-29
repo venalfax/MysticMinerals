@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": "minecraft:emerald_block",
+    "G": "minecraft:gold_block",
+    "R": "minecraft:redstone_block",
+    "a": "minecraft:amethyst_shard",
+    "g": "minecraft:gold_ingot"
+  },
+  "pattern": [
+    "a a",
+    "gRg",
+    "EGE"
+  ],
+  "result": {
+    "id": "mysticminerals:resonant_converter"
+  }
+}

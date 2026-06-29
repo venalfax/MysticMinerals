@@ -18,9 +18,19 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
 public class SharpenerBlock extends Block {
-
+	
 	public SharpenerBlock(Properties properties) {
 		super(properties);
+	}
+	
+	private int interactionProgress = 0;
+	// Set for 60 seconds testing shows completion in 30 seconds 
+	private final int requiredInteractionTime = 1200;
+	// Resets progress when no item is on block does not work T_T
+	public void tick() {
+		if(interactionProgress > 0) {
+			interactionProgress--;
+		}
 	}
 	
 	@Override
@@ -29,6 +39,9 @@ public class SharpenerBlock extends Block {
 		level.addParticle(ParticleTypes.POOF, pos.getX() + 0.5, pos.getY() + 1, pos.getZ() + 0.5, 0, 1, 0);
 		
 		level.playSound(player, pos, SoundEvents.GRINDSTONE_USE, SoundSource.BLOCKS, 1f, 1f);
+		
+		// Resets sharpening progress
+		interactionProgress = 0;
 		
 		return InteractionResult.SUCCESS;
 	}
@@ -57,23 +70,33 @@ public class SharpenerBlock extends Block {
 		return itemStack(MineralItems.SHARPENED_FLINT);
 	}
 	
-	*/
+	/* */
 
 	@Override
 	public void stepOn(Level level, BlockPos pos, BlockState onState, Entity entity) {
 		
 		if(entity instanceof ItemEntity itemEntity) {
 			if(isValidItem(itemEntity.getItem())) {
-				itemEntity.setItem(new ItemStack(MineralItems.SHARPENED_FLINT.get(), itemEntity.getItem().getCount()));
+				if(interactionProgress < requiredInteractionTime) {
+					interactionProgress++;
+				}
+				if(interactionProgress >= requiredInteractionTime) {
+					itemEntity.setItem(new ItemStack(MineralItems.SHARPENED_FLINT.get(), itemEntity.getItem().getCount()));
+					triggerCompletion();
+				}
 			}
 		}
 		
 		super.stepOn(level, pos, onState, entity);
 	}
 	
+	private void triggerCompletion() {
+		interactionProgress = 0;
+	}
+	
 	private boolean isValidItem(ItemStack item) {
 		
 		return item.is(ModTags.Items.SHARPENABLE);
 	}
-
+	
 }

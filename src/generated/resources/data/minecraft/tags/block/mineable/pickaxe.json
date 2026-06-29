@@ -7,12 +7,11 @@
     "mysticminerals:sapphire_ore",
     "mysticminerals:deepslate_sapphire_ore",
     "mysticminerals:garnet_block",
-    "mysticminerals:garnet_ore",
-    "mysticminerals:deepslate_garnet_ore",
     "mysticminerals:flint_block",
     "mysticminerals:sharpened_flint_block",
     "mysticminerals:tempered_flint_block",
     "mysticminerals:gem_lamp",
+    "mysticminerals:resonant_converter",
     "mysticminerals:amethyst_pressure_plate"
   ]
 }

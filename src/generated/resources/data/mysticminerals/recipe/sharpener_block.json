@@ -1,7 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "group": "utility",
   "key": {
     "G": "minecraft:grindstone",
     "I": "minecraft:iron_ingot",

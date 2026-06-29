@@ -31,11 +31,11 @@ public class MineralItems extends Items {
 	public static final DeferredItem<Item> SHARPENED_FLINT = ITEMS.registerSimpleItem("sharpened_flint");
 	public static final DeferredItem<Item> TEMPERED_FLINT = ITEMS.registerSimpleItem("tempered_flint");
 	
-	public static final DeferredItem<Item> GARNET = ITEMS.registerItem("garnet", 
+	public static final DeferredItem<Item> GARNET_SHARD = ITEMS.registerItem("garnet_shard", 
 			properties -> new Item(properties.fireResistant()) {
 				@Override
 				public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
-					builder.accept(Component.translatable("tooltip.mysticminerals.garnet.tooltip"));
+					builder.accept(Component.translatable("tooltip.mysticminerals.garnet_shard.tooltip"));
 					super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
 				}
 			});

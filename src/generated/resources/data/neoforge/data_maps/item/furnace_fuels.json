@@ -1,10 +1,10 @@
 {
   "values": {
-    "mysticminerals:garnet": {
-      "burn_time": 3200
-    },
     "mysticminerals:garnet_block": {
-      "burn_time": 32000
+      "burn_time": 12800
+    },
+    "mysticminerals:garnet_shard": {
+      "burn_time": 3200
     }
   }
 }

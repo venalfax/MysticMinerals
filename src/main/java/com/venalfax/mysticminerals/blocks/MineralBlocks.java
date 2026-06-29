@@ -5,6 +5,7 @@ import java.util.function.Function;
 
 import com.venalfax.mysticminerals.MysticMinerals;
 import com.venalfax.mysticminerals.blocks.custom.GemLampBlock;
+import com.venalfax.mysticminerals.blocks.custom.ResonantConverterBlock;
 import com.venalfax.mysticminerals.blocks.custom.SharpenerBlock;
 import com.venalfax.mysticminerals.items.MineralItems;
 
@@ -64,13 +65,6 @@ public class MineralBlocks {
 					.mapColor(MapColor.STONE)
 					.sound(SoundType.STONE)));
 	
-	public static final DeferredBlock<Block> GARNET_ORE = registerBlock("garnet_ore", 
-			properties -> new DropExperienceBlock(UniformInt.of(3, 7), properties
-					.strength(3f)
-					.requiresCorrectToolForDrops()
-					.mapColor(MapColor.STONE)
-					.sound(SoundType.STONE)));
-	
 	public static final DeferredBlock<Block> DEEPSLATE_RUBY_ORE = registerBlock("deepslate_ruby_ore", 
 			properties -> new DropExperienceBlock(UniformInt.of(3, 7), properties
 					.strength(4.5f)
@@ -79,13 +73,6 @@ public class MineralBlocks {
 					.sound(SoundType.DEEPSLATE)));
 	
 	public static final DeferredBlock<Block> DEEPSLATE_SAPPHIRE_ORE = registerBlock("deepslate_sapphire_ore", 
-			properties -> new DropExperienceBlock(UniformInt.of(3, 7), properties
-					.strength(4.5f)
-					.requiresCorrectToolForDrops()
-					.mapColor(MapColor.DEEPSLATE)
-					.sound(SoundType.DEEPSLATE)));
-	
-	public static final DeferredBlock<Block> DEEPSLATE_GARNET_ORE = registerBlock("deepslate_garnet_ore", 
 			properties -> new DropExperienceBlock(UniformInt.of(3, 7), properties
 					.strength(4.5f)
 					.requiresCorrectToolForDrops()
@@ -119,6 +106,13 @@ public class MineralBlocks {
 					.requiresCorrectToolForDrops()
 					.mapColor(MapColor.COLOR_GRAY)
 					.sound(SoundType.WOOD)), Component.translatable("tooltip.mysticminerals.sharpener_block.tooltip"));
+	
+	public static final DeferredBlock<Block> RESONANT_CONVERTER = registerBlock("resonant_converter",
+			properties -> new ResonantConverterBlock(properties
+					.strength(3.0f, 100.0f)
+					.requiresCorrectToolForDrops()
+					.mapColor(MapColor.GOLD)
+					.sound(SoundType.AMETHYST)), Component.translatable("tooltip.mysticalminerals.resonant_converter.tooltip"));
 	
 	public static final DeferredBlock<Block> GEM_LAMP = registerBlock("gem_lamp", 
 			properties -> new GemLampBlock(properties

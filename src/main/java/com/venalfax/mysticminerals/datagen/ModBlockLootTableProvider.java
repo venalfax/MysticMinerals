@@ -27,20 +27,17 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 		dropSelf(MineralBlocks.TEMPERED_FLINT_BLOCK.get());
 		dropSelf(MineralBlocks.SHARPENER_BLOCK.get());
 		dropSelf(MineralBlocks.GEM_LAMP.get());
+		dropSelf(MineralBlocks.RESONANT_CONVERTER.get());
 		dropSelf(MineralBlocks.AMETHYST_PRESSURE_PLATE.get());
 		
 		add(MineralBlocks.RUBY_ORE.get(), 
 				createOreDrop(MineralBlocks.RUBY_ORE.get(), MineralItems.RUBY.get()));
 		add(MineralBlocks.SAPPHIRE_ORE.get(), 
 				createOreDrop(MineralBlocks.SAPPHIRE_ORE.get(), MineralItems.SAPPHIRE.get()));
-		add(MineralBlocks.GARNET_ORE.get(), 
-				createOreDrop(MineralBlocks.GARNET_ORE.get(), MineralItems.GARNET.get()));
 		add(MineralBlocks.DEEPSLATE_RUBY_ORE.get(), 
 				createOreDrop(MineralBlocks.DEEPSLATE_RUBY_ORE.get(), MineralItems.RUBY.get()));
 		add(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get(), 
 				createOreDrop(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get(), MineralItems.SAPPHIRE.get()));
-		add(MineralBlocks.DEEPSLATE_GARNET_ORE.get(), 
-				createOreDrop(MineralBlocks.DEEPSLATE_GARNET_ORE.get(), MineralItems.GARNET.get()));
 		
 	}
 	

@@ -49,6 +49,8 @@ public class ModRecipeProvider extends RecipeProvider {
 	@Override
 	protected void buildRecipes() {
 		
+		/* STORAGE */
+		
 		shaped(RecipeCategory.BUILDING_BLOCKS, MineralBlocks.RUBY_BLOCK.get())
 			.pattern("RRR")
 			.pattern("RRR")
@@ -80,19 +82,24 @@ public class ModRecipeProvider extends RecipeProvider {
 			.save(output);
 		
 		shaped(RecipeCategory.BUILDING_BLOCKS, MineralBlocks.GARNET_BLOCK.get())
-			.pattern("GGG")
-			.pattern("GGG")
-			.pattern("GGG")
-			.define('G', MineralItems.GARNET.get())
-			.unlockedBy(getHasName(MineralItems.GARNET.get()), has(MineralItems.GARNET))
+			.pattern("GG")
+			.pattern("GG")
+			.define('G', MineralItems.GARNET_SHARD.get())
+			.unlockedBy(getHasName(MineralItems.GARNET_SHARD.get()), has(MineralItems.GARNET_SHARD))
 			.group("gem_block")
 			.save(output);
 
-		shapeless(RecipeCategory.MISC, MineralItems.GARNET, 9)
+		shapeless(RecipeCategory.MISC, MineralItems.GARNET_SHARD, 4)
 			.requires(MineralBlocks.GARNET_BLOCK)
 			.unlockedBy(getHasName(MineralBlocks.GARNET_BLOCK.get()), has(MineralBlocks.GARNET_BLOCK))
 			.group("gem")
 			.save(output);
+		
+		shapeless(RecipeCategory.MISC, Items.AMETHYST_SHARD, 4)
+			.requires(Blocks.AMETHYST_BLOCK)
+			.unlockedBy(getHasName(Blocks.AMETHYST_BLOCK), has(Blocks.AMETHYST_BLOCK))
+			.group("gem")
+			.save(output, MysticMinerals.MOD_ID + ":" + getSimpleRecipeName(Items.AMETHYST_SHARD));
 	
 		shaped(RecipeCategory.BUILDING_BLOCKS, MineralBlocks.FLINT_BLOCK.get())
 			.pattern("FFF")
@@ -139,6 +146,8 @@ public class ModRecipeProvider extends RecipeProvider {
 			.group("flint_item")
 			.save(output);
 		
+		/* MISC */
+		
 		shaped(RecipeCategory.TOOLS, MineralItems.CRYSTAL_RESONATOR.get())
 			.pattern(" GS")
 			.pattern("GRG")
@@ -162,8 +171,21 @@ public class ModRecipeProvider extends RecipeProvider {
 			.define('I', Items.IRON_INGOT)
 			.unlockedBy(getHasName(Blocks.GRINDSTONE), has(Blocks.GRINDSTONE))
 			.unlockedBy(getHasName(Items.IRON_INGOT), has(Items.IRON_INGOT))
-			.group("utility")
 			.save(output);
+		
+		shaped(RecipeCategory.MISC, MineralBlocks.RESONANT_CONVERTER.get())
+			.pattern("a a")
+			.pattern("gRg")
+			.pattern("EGE")
+			.define('a', Items.AMETHYST_SHARD)
+			.define('g', Items.GOLD_INGOT)
+			.define('R', Blocks.REDSTONE_BLOCK)
+			.define('E', Blocks.EMERALD_BLOCK)
+			.define('G', Blocks.GOLD_BLOCK)
+			.unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
+			.unlockedBy(getHasName(Blocks.EMERALD_BLOCK), has(Blocks.EMERALD_BLOCK))
+			.save(output);
+			
 		
 		shaped(RecipeCategory.FOOD, MineralItems.RUBY_POTATO.get())
 			.pattern(" R ")

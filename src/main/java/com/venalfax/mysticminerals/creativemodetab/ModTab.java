@@ -26,7 +26,7 @@ public class ModTab {
 						
 						output.accept(MineralItems.RUBY);
 						output.accept(MineralItems.SAPPHIRE);
-						output.accept(MineralItems.GARNET);
+						output.accept(MineralItems.GARNET_SHARD);
 						output.accept(MineralItems.SHARPENED_FLINT);
 						output.accept(MineralItems.TEMPERED_FLINT);
 						
@@ -106,16 +106,15 @@ public class ModTab {
 						output.accept(MineralBlocks.SAPPHIRE_BLOCK);
 						output.accept(MineralBlocks.GARNET_BLOCK);
 						output.accept(MineralBlocks.RUBY_ORE);
-						output.accept(MineralBlocks.SAPPHIRE_ORE);
-						output.accept(MineralBlocks.GARNET_ORE);
 						output.accept(MineralBlocks.DEEPSLATE_RUBY_ORE);
+						output.accept(MineralBlocks.SAPPHIRE_ORE);
 						output.accept(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE);
-						output.accept(MineralBlocks.DEEPSLATE_GARNET_ORE);
 						output.accept(MineralBlocks.FLINT_BLOCK);
 						output.accept(MineralBlocks.SHARPENED_FLINT_BLOCK);
 						output.accept(MineralBlocks.TEMPERED_FLINT_BLOCK);
 						
 						output.accept(MineralBlocks.SHARPENER_BLOCK);
+						output.accept(MineralBlocks.RESONANT_CONVERTER);
 						output.accept(MineralBlocks.GEM_LAMP);
 						output.accept(MineralBlocks.AMETHYST_PRESSURE_PLATE);
 						

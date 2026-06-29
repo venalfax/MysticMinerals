@@ -3,7 +3,7 @@
 	
 	"item.mysticminerals.ruby": "Ruby",
 	"item.mysticminerals.sapphire": "Sapphire",
-	"item.mysticminerals.garnet": "Garnet",
+	"item.mysticminerals.garnet_shard": "Garnet Shard",
 	"item.mysticminerals.sharpened_flint": "Sharpened Flint",
 	"item.mysticminerals.tempered_flint": "Tempered Flint",
 	
@@ -82,9 +82,10 @@
 	
 	"tooltip.mysticminerals.crystal_resonator.tooltip": "Press §eShift§r for more information",
 	"tooltip.mysticminerals.crystal_resonator.shift_down": "Right click blocks to detect nearby crystals",
-	"tooltip.mysticminerals.garnet.tooltip": "Mystical fuel",
+	"tooltip.mysticminerals.garnet_shard.tooltip": "Mystical fuel",
 	"tooltip.mysticminerals.sharpener_block.tooltip": "The sharp gets sharper",
 	"tooltip.mysticminerals.garnet_block.tooltip": "Super fuel block",
+	"tooltip.mysticalminerals.resonant_converter.tooltip": "Resonates gems to alter material",
 	
 	
 	/* BLOCKS */
@@ -103,6 +104,7 @@
 	"block.mysticminerals.tempered_flint_block": "Block of Tempered Flint",
 	
 	"block.mysticminerals.sharpener_block": "Sharpener",
+	"block.mysticminerals.resonant_converter": "Resonant Converter",
 	"block.mysticminerals.gem_lamp": "Gem Lamp",
 	
 	"block.mysticminerals.amethyst_pressure_plate": "Amethyst Pressure Plate",

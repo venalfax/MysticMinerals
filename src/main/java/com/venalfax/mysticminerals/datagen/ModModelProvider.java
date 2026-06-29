@@ -29,15 +29,16 @@ public class ModModelProvider extends ModelProvider {
 		
 		itemModels.generateFlatItem(MineralItems.RUBY.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.SAPPHIRE.get(), ModelTemplates.FLAT_ITEM);
-		itemModels.generateFlatItem(MineralItems.GARNET.get(), ModelTemplates.FLAT_ITEM);
+		itemModels.generateFlatItem(MineralItems.GARNET_SHARD.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.SHARPENED_FLINT.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.TEMPERED_FLINT.get(), ModelTemplates.FLAT_ITEM);
-		itemModels.generateFlatItem(MineralItems.CRYSTAL_RESONATOR.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.RUBY_POTATO.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.SAPPHIRE_STEW.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.EMERALD_HONEY.get(), ModelTemplates.FLAT_ITEM);
 		
 		/* TOOLS */
+		
+		itemModels.declareCustomModelItem(MineralItems.CRYSTAL_RESONATOR.get());
 		
 		itemModels.generateFlatItem(MineralItems.RUBY_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
 		itemModels.generateFlatItem(MineralItems.RUBY_PICKAXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
@@ -108,15 +109,14 @@ public class ModModelProvider extends ModelProvider {
 		blockModels.createTrivialCube(MineralBlocks.GARNET_BLOCK.get());
 		blockModels.createTrivialCube(MineralBlocks.RUBY_ORE.get());
 		blockModels.createTrivialCube(MineralBlocks.SAPPHIRE_ORE.get());
-		blockModels.createTrivialCube(MineralBlocks.GARNET_ORE.get());
 		blockModels.createTrivialCube(MineralBlocks.DEEPSLATE_RUBY_ORE.get());
 		blockModels.createTrivialCube(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
-		blockModels.createTrivialCube(MineralBlocks.DEEPSLATE_GARNET_ORE.get());
 		blockModels.createTrivialCube(MineralBlocks.FLINT_BLOCK.get());
 		blockModels.createTrivialCube(MineralBlocks.SHARPENED_FLINT_BLOCK.get());
 		blockModels.createTrivialCube(MineralBlocks.TEMPERED_FLINT_BLOCK.get());
 		
 		blockModels.createTrivialCube(MineralBlocks.SHARPENER_BLOCK.get());
+		blockModels.createNonTemplateModelBlock(MineralBlocks.RESONANT_CONVERTER.get());
 		
 		blockModels.blockStateOutput.accept(
 				MultiVariantGenerator.dispatch(MineralBlocks.GEM_LAMP.get()).with(BlockModelGenerators.createBooleanModelDispatch(GemLampBlock.CLICKED,

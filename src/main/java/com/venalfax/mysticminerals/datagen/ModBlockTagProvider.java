@@ -29,12 +29,11 @@ public class ModBlockTagProvider extends BlockTagsProvider{
 			.add(MineralBlocks.SAPPHIRE_ORE.get())
 			.add(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get())
 			.add(MineralBlocks.GARNET_BLOCK.get())
-			.add(MineralBlocks.GARNET_ORE.get())
-			.add(MineralBlocks.DEEPSLATE_GARNET_ORE.get())
 			.add(MineralBlocks.FLINT_BLOCK.get())
 			.add(MineralBlocks.SHARPENED_FLINT_BLOCK.get())
 			.add(MineralBlocks.TEMPERED_FLINT_BLOCK.get())
 			.add(MineralBlocks.GEM_LAMP.get())
+			.add(MineralBlocks.RESONANT_CONVERTER.get())
 			.add(MineralBlocks.AMETHYST_PRESSURE_PLATE.get());
 		
 		tag(BlockTags.MINEABLE_WITH_AXE)
@@ -47,20 +46,16 @@ public class ModBlockTagProvider extends BlockTagsProvider{
 			.add(MineralBlocks.SAPPHIRE_BLOCK.get())
 			.add(MineralBlocks.SAPPHIRE_ORE.get())
 			.add(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get())
-			.add(MineralBlocks.GARNET_BLOCK.get())
-			.add(MineralBlocks.GARNET_ORE.get())
-			.add(MineralBlocks.DEEPSLATE_GARNET_ORE.get());
+			.add(MineralBlocks.GARNET_BLOCK.get());
 		
 		
 		tag(BlockTags.DEEPSLATE_ORE_REPLACEABLES)
 			.add(MineralBlocks.DEEPSLATE_RUBY_ORE.get())
-			.add(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get())
-			.add(MineralBlocks.DEEPSLATE_GARNET_ORE.get());
+			.add(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
 		
 		tag(BlockTags.BEACON_BASE_BLOCKS)
 			.add(MineralBlocks.RUBY_BLOCK.get())
-			.add(MineralBlocks.SAPPHIRE_BLOCK.get())
-			.add(MineralBlocks.GARNET_BLOCK.get());
+			.add(MineralBlocks.SAPPHIRE_BLOCK.get());
 		
 		tag(ModTags.Blocks.CRYSTAL_RESONATORS)
 			.add(Blocks.EMERALD_BLOCK)
@@ -80,9 +75,7 @@ public class ModBlockTagProvider extends BlockTagsProvider{
 			.add(MineralBlocks.SAPPHIRE_BLOCK.get())
 			.add(MineralBlocks.SAPPHIRE_ORE.get())
 			.add(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get())
-			.add(MineralBlocks.GARNET_BLOCK.get())
-			.add(MineralBlocks.GARNET_ORE.get())
-			.add(MineralBlocks.DEEPSLATE_GARNET_ORE.get());
+			.add(MineralBlocks.GARNET_BLOCK.get());
 			
 		tag(ModTags.Blocks.NEEDS_MINERAL_TOOL)
 			.addTag(BlockTags.NEEDS_DIAMOND_TOOL);

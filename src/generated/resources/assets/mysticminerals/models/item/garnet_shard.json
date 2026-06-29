@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "mysticminerals:item/crystal_resonator"
+    "layer0": "mysticminerals:item/garnet_shard"
   }
 }

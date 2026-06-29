@@ -57,7 +57,7 @@ public class MysticMinerals {
     	if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
     		event.accept(MineralItems.RUBY);
     		event.accept(MineralItems.SAPPHIRE);
-    		event.accept(MineralItems.GARNET);
+    		event.accept(MineralItems.GARNET_SHARD);
     		event.accept(MineralItems.SHARPENED_FLINT);
     		event.accept(MineralItems.TEMPERED_FLINT);
     	}
@@ -74,10 +74,8 @@ public class MysticMinerals {
     	if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
     		event.accept(MineralBlocks.RUBY_ORE);
     		event.accept(MineralBlocks.SAPPHIRE_ORE);
-    		event.accept(MineralBlocks.GARNET_ORE);
     		event.accept(MineralBlocks.DEEPSLATE_RUBY_ORE);
     		event.accept(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE);
-    		event.accept(MineralBlocks.DEEPSLATE_GARNET_ORE);
     	}
     	
     	if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {

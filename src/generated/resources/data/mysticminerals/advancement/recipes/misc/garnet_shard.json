@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mysticminerals:garnet"
+        "recipe": "mysticminerals:garnet_shard"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "mysticminerals:garnet"
+      "mysticminerals:garnet_shard"
     ]
   }
 }

@@ -25,6 +25,18 @@ public class ModItemTagProvider extends ItemTagsProvider {
 			.add(Items.FLINT)
 			.add(MineralItems.TEMPERED_FLINT.get());
 		
+		tag(ModTags.Items.EMERALD_CONVERTABLE)
+			.add(Items.EMERALD);
+		tag(ModTags.Items.RUBY_CONVERTABLE)
+			.add(MineralItems.RUBY.get());
+		tag(ModTags.Items.SAPPHIRE_CONVERTABLE)
+			.add(MineralItems.SAPPHIRE.get());
+		tag(ModTags.Items.AMETHYST_CONVERTABLE)
+			.add(Items.AMETHYST_SHARD);
+		tag(ModTags.Items.GARNET_CONVERTABLE)
+			.add(MineralItems.GARNET_SHARD.get());
+			
+		
 		tag(ModTags.Items.RUBY_REPAIRABLE)
 			.add(MineralItems.RUBY.get());
 		tag(ModTags.Items.SAPPHIRE_REPAIRABLE)
