@@ -4,12 +4,12 @@
   "group": "food",
   "key": {
     "M": "minecraft:mushroom_stew",
-    "S": "mysticminerals:sapphire"
+    "S": "mysticminerals:sapphire_block"
   },
   "pattern": [
-    " S ",
+    "SSS",
     "SMS",
-    " S "
+    "SSS"
   ],
   "result": {
     "id": "mysticminerals:sapphire_stew"

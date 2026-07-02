@@ -29,6 +29,11 @@ public class ModBlockTagProvider extends BlockTagsProvider{
 			.add(MineralBlocks.SAPPHIRE_ORE.get())
 			.add(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get())
 			.add(MineralBlocks.GARNET_BLOCK.get())
+			.add(MineralBlocks.BUDDING_GARNET.get())
+			.add(MineralBlocks.GARNET_CLUSTER.get())
+			.add(MineralBlocks.LARGE_GARNET_BUD.get())
+			.add(MineralBlocks.MEDIUM_GARNET_BUD.get())
+			.add(MineralBlocks.SMALL_GARNET_BUD.get())
 			.add(MineralBlocks.FLINT_BLOCK.get())
 			.add(MineralBlocks.SHARPENED_FLINT_BLOCK.get())
 			.add(MineralBlocks.TEMPERED_FLINT_BLOCK.get())
@@ -46,8 +51,7 @@ public class ModBlockTagProvider extends BlockTagsProvider{
 			.add(MineralBlocks.SAPPHIRE_BLOCK.get())
 			.add(MineralBlocks.SAPPHIRE_ORE.get())
 			.add(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get())
-			.add(MineralBlocks.GARNET_BLOCK.get());
-		
+			.add(MineralBlocks.RESONANT_CONVERTER.get());
 		
 		tag(BlockTags.DEEPSLATE_ORE_REPLACEABLES)
 			.add(MineralBlocks.DEEPSLATE_RUBY_ORE.get())
@@ -62,8 +66,8 @@ public class ModBlockTagProvider extends BlockTagsProvider{
 			.add(Blocks.EMERALD_ORE)
 			.add(Blocks.DEEPSLATE_EMERALD_ORE)
 			.add(Blocks.AMETHYST_BLOCK)
-			.add(Blocks.AMETHYST_CLUSTER)
 			.add(Blocks.BUDDING_AMETHYST)
+			.add(Blocks.AMETHYST_CLUSTER)
 			.add(Blocks.LARGE_AMETHYST_BUD)
 			.add(Blocks.MEDIUM_AMETHYST_BUD)
 			.add(Blocks.SMALL_AMETHYST_BUD)
@@ -75,7 +79,12 @@ public class ModBlockTagProvider extends BlockTagsProvider{
 			.add(MineralBlocks.SAPPHIRE_BLOCK.get())
 			.add(MineralBlocks.SAPPHIRE_ORE.get())
 			.add(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get())
-			.add(MineralBlocks.GARNET_BLOCK.get());
+			.add(MineralBlocks.GARNET_BLOCK.get())
+			.add(MineralBlocks.BUDDING_GARNET.get())
+			.add(MineralBlocks.GARNET_CLUSTER.get())
+			.add(MineralBlocks.LARGE_GARNET_BUD.get())
+			.add(MineralBlocks.MEDIUM_GARNET_BUD.get())
+			.add(MineralBlocks.SMALL_GARNET_BUD.get());
 			
 		tag(ModTags.Blocks.NEEDS_MINERAL_TOOL)
 			.addTag(BlockTags.NEEDS_DIAMOND_TOOL);

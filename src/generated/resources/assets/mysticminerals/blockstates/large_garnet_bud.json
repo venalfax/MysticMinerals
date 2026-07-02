@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "mysticminerals:block/large_garnet_bud",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "mysticminerals:block/large_garnet_bud",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "mysticminerals:block/large_garnet_bud",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "mysticminerals:block/large_garnet_bud",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "mysticminerals:block/large_garnet_bud"
+    },
+    "facing=west": {
+      "model": "mysticminerals:block/large_garnet_bud",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

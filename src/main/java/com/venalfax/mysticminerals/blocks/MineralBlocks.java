@@ -1,20 +1,17 @@
 package com.venalfax.mysticminerals.blocks;
 
-import java.util.function.Consumer;
 import java.util.function.Function;
 
 import com.venalfax.mysticminerals.MysticMinerals;
+import com.venalfax.mysticminerals.blocks.custom.BuddingGarnetBlock;
+import com.venalfax.mysticminerals.blocks.custom.GarnetBlock;
+import com.venalfax.mysticminerals.blocks.custom.GarnetClusterBlock;
 import com.venalfax.mysticminerals.blocks.custom.GemLampBlock;
 import com.venalfax.mysticminerals.blocks.custom.ResonantConverterBlock;
 import com.venalfax.mysticminerals.blocks.custom.SharpenerBlock;
-import com.venalfax.mysticminerals.items.MineralItems;
 
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
@@ -39,17 +36,66 @@ public class MineralBlocks {
 	
 	public static final DeferredBlock<Block> SAPPHIRE_BLOCK = registerBlock("sapphire_block", 
 			properties -> new Block(properties
-					.strength(5f, 6f)
+					.strength(5f, 5f)
 					.requiresCorrectToolForDrops()
 					.mapColor(MapColor.COLOR_BLUE)
 					.sound(SoundType.METAL)));
 	
 	public static final DeferredBlock<Block> GARNET_BLOCK = registerBlock("garnet_block", 
-			properties -> new Block(properties
-					.strength(5f, 6f)
+			properties -> new GarnetBlock(properties
+					.strength(2f)
 					.requiresCorrectToolForDrops()
-					.mapColor(MapColor.CRIMSON_NYLIUM)
-					.sound(SoundType.METAL)), Component.translatable("tooltip.mysticminerals.garnet_block.tooltip"));
+					.mapColor(MapColor.COLOR_ORANGE)
+					.sound(SoundType.AMETHYST)));
+	
+	public static final DeferredBlock<Block> BUDDING_GARNET = registerBlock("budding_garnet",
+			properties -> new BuddingGarnetBlock(properties
+					.strength(2f)
+					.randomTicks()
+					.requiresCorrectToolForDrops()
+					.mapColor(MapColor.COLOR_ORANGE)
+					.sound(SoundType.AMETHYST)
+					.pushReaction(PushReaction.DESTROY)));
+	
+	public static final DeferredBlock<Block> GARNET_CLUSTER = registerBlock("garnet_cluster",
+			properties -> new GarnetClusterBlock(7.0f, 10.0f, properties
+					.strength(2f)
+					.forceSolidOn()
+					.noOcclusion()
+					.lightLevel(statex -> 5)
+					.mapColor(MapColor.COLOR_ORANGE)
+					.sound(SoundType.AMETHYST_CLUSTER)
+					.pushReaction(PushReaction.DESTROY)));
+	
+	public static final DeferredBlock<Block> LARGE_GARNET_BUD = registerBlock("large_garnet_bud",
+			properties -> new GarnetClusterBlock(5.0f, 10.0f, properties
+					.strength(2f)
+					.forceSolidOn()
+					.noOcclusion()
+					.lightLevel(statex -> 4)
+					.mapColor(MapColor.COLOR_ORANGE)
+					.sound(SoundType.LARGE_AMETHYST_BUD)
+					.pushReaction(PushReaction.DESTROY)));
+	
+	public static final DeferredBlock<Block> MEDIUM_GARNET_BUD = registerBlock("medium_garnet_bud",
+			properties -> new GarnetClusterBlock(4.0f, 10.0f, properties
+					.strength(2f)
+					.forceSolidOn()
+					.noOcclusion()
+					.lightLevel(statex -> 2)
+					.mapColor(MapColor.COLOR_ORANGE)
+					.sound(SoundType.MEDIUM_AMETHYST_BUD)
+					.pushReaction(PushReaction.DESTROY)));
+	
+	public static final DeferredBlock<Block> SMALL_GARNET_BUD = registerBlock("small_garnet_bud",
+			properties -> new GarnetClusterBlock(3.0f, 8.0f, properties
+					.strength(2f)
+					.forceSolidOn()
+					.noOcclusion()
+					.lightLevel(statex -> 1)
+					.mapColor(MapColor.COLOR_ORANGE)
+					.sound(SoundType.SMALL_AMETHYST_BUD)
+					.pushReaction(PushReaction.DESTROY)));
 	
 	public static final DeferredBlock<Block> RUBY_ORE = registerBlock("ruby_ore", 
 			properties -> new DropExperienceBlock(UniformInt.of(3, 7), properties
@@ -78,6 +124,8 @@ public class MineralBlocks {
 					.requiresCorrectToolForDrops()
 					.mapColor(MapColor.DEEPSLATE)
 					.sound(SoundType.DEEPSLATE)));
+	
+	
 	
 	public static final DeferredBlock<Block> FLINT_BLOCK = registerBlock("flint_block", 
 			properties -> new Block(properties
@@ -112,7 +160,7 @@ public class MineralBlocks {
 					.strength(3.0f, 100.0f)
 					.requiresCorrectToolForDrops()
 					.mapColor(MapColor.GOLD)
-					.sound(SoundType.AMETHYST)), Component.translatable("tooltip.mysticalminerals.resonant_converter.tooltip"));
+					.sound(SoundType.AMETHYST)), Component.translatable("tooltip.mysticminerals.resonant_converter.tooltip"));
 	
 	public static final DeferredBlock<Block> GEM_LAMP = registerBlock("gem_lamp", 
 			properties -> new GemLampBlock(properties
@@ -134,30 +182,14 @@ public class MineralBlocks {
 	
 	private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function, Component... components){
 		DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);
-		registerBlockItem(name, toReturn, components);
+		//registerBlockItem(name, toReturn, components);
 		return toReturn;
-	}
-	
-	private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block, Component... components) {
-		MineralItems.ITEMS.registerItem(name, properties -> new BlockItem(block.get(), properties.useBlockDescriptionPrefix()) {
-			@Override
-			public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
-				for(var component : components) {
-					builder.accept(component);
-				}
-				super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
-			}
-		});
 	}
 	
 	private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function){
 		DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);
-		registerBlockItem(name, toReturn);
+		//registerBlockItem(name, toReturn);
 		return toReturn;
-	}
-	
-	private static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
-		MineralItems.ITEMS.registerItem(name, properties -> new BlockItem(block.get(), properties.useBlockDescriptionPrefix()));
 	}
 	
 	public static void register(IEventBus eventBus) {

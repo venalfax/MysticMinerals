@@ -6,6 +6,7 @@ import com.mojang.logging.LogUtils;
 import com.venalfax.mysticminerals.blocks.MineralBlocks;
 import com.venalfax.mysticminerals.creativemodetab.ModTab;
 import com.venalfax.mysticminerals.items.MineralItems;
+import com.venalfax.mysticminerals.stat.MineralStats;
 import com.venalfax.mysticminerals.worldgen.ModWorldGen;
 
 import net.minecraft.resources.Identifier;
@@ -39,6 +40,9 @@ public class MysticMinerals {
         
         MineralItems.register(modEventBus);
         MineralBlocks.register(modEventBus);
+        
+        MineralStats.register(modEventBus);
+        
         ModWorldGen.load();
 
         NeoForge.EVENT_BUS.register(this);
@@ -72,6 +76,12 @@ public class MysticMinerals {
     	}
     	
     	if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+    		event.accept(MineralBlocks.GARNET_BLOCK);
+    		event.accept(MineralBlocks.BUDDING_GARNET);
+    		event.accept(MineralBlocks.GARNET_CLUSTER);
+    		event.accept(MineralBlocks.LARGE_GARNET_BUD);
+    		event.accept(MineralBlocks.MEDIUM_GARNET_BUD);
+    		event.accept(MineralBlocks.SMALL_GARNET_BUD);
     		event.accept(MineralBlocks.RUBY_ORE);
     		event.accept(MineralBlocks.SAPPHIRE_ORE);
     		event.accept(MineralBlocks.DEEPSLATE_RUBY_ORE);

@@ -4,12 +4,12 @@
   "group": "food",
   "key": {
     "P": "minecraft:baked_potato",
-    "R": "mysticminerals:ruby"
+    "R": "mysticminerals:ruby_block"
   },
   "pattern": [
-    " R ",
+    "RRR",
     "RPR",
-    " R "
+    "RRR"
   ],
   "result": {
     "id": "mysticminerals:ruby_potato"

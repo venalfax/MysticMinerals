@@ -3,13 +3,13 @@
   "category": "misc",
   "group": "food",
   "key": {
-    "E": "minecraft:emerald",
+    "E": "minecraft:emerald_block",
     "H": "minecraft:honey_bottle"
   },
   "pattern": [
-    " E ",
+    "EEE",
     "EHE",
-    " E "
+    "EEE"
   ],
   "result": {
     "id": "mysticminerals:emerald_honey"

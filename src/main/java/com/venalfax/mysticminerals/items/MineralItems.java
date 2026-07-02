@@ -3,11 +3,13 @@ package com.venalfax.mysticminerals.items;
 import java.util.function.Consumer;
 
 import com.venalfax.mysticminerals.MysticMinerals;
+import com.venalfax.mysticminerals.blocks.MineralBlocks;
 import com.venalfax.mysticminerals.foods.MineralFoods;
 import com.venalfax.mysticminerals.items.custom.GemDetectorItem;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.AxeItem;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -165,6 +167,36 @@ public class MineralItems extends Items {
 			properties -> new Item(properties.food(MineralFoods.SAPPHIRE_STEW, MineralFoods.SAPPHIRE_STEW_CONSUMABLE)));
 	public static final DeferredItem<Item> EMERALD_HONEY = ITEMS.registerItem("emerald_honey", 
 			properties -> new Item(properties.food(MineralFoods.EMERALD_HONEY, MineralFoods.EMERALD_HONEY_CONSUMABLE)));
+	
+	/* BLOCKS */
+	
+	public static final DeferredItem<BlockItem> RUBY_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.RUBY_BLOCK);
+	public static final DeferredItem<BlockItem> SAPPHIRE_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.SAPPHIRE_BLOCK);
+	// Testing properties to make Garnet Block immune to fire
+	public static final DeferredItem<BlockItem> GARNET_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.GARNET_BLOCK,
+			properties -> new Item.Properties().fireResistant());
+	public static final DeferredItem<BlockItem> BUDDING_GARNET = ITEMS.registerSimpleBlockItem(MineralBlocks.BUDDING_GARNET, 
+			properties -> new Item.Properties().fireResistant());
+	public static final DeferredItem<BlockItem> GARNET_CLUSTER = ITEMS.registerSimpleBlockItem(MineralBlocks.GARNET_CLUSTER, 
+			properties -> new Item.Properties().fireResistant());
+	public static final DeferredItem<BlockItem> LARGE_GARNET_BUD = ITEMS.registerSimpleBlockItem(MineralBlocks.LARGE_GARNET_BUD, 
+			properties -> new Item.Properties().fireResistant());
+	public static final DeferredItem<BlockItem> MEDIUM_GARNET_BUD = ITEMS.registerSimpleBlockItem(MineralBlocks.MEDIUM_GARNET_BUD, 
+			properties -> new Item.Properties().fireResistant());
+	public static final DeferredItem<BlockItem> SMALL_GARNET_BUD = ITEMS.registerSimpleBlockItem(MineralBlocks.SMALL_GARNET_BUD, 
+			properties -> new Item.Properties().fireResistant());
+	public static final DeferredItem<BlockItem> RUBY_ORE = ITEMS.registerSimpleBlockItem(MineralBlocks.RUBY_ORE);
+	public static final DeferredItem<BlockItem> SAPPHIRE_ORE = ITEMS.registerSimpleBlockItem(MineralBlocks.SAPPHIRE_ORE);
+	public static final DeferredItem<BlockItem> DEEPSLATE_RUBY_ORE = ITEMS.registerSimpleBlockItem(MineralBlocks.DEEPSLATE_RUBY_ORE);
+	public static final DeferredItem<BlockItem> DEEPSLATE_SAPPHIRE_ORE = ITEMS.registerSimpleBlockItem(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE);
+	public static final DeferredItem<BlockItem> FLINT_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.FLINT_BLOCK);
+	public static final DeferredItem<BlockItem> SHARPENED_FLINT_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.SHARPENED_FLINT_BLOCK);
+	public static final DeferredItem<BlockItem> TEMPERED_FLINT_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.TEMPERED_FLINT_BLOCK);
+	public static final DeferredItem<BlockItem> SHARPENER_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.SHARPENER_BLOCK);
+	public static final DeferredItem<BlockItem> RESONANT_CONVERTER = ITEMS.registerSimpleBlockItem(MineralBlocks.RESONANT_CONVERTER);
+	public static final DeferredItem<BlockItem> GEM_LAMP = ITEMS.registerSimpleBlockItem(MineralBlocks.GEM_LAMP);
+	public static final DeferredItem<BlockItem> AMETHYST_PRESSURE_PLATE = ITEMS.registerSimpleBlockItem(MineralBlocks.AMETHYST_PRESSURE_PLATE);
+	
 	
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

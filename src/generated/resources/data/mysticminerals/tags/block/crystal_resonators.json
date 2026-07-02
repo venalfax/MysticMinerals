@@ -4,8 +4,8 @@
     "minecraft:emerald_ore",
     "minecraft:deepslate_emerald_ore",
     "minecraft:amethyst_block",
-    "minecraft:amethyst_cluster",
     "minecraft:budding_amethyst",
+    "minecraft:amethyst_cluster",
     "minecraft:large_amethyst_bud",
     "minecraft:medium_amethyst_bud",
     "minecraft:small_amethyst_bud",
@@ -17,6 +17,11 @@
     "mysticminerals:sapphire_block",
     "mysticminerals:sapphire_ore",
     "mysticminerals:deepslate_sapphire_ore",
-    "mysticminerals:garnet_block"
+    "mysticminerals:garnet_block",
+    "mysticminerals:budding_garnet",
+    "mysticminerals:garnet_cluster",
+    "mysticminerals:large_garnet_bud",
+    "mysticminerals:medium_garnet_bud",
+    "mysticminerals:small_garnet_bud"
   ]
 }

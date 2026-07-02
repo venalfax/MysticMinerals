@@ -84,21 +84,26 @@
 	"tooltip.mysticminerals.crystal_resonator.shift_down": "Right click blocks to detect nearby crystals",
 	"tooltip.mysticminerals.garnet_shard.tooltip": "Mystical fuel",
 	"tooltip.mysticminerals.sharpener_block.tooltip": "The sharp gets sharper",
-	"tooltip.mysticminerals.garnet_block.tooltip": "Super fuel block",
-	"tooltip.mysticalminerals.resonant_converter.tooltip": "Resonates gems to alter material",
+	"tooltip.mysticminerals.resonant_converter.tooltip": "Resonates gems to alter material",
 	
+	/* STATS */
+	
+	"stat.mysticminerals.gems_resonated": "Gems Resonated",	
 	
 	/* BLOCKS */
 	
 	"block.mysticminerals.ruby_block": "Block of Ruby",
 	"block.mysticminerals.sapphire_block": "Block of Sapphire",
 	"block.mysticminerals.garnet_block": "Block of Garnet",
+	"block.mysticminerals.budding_garnet": "Budding Garnet",
+	"block.mysticminerals.garnet_cluster": "Garnet Cluster",
+	"block.mysticminerals.large_garnet_bud": "Large Garnet Bud",
+	"block.mysticminerals.medium_garnet_bud": "Medium Garnet Bud",
+	"block.mysticminerals.small_garnet_bud": "Small Garnet Bud",
 	"block.mysticminerals.ruby_ore": "Ruby Ore",
 	"block.mysticminerals.sapphire_ore": "Sapphire Ore",
-	"block.mysticminerals.garnet_ore": "Garnet Ore",
 	"block.mysticminerals.deepslate_ruby_ore": "Deepslate Ruby Ore",
 	"block.mysticminerals.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
-	"block.mysticminerals.deepslate_garnet_ore": "Deepslate Garnet Ore",
 	"block.mysticminerals.flint_block": "Block of Flint",
 	"block.mysticminerals.sharpened_flint_block": "Block of Sharpened Flint",
 	"block.mysticminerals.tempered_flint_block": "Block of Tempered Flint",

@@ -188,32 +188,32 @@ public class ModRecipeProvider extends RecipeProvider {
 			
 		
 		shaped(RecipeCategory.FOOD, MineralItems.RUBY_POTATO.get())
-			.pattern(" R ")
+			.pattern("RRR")
 			.pattern("RPR")
-			.pattern(" R ")
-			.define('R', MineralItems.RUBY.get())
+			.pattern("RRR")
+			.define('R', MineralBlocks.RUBY_BLOCK.get())
 			.define('P', Items.BAKED_POTATO)
-			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY.get()))
+			.unlockedBy(getHasName(MineralBlocks.RUBY_BLOCK.get()), has(MineralBlocks.RUBY_BLOCK.get()))
 			.group("food")
 			.save(output);
 
 		shaped(RecipeCategory.FOOD, MineralItems.SAPPHIRE_STEW.get())
-			.pattern(" S ")
+			.pattern("SSS")
 			.pattern("SMS")
-			.pattern(" S ")
-			.define('S', MineralItems.SAPPHIRE.get())
+			.pattern("SSS")
+			.define('S', MineralBlocks.SAPPHIRE_BLOCK.get())
 			.define('M', Items.MUSHROOM_STEW)
-			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE.get()))
+			.unlockedBy(getHasName(MineralBlocks.SAPPHIRE_BLOCK.get()), has(MineralBlocks.SAPPHIRE_BLOCK.get()))
 			.group("food")
 			.save(output);
 
 		shaped(RecipeCategory.FOOD, MineralItems.EMERALD_HONEY.get())
-			.pattern(" E ")
+			.pattern("EEE")
 			.pattern("EHE")
-			.pattern(" E ")
-			.define('E', Items.EMERALD)
+			.pattern("EEE")
+			.define('E', Blocks.EMERALD_BLOCK)
 			.define('H', Items.HONEY_BOTTLE)
-			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY.get()))
+			.unlockedBy(getHasName(Blocks.EMERALD_BLOCK), has(Blocks.EMERALD_BLOCK))
 			.group("food")
 			.save(output);
 		

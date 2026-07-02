@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_ruby": {
+    "has_emerald_block": {
       "conditions": {
         "items": [
           {
-            "items": "mysticminerals:ruby"
+            "items": "minecraft:emerald_block"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_ruby"
+      "has_emerald_block"
     ]
   ],
   "rewards": {

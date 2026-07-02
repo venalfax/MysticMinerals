@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_sapphire": {
+    "has_sapphire_block": {
       "conditions": {
         "items": [
           {
-            "items": "mysticminerals:sapphire"
+            "items": "mysticminerals:sapphire_block"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_sapphire"
+      "has_sapphire_block"
     ]
   ],
   "rewards": {

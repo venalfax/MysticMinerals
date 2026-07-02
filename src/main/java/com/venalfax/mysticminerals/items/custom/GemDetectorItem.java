@@ -2,6 +2,7 @@ package com.venalfax.mysticminerals.items.custom;
 
 import java.util.function.Consumer;
 
+import com.venalfax.mysticminerals.stat.MineralStats;
 import com.venalfax.mysticminerals.tags.ModTags;
 
 import net.minecraft.client.Minecraft;
@@ -57,6 +58,8 @@ public class GemDetectorItem extends Item {
 						level.playSound(null, positionClicked, SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.BLOCKS, 1.5f, 1f);
 						
 						spawnFoundParticles(level, positionClicked, Direction.UP, blockState);
+						
+						player.awardStat(MineralStats.GEMS_RESONATED.get(), 1);
 						
 						break;
 					}

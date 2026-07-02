@@ -3,6 +3,7 @@ package com.venalfax.mysticminerals.datagen;
 import java.util.concurrent.CompletableFuture;
 
 import com.venalfax.mysticminerals.MysticMinerals;
+import com.venalfax.mysticminerals.blocks.MineralBlocks;
 import com.venalfax.mysticminerals.items.MineralItems;
 import com.venalfax.mysticminerals.tags.ModTags;
 
@@ -35,7 +36,27 @@ public class ModItemTagProvider extends ItemTagsProvider {
 			.add(Items.AMETHYST_SHARD);
 		tag(ModTags.Items.GARNET_CONVERTABLE)
 			.add(MineralItems.GARNET_SHARD.get());
-			
+		
+		tag(ModTags.Items.EMERALD_ORE_CONVERTABLE)
+			.add(Items.EMERALD_ORE);
+		tag(ModTags.Items.RUBY_ORE_CONVERTABLE)
+			.add(MineralItems.RUBY_ORE.get());
+		tag(ModTags.Items.SAPPHIRE_ORE_CONVERTABLE)
+			.add(MineralItems.SAPPHIRE_ORE.get());
+		tag(ModTags.Items.DEEPSLATE_EMERALD_ORE_CONVERTABLE)
+			.add(Items.DEEPSLATE_EMERALD_ORE);
+		tag(ModTags.Items.DEEPSLATE_RUBY_ORE_CONVERTABLE)
+			.add(MineralItems.DEEPSLATE_RUBY_ORE.get());
+		tag(ModTags.Items.DEEPSLATE_SAPPHIRE_ORE_CONVERTABLE)
+			.add(MineralItems.DEEPSLATE_SAPPHIRE_ORE.get());
+		tag(ModTags.Items.AMETHYST_BLOCK_CONVERTABLE)
+			.add(Items.AMETHYST_BLOCK);
+		tag(ModTags.Items.GARNET_BLOCK_CONVERTABLE)
+			.add(MineralItems.GARNET_BLOCK.get());
+		tag(ModTags.Items.BUDDING_AMETHYST_CONVERTABLE)
+			.add(Items.BUDDING_AMETHYST);
+		tag(ModTags.Items.BUDDING_GARNET_CONVERTABLE)
+			.add(MineralItems.BUDDING_GARNET.get());
 		
 		tag(ModTags.Items.RUBY_REPAIRABLE)
 			.add(MineralItems.RUBY.get());
@@ -53,7 +74,10 @@ public class ModItemTagProvider extends ItemTagsProvider {
 		/* TOOLS */
 		
 		tag(ItemTags.DURABILITY_ENCHANTABLE).add(MineralItems.CRYSTAL_RESONATOR.get());
-				
+		
+		tag(ItemTags.BREWING_FUEL).add(MineralItems.GARNET_SHARD.get());
+		tag(ItemTags.DUPLICATES_ALLAYS).add(MineralItems.GARNET_SHARD.get());
+		
 		tag(ItemTags.SWORDS).add(MineralItems.RUBY_SWORD.get());
 		tag(ItemTags.PICKAXES).add(MineralItems.RUBY_PICKAXE.get());
 		tag(ItemTags.AXES).add(MineralItems.RUBY_AXE.get());
@@ -88,6 +112,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
 		tag(ItemTags.SHOVELS).add(MineralItems.SHARPENED_FLINT_SHOVEL.get());
 		tag(ItemTags.HOES).add(MineralItems.SHARPENED_FLINT_HOE.get());
 		tag(ItemTags.SPEARS).add(MineralItems.SHARPENED_FLINT_SPEAR.get());
+		
+		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.RUBY_PICKAXE.get());
+		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.SAPPHIRE_PICKAXE.get());
+		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.EMERALD_PICKAXE.get());
+		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.FLINT_PICKAXE.get());
+		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.SHARPENED_FLINT_PICKAXE.get());
 		
 		/* ARMOR */
 		

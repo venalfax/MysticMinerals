@@ -107,6 +107,11 @@ public class ModModelProvider extends ModelProvider {
 		blockModels.createTrivialCube(MineralBlocks.RUBY_BLOCK.get());
 		blockModels.createTrivialCube(MineralBlocks.SAPPHIRE_BLOCK.get());
 		blockModels.createTrivialCube(MineralBlocks.GARNET_BLOCK.get());
+		blockModels.createTrivialCube(MineralBlocks.BUDDING_GARNET.get());
+		blockModels.createAmethystCluster(MineralBlocks.GARNET_CLUSTER.get());
+		blockModels.createAmethystCluster(MineralBlocks.LARGE_GARNET_BUD.get());
+		blockModels.createAmethystCluster(MineralBlocks.MEDIUM_GARNET_BUD.get());
+		blockModels.createAmethystCluster(MineralBlocks.SMALL_GARNET_BUD.get());
 		blockModels.createTrivialCube(MineralBlocks.RUBY_ORE.get());
 		blockModels.createTrivialCube(MineralBlocks.SAPPHIRE_ORE.get());
 		blockModels.createTrivialCube(MineralBlocks.DEEPSLATE_RUBY_ORE.get());

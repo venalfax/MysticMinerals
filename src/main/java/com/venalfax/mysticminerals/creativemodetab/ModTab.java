@@ -105,6 +105,11 @@ public class ModTab {
 						output.accept(MineralBlocks.RUBY_BLOCK);
 						output.accept(MineralBlocks.SAPPHIRE_BLOCK);
 						output.accept(MineralBlocks.GARNET_BLOCK);
+						output.accept(MineralBlocks.BUDDING_GARNET);
+						output.accept(MineralBlocks.GARNET_CLUSTER);
+						output.accept(MineralBlocks.LARGE_GARNET_BUD);
+						output.accept(MineralBlocks.MEDIUM_GARNET_BUD);
+						output.accept(MineralBlocks.SMALL_GARNET_BUD);
 						output.accept(MineralBlocks.RUBY_ORE);
 						output.accept(MineralBlocks.DEEPSLATE_RUBY_ORE);
 						output.accept(MineralBlocks.SAPPHIRE_ORE);
