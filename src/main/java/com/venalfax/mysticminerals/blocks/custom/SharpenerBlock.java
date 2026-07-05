@@ -24,8 +24,8 @@ public class SharpenerBlock extends Block {
 	}
 	
 	private int interactionProgress = 0;
-	// Set for 60 seconds testing shows completion in 30 seconds 
-	private final int requiredInteractionTime = 1200;
+	// Set for 30 seconds 
+	private final int requiredInteractionTime = 600;
 	// Resets progress when no item is on block does not work T_T
 	public void tick() {
 		if(interactionProgress > 0) {

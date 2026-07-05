@@ -6,11 +6,7 @@ import com.mojang.logging.LogUtils;
 import com.venalfax.mysticminerals.blocks.MineralBlocks;
 import com.venalfax.mysticminerals.creativemodetab.ModTab;
 import com.venalfax.mysticminerals.items.MineralItems;
-import com.venalfax.mysticminerals.registry.MineralsModifier;
 import com.venalfax.mysticminerals.stat.MineralStats;
-import com.venalfax.mysticminerals.worldgen.ModBiomeGen;
-import com.venalfax.mysticminerals.worldgen.ModWorldGen;
-import com.venalfax.mysticminerals.worldgen.features.MineralsFeatures;
 
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -45,11 +41,6 @@ public class MysticMinerals {
         MineralBlocks.register(modEventBus);
         
         MineralStats.register(modEventBus);
-        
-        MineralsFeatures.initialize();
-        ModWorldGen.REGISTRY.register(modEventBus);
-        ModBiomeGen.REGISTRY.register(modEventBus);
-        MineralsModifier.BIOME_MODIFIER_SERIALIZERS.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
         // Register the item to a creative tab
