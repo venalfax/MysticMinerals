@@ -2,6 +2,7 @@ package com.venalfax.mysticminerals.worldgen;
 
 import java.util.List;
 
+import com.venalfax.mysticminerals.MysticMinerals;
 import com.venalfax.mysticminerals.blocks.MineralBlocks;
 
 import net.minecraft.core.Holder;
@@ -25,9 +26,11 @@ import net.minecraft.world.level.levelgen.placement.InSquarePlacement;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
 import net.minecraft.world.level.levelgen.placement.PlacementModifier;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
+import net.neoforged.neoforge.registries.DeferredRegister;
 
 public final class ModWorldGen {
-
+	public static final DeferredRegister<Feature<?>> REGISTRY = DeferredRegister.create(Registries.FEATURE, MysticMinerals.MOD_ID);
+	
 	public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_ORE = FeatureUtils.createKey("ruby_ore");
 	public static final ResourceKey<ConfiguredFeature<?, ?>> SAPPHIRE_ORE = FeatureUtils.createKey("sapphire_ore");
 	

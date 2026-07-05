@@ -3,7 +3,6 @@ package com.venalfax.mysticminerals.datagen;
 import java.util.concurrent.CompletableFuture;
 
 import com.venalfax.mysticminerals.MysticMinerals;
-import com.venalfax.mysticminerals.blocks.MineralBlocks;
 import com.venalfax.mysticminerals.items.MineralItems;
 import com.venalfax.mysticminerals.tags.ModTags;
 
@@ -76,6 +75,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
 		tag(ItemTags.DURABILITY_ENCHANTABLE).add(MineralItems.CRYSTAL_RESONATOR.get());
 		
 		tag(ItemTags.BREWING_FUEL).add(MineralItems.GARNET_SHARD.get());
+		tag(ItemTags.FURNACE_MINECART_FUEL).add(MineralItems.GARNET_SHARD.get());
 		tag(ItemTags.DUPLICATES_ALLAYS).add(MineralItems.GARNET_SHARD.get());
 		
 		tag(ItemTags.SWORDS).add(MineralItems.RUBY_SWORD.get());

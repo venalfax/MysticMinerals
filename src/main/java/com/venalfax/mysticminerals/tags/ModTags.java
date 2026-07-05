@@ -12,6 +12,8 @@ import net.minecraft.world.level.block.Block;
 public class ModTags {
 	
 	public static class Blocks{
+		public static final TagKey<Block> MYSTIC_MINERALS_BLOCKS = createTag("mystic_minerals_blocks");
+		
 		public static final TagKey<Block> CRYSTAL_RESONATORS = createTag("crystal_resonators");
 		
 		public static final TagKey<Block> NEEDS_MINERAL_TOOL = createTag("needs_mineral_tool");
@@ -27,6 +29,8 @@ public class ModTags {
 	}
 	
 	public static class Items{
+		public static final TagKey<Item> MYSTIC_MINERALS_ITEMS = createTag("mystic_minerals_items");
+		
 		public static final TagKey<Item> SHARPENABLE = createTag("sharpenable");
 		
 		public static final TagKey<Item> EMERALD_CONVERTABLE = createTag("emerald_convertable");

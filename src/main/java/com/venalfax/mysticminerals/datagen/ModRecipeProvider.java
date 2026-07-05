@@ -185,7 +185,25 @@ public class ModRecipeProvider extends RecipeProvider {
 			.unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
 			.unlockedBy(getHasName(Blocks.EMERALD_BLOCK), has(Blocks.EMERALD_BLOCK))
 			.save(output);
+		
+		shaped(RecipeCategory.REDSTONE, MineralBlocks.GEM_LAMP.get())
+			.pattern(" g ")
+			.pattern("gRg")
+			.pattern(" g ")
+			.define('g', MineralItems.GARNET_SHARD.get())
+			.define('R', Blocks.REDSTONE_LAMP)
+			.unlockedBy(getHasName(MineralItems.GARNET_SHARD.get()), has(MineralItems.GARNET_SHARD.get()))
+			.unlockedBy(getHasName(Blocks.REDSTONE_LAMP), has(Blocks.REDSTONE_LAMP))
+			.save(output);
 			
+		shaped(RecipeCategory.REDSTONE, MineralBlocks.AMETHYST_PRESSURE_PLATE.get())
+			.pattern("AA")
+			.define('A', Blocks.AMETHYST_BLOCK)
+			.unlockedBy(getHasName(Blocks.AMETHYST_BLOCK), has(Blocks.AMETHYST_BLOCK))
+			.group("amethyst")
+			.save(output);
+		
+		/* FOOD */
 		
 		shaped(RecipeCategory.FOOD, MineralItems.RUBY_POTATO.get())
 			.pattern("RRR")
@@ -215,13 +233,6 @@ public class ModRecipeProvider extends RecipeProvider {
 			.define('H', Items.HONEY_BOTTLE)
 			.unlockedBy(getHasName(Blocks.EMERALD_BLOCK), has(Blocks.EMERALD_BLOCK))
 			.group("food")
-			.save(output);
-		
-		shaped(RecipeCategory.REDSTONE, MineralBlocks.AMETHYST_PRESSURE_PLATE.get())
-			.pattern("AA")
-			.define('A', Blocks.AMETHYST_BLOCK)
-			.unlockedBy(getHasName(Blocks.AMETHYST_BLOCK), has(Blocks.AMETHYST_BLOCK))
-			.group("amethyst")
 			.save(output);
 		
 		/* TOOLS */
