@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 import com.venalfax.mysticminerals.blocks.MineralBlocks;
-import com.venalfax.mysticminerals.creativemodetab.ModTab;
+import com.venalfax.mysticminerals.creativemodetab.MineralTab;
 import com.venalfax.mysticminerals.items.MineralItems;
 import com.venalfax.mysticminerals.stat.MineralStats;
 
@@ -35,7 +35,7 @@ public class MysticMinerals {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
         
-        ModTab.register(modEventBus);
+        MineralTab.register(modEventBus);
         
         MineralItems.register(modEventBus);
         MineralBlocks.register(modEventBus);
@@ -87,6 +87,7 @@ public class MysticMinerals {
     	
     	if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
     		event.accept(MineralItems.CRYSTAL_RESONATOR);
+    		event.accept(MineralItems.RUBY_SCEPTER);
     		
     		event.accept(MineralItems.RUBY_SHOVEL);
     		event.accept(MineralItems.RUBY_PICKAXE);
@@ -132,6 +133,8 @@ public class MysticMinerals {
     		event.accept(MineralItems.EMERALD_AXE);
     		event.accept(MineralItems.FLINT_AXE);
     		event.accept(MineralItems.SHARPENED_FLINT_AXE);
+    		
+    		event.accept(MineralItems.CRYSTAL_BOW);
     		
     		event.accept(MineralItems.RUBY_HELMET);
     		event.accept(MineralItems.RUBY_CHESTPLATE);

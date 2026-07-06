@@ -7,6 +7,8 @@ import com.venalfax.mysticminerals.datagen.ModBlockLootTableProvider;
 import com.venalfax.mysticminerals.datagen.ModBlockTagProvider;
 import com.venalfax.mysticminerals.datagen.ModDataMapProvider;
 import com.venalfax.mysticminerals.datagen.ModEquipmentAssetProvider;
+import com.venalfax.mysticminerals.datagen.ModPaintingTagsProvider;
+import com.venalfax.mysticminerals.datagen.ModDatapackProvider;
 import com.venalfax.mysticminerals.datagen.ModItemTagProvider;
 import com.venalfax.mysticminerals.datagen.ModModelProvider;
 import com.venalfax.mysticminerals.datagen.ModRecipeProvider;
@@ -38,6 +40,8 @@ public class MysticMineralsDataGen {
 		generator.addProvider(true, new ModItemTagProvider(packOutput, lookupProvider));
 		
 		generator.addProvider(true, new ModEquipmentAssetProvider(packOutput));
+		generator.addProvider(true, new ModDatapackProvider(packOutput, lookupProvider));
+		generator.addProvider(true, new ModPaintingTagsProvider(packOutput,lookupProvider));
 		
 	}
 	

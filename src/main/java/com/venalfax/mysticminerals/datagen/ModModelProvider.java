@@ -4,7 +4,7 @@ import com.venalfax.mysticminerals.MysticMinerals;
 import com.venalfax.mysticminerals.blocks.MineralBlocks;
 import com.venalfax.mysticminerals.blocks.custom.GemLampBlock;
 import com.venalfax.mysticminerals.items.MineralItems;
-import com.venalfax.mysticminerals.items.ModArmorMaterials;
+import com.venalfax.mysticminerals.items.MineralArmorMaterials;
 
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
@@ -39,6 +39,10 @@ public class ModModelProvider extends ModelProvider {
 		/* TOOLS */
 		
 		itemModels.declareCustomModelItem(MineralItems.CRYSTAL_RESONATOR.get());
+		itemModels.declareCustomModelItem(MineralItems.RUBY_SCEPTER.get());
+		
+		itemModels.createFlatItemModel(MineralItems.CRYSTAL_BOW.get(), ModelTemplates.BOW);
+		itemModels.generateBow(MineralItems.CRYSTAL_BOW.get());
 		
 		itemModels.generateFlatItem(MineralItems.RUBY_SWORD.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
 		itemModels.generateFlatItem(MineralItems.RUBY_PICKAXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
@@ -77,30 +81,30 @@ public class ModModelProvider extends ModelProvider {
 		
 		/* ARMOR */
 		
-		itemModels.generateTrimmableItem(MineralItems.RUBY_HELMET.get(), ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-		itemModels.generateTrimmableItem(MineralItems.RUBY_CHESTPLATE.get(), ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-		itemModels.generateTrimmableItem(MineralItems.RUBY_LEGGINGS.get(), ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-		itemModels.generateTrimmableItem(MineralItems.RUBY_BOOTS.get(), ModArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+		itemModels.generateTrimmableItem(MineralItems.RUBY_HELMET.get(), MineralArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+		itemModels.generateTrimmableItem(MineralItems.RUBY_CHESTPLATE.get(), MineralArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+		itemModels.generateTrimmableItem(MineralItems.RUBY_LEGGINGS.get(), MineralArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+		itemModels.generateTrimmableItem(MineralItems.RUBY_BOOTS.get(), MineralArmorMaterials.RUBY_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
-		itemModels.generateTrimmableItem(MineralItems.SAPPHIRE_HELMET.get(), ModArmorMaterials.SAPPHIRE_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-		itemModels.generateTrimmableItem(MineralItems.SAPPHIRE_CHESTPLATE.get(), ModArmorMaterials.SAPPHIRE_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-		itemModels.generateTrimmableItem(MineralItems.SAPPHIRE_LEGGINGS.get(), ModArmorMaterials.SAPPHIRE_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-		itemModels.generateTrimmableItem(MineralItems.SAPPHIRE_BOOTS.get(), ModArmorMaterials.SAPPHIRE_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+		itemModels.generateTrimmableItem(MineralItems.SAPPHIRE_HELMET.get(), MineralArmorMaterials.SAPPHIRE_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+		itemModels.generateTrimmableItem(MineralItems.SAPPHIRE_CHESTPLATE.get(), MineralArmorMaterials.SAPPHIRE_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+		itemModels.generateTrimmableItem(MineralItems.SAPPHIRE_LEGGINGS.get(), MineralArmorMaterials.SAPPHIRE_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+		itemModels.generateTrimmableItem(MineralItems.SAPPHIRE_BOOTS.get(), MineralArmorMaterials.SAPPHIRE_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 		
-		itemModels.generateTrimmableItem(MineralItems.EMERALD_HELMET.get(), ModArmorMaterials.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-		itemModels.generateTrimmableItem(MineralItems.EMERALD_CHESTPLATE.get(), ModArmorMaterials.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-		itemModels.generateTrimmableItem(MineralItems.EMERALD_LEGGINGS.get(), ModArmorMaterials.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-		itemModels.generateTrimmableItem(MineralItems.EMERALD_BOOTS.get(), ModArmorMaterials.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+		itemModels.generateTrimmableItem(MineralItems.EMERALD_HELMET.get(), MineralArmorMaterials.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+		itemModels.generateTrimmableItem(MineralItems.EMERALD_CHESTPLATE.get(), MineralArmorMaterials.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+		itemModels.generateTrimmableItem(MineralItems.EMERALD_LEGGINGS.get(), MineralArmorMaterials.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+		itemModels.generateTrimmableItem(MineralItems.EMERALD_BOOTS.get(), MineralArmorMaterials.EMERALD_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 		
-		itemModels.generateTrimmableItem(MineralItems.FLINT_HELMET.get(), ModArmorMaterials.FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-		itemModels.generateTrimmableItem(MineralItems.FLINT_CHESTPLATE.get(), ModArmorMaterials.FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-		itemModels.generateTrimmableItem(MineralItems.FLINT_LEGGINGS.get(), ModArmorMaterials.FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-		itemModels.generateTrimmableItem(MineralItems.FLINT_BOOTS.get(), ModArmorMaterials.FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+		itemModels.generateTrimmableItem(MineralItems.FLINT_HELMET.get(), MineralArmorMaterials.FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+		itemModels.generateTrimmableItem(MineralItems.FLINT_CHESTPLATE.get(), MineralArmorMaterials.FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+		itemModels.generateTrimmableItem(MineralItems.FLINT_LEGGINGS.get(), MineralArmorMaterials.FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+		itemModels.generateTrimmableItem(MineralItems.FLINT_BOOTS.get(), MineralArmorMaterials.FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 		
-		itemModels.generateTrimmableItem(MineralItems.TEMPERED_FLINT_HELMET.get(), ModArmorMaterials.TEMPERED_FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-		itemModels.generateTrimmableItem(MineralItems.TEMPERED_FLINT_CHESTPLATE.get(), ModArmorMaterials.TEMPERED_FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-		itemModels.generateTrimmableItem(MineralItems.TEMPERED_FLINT_LEGGINGS.get(), ModArmorMaterials.TEMPERED_FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-		itemModels.generateTrimmableItem(MineralItems.TEMPERED_FLINT_BOOTS.get(), ModArmorMaterials.TEMPERED_FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+		itemModels.generateTrimmableItem(MineralItems.TEMPERED_FLINT_HELMET.get(), MineralArmorMaterials.TEMPERED_FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+		itemModels.generateTrimmableItem(MineralItems.TEMPERED_FLINT_CHESTPLATE.get(), MineralArmorMaterials.TEMPERED_FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+		itemModels.generateTrimmableItem(MineralItems.TEMPERED_FLINT_LEGGINGS.get(), MineralArmorMaterials.TEMPERED_FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+		itemModels.generateTrimmableItem(MineralItems.TEMPERED_FLINT_BOOTS.get(), MineralArmorMaterials.TEMPERED_FLINT_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 		
 		/* BLOCKS */
 		

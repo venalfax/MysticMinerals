@@ -6,7 +6,7 @@ import java.util.concurrent.CompletableFuture;
 import java.util.function.BiConsumer;
 
 import com.venalfax.mysticminerals.MysticMinerals;
-import com.venalfax.mysticminerals.items.ModArmorMaterials;
+import com.venalfax.mysticminerals.items.MineralArmorMaterials;
 
 import net.minecraft.client.resources.model.EquipmentClientInfo;
 import net.minecraft.data.CachedOutput;
@@ -25,19 +25,19 @@ public class ModEquipmentAssetProvider implements DataProvider {
 	}
 
 	private static void bootstrap(BiConsumer<ResourceKey<EquipmentAsset>, EquipmentClientInfo> output) {
-			output.accept(ModArmorMaterials.RUBY_KEY, EquipmentClientInfo.builder()
+			output.accept(MineralArmorMaterials.RUBY_KEY, EquipmentClientInfo.builder()
 						.addHumanoidLayers(Identifier.fromNamespaceAndPath(MysticMinerals.MOD_ID, "ruby"), false)
 						.build());
-			output.accept(ModArmorMaterials.SAPPHIRE_KEY, EquipmentClientInfo.builder()
+			output.accept(MineralArmorMaterials.SAPPHIRE_KEY, EquipmentClientInfo.builder()
 						.addHumanoidLayers(Identifier.fromNamespaceAndPath(MysticMinerals.MOD_ID, "sapphire"), false)
 						.build());
-			output.accept(ModArmorMaterials.EMERALD_KEY, EquipmentClientInfo.builder()
+			output.accept(MineralArmorMaterials.EMERALD_KEY, EquipmentClientInfo.builder()
 						.addHumanoidLayers(Identifier.fromNamespaceAndPath(MysticMinerals.MOD_ID, "emerald"), false)
 						.build());
-			output.accept(ModArmorMaterials.FLINT_KEY, EquipmentClientInfo.builder()
+			output.accept(MineralArmorMaterials.FLINT_KEY, EquipmentClientInfo.builder()
 						.addHumanoidLayers(Identifier.fromNamespaceAndPath(MysticMinerals.MOD_ID, "flint"), false)
 						.build());
-			output.accept(ModArmorMaterials.TEMPERED_FLINT_KEY, EquipmentClientInfo.builder()
+			output.accept(MineralArmorMaterials.TEMPERED_FLINT_KEY, EquipmentClientInfo.builder()
 						.addHumanoidLayers(Identifier.fromNamespaceAndPath(MysticMinerals.MOD_ID, "tempered_flint"), false)
 						.build());
 	}

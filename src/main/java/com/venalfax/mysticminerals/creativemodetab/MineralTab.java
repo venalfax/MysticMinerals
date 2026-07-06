@@ -13,7 +13,7 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-public class ModTab {
+public class MineralTab {
 	public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = 
 			DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MysticMinerals.MOD_ID);
 	
@@ -33,10 +33,13 @@ public class ModTab {
 						output.accept(MineralItems.RUBY_POTATO);
 						output.accept(MineralItems.SAPPHIRE_STEW);
 						output.accept(MineralItems.EMERALD_HONEY);
-						
-						output.accept(MineralItems.CRYSTAL_RESONATOR);
 
 						/* TOOLS */
+
+						output.accept(MineralItems.CRYSTAL_RESONATOR);
+						output.accept(MineralItems.RUBY_SCEPTER);
+						
+						output.accept(MineralItems.CRYSTAL_BOW);
 						
 						output.accept(MineralItems.RUBY_SWORD);
 						output.accept(MineralItems.RUBY_PICKAXE);

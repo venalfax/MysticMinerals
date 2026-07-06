@@ -9,7 +9,7 @@ import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
-public class ModTags {
+public class MineralTags {
 	
 	public static class Blocks{
 		public static final TagKey<Block> MYSTIC_MINERALS_BLOCKS = createTag("mystic_minerals_blocks");

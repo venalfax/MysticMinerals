@@ -4,7 +4,7 @@ import java.util.concurrent.CompletableFuture;
 
 import com.venalfax.mysticminerals.MysticMinerals;
 import com.venalfax.mysticminerals.items.MineralItems;
-import com.venalfax.mysticminerals.tags.ModTags;
+import com.venalfax.mysticminerals.tags.MineralTags;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -21,58 +21,61 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
 	@Override
 	protected void addTags(HolderLookup.Provider registries) {
-		tag(ModTags.Items.SHARPENABLE) 
+		tag(MineralTags.Items.SHARPENABLE) 
 			.add(Items.FLINT)
 			.add(MineralItems.TEMPERED_FLINT.get());
 		
-		tag(ModTags.Items.EMERALD_CONVERTABLE)
+		tag(MineralTags.Items.EMERALD_CONVERTABLE)
 			.add(Items.EMERALD);
-		tag(ModTags.Items.RUBY_CONVERTABLE)
+		tag(MineralTags.Items.RUBY_CONVERTABLE)
 			.add(MineralItems.RUBY.get());
-		tag(ModTags.Items.SAPPHIRE_CONVERTABLE)
+		tag(MineralTags.Items.SAPPHIRE_CONVERTABLE)
 			.add(MineralItems.SAPPHIRE.get());
-		tag(ModTags.Items.AMETHYST_CONVERTABLE)
+		tag(MineralTags.Items.AMETHYST_CONVERTABLE)
 			.add(Items.AMETHYST_SHARD);
-		tag(ModTags.Items.GARNET_CONVERTABLE)
+		tag(MineralTags.Items.GARNET_CONVERTABLE)
 			.add(MineralItems.GARNET_SHARD.get());
 		
-		tag(ModTags.Items.EMERALD_ORE_CONVERTABLE)
+		tag(MineralTags.Items.EMERALD_ORE_CONVERTABLE)
 			.add(Items.EMERALD_ORE);
-		tag(ModTags.Items.RUBY_ORE_CONVERTABLE)
+		tag(MineralTags.Items.RUBY_ORE_CONVERTABLE)
 			.add(MineralItems.RUBY_ORE.get());
-		tag(ModTags.Items.SAPPHIRE_ORE_CONVERTABLE)
+		tag(MineralTags.Items.SAPPHIRE_ORE_CONVERTABLE)
 			.add(MineralItems.SAPPHIRE_ORE.get());
-		tag(ModTags.Items.DEEPSLATE_EMERALD_ORE_CONVERTABLE)
+		tag(MineralTags.Items.DEEPSLATE_EMERALD_ORE_CONVERTABLE)
 			.add(Items.DEEPSLATE_EMERALD_ORE);
-		tag(ModTags.Items.DEEPSLATE_RUBY_ORE_CONVERTABLE)
+		tag(MineralTags.Items.DEEPSLATE_RUBY_ORE_CONVERTABLE)
 			.add(MineralItems.DEEPSLATE_RUBY_ORE.get());
-		tag(ModTags.Items.DEEPSLATE_SAPPHIRE_ORE_CONVERTABLE)
+		tag(MineralTags.Items.DEEPSLATE_SAPPHIRE_ORE_CONVERTABLE)
 			.add(MineralItems.DEEPSLATE_SAPPHIRE_ORE.get());
-		tag(ModTags.Items.AMETHYST_BLOCK_CONVERTABLE)
+		tag(MineralTags.Items.AMETHYST_BLOCK_CONVERTABLE)
 			.add(Items.AMETHYST_BLOCK);
-		tag(ModTags.Items.GARNET_BLOCK_CONVERTABLE)
+		tag(MineralTags.Items.GARNET_BLOCK_CONVERTABLE)
 			.add(MineralItems.GARNET_BLOCK.get());
-		tag(ModTags.Items.BUDDING_AMETHYST_CONVERTABLE)
+		tag(MineralTags.Items.BUDDING_AMETHYST_CONVERTABLE)
 			.add(Items.BUDDING_AMETHYST);
-		tag(ModTags.Items.BUDDING_GARNET_CONVERTABLE)
+		tag(MineralTags.Items.BUDDING_GARNET_CONVERTABLE)
 			.add(MineralItems.BUDDING_GARNET.get());
 		
-		tag(ModTags.Items.RUBY_REPAIRABLE)
+		tag(MineralTags.Items.RUBY_REPAIRABLE)
 			.add(MineralItems.RUBY.get());
-		tag(ModTags.Items.SAPPHIRE_REPAIRABLE)
+		tag(MineralTags.Items.SAPPHIRE_REPAIRABLE)
 			.add(MineralItems.SAPPHIRE.get());
-		tag(ModTags.Items.EMERALD_REPAIRABLE)
+		tag(MineralTags.Items.EMERALD_REPAIRABLE)
 			.add(Items.EMERALD);
-		tag(ModTags.Items.FLINT_REPAIRABLE)
+		tag(MineralTags.Items.FLINT_REPAIRABLE)
 			.add(Items.FLINT);
-		tag(ModTags.Items.SHARPENED_FLINT_REPAIRABLE)
+		tag(MineralTags.Items.SHARPENED_FLINT_REPAIRABLE)
 			.add(MineralItems.SHARPENED_FLINT.get());
-		tag(ModTags.Items.TEMPERED_FLINT_REPAIRABLE)
+		tag(MineralTags.Items.TEMPERED_FLINT_REPAIRABLE)
 			.add(MineralItems.TEMPERED_FLINT.get());
 		
 		/* TOOLS */
 		
 		tag(ItemTags.DURABILITY_ENCHANTABLE).add(MineralItems.CRYSTAL_RESONATOR.get());
+		tag(ItemTags.DURABILITY_ENCHANTABLE).add(MineralItems.RUBY_SCEPTER.get());
+		
+		tag(ItemTags.BOW_ENCHANTABLE).add(MineralItems.CRYSTAL_BOW.get());
 		
 		tag(ItemTags.BREWING_FUEL).add(MineralItems.GARNET_SHARD.get());
 		tag(ItemTags.FURNACE_MINECART_FUEL).add(MineralItems.GARNET_SHARD.get());

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": "mysticminerals:garnet_shard",
+    "S": "minecraft:string",
+    "s": "minecraft:stick"
+  },
+  "pattern": [
+    " GS",
+    "s S",
+    " GS"
+  ],
+  "result": {
+    "id": "mysticminerals:crystal_bow"
+  }
+}

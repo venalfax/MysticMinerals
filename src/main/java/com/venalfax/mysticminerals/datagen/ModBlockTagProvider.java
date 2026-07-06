@@ -4,7 +4,7 @@ import java.util.concurrent.CompletableFuture;
 
 import com.venalfax.mysticminerals.MysticMinerals;
 import com.venalfax.mysticminerals.blocks.MineralBlocks;
-import com.venalfax.mysticminerals.tags.ModTags;
+import com.venalfax.mysticminerals.tags.MineralTags;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
@@ -61,7 +61,7 @@ public class ModBlockTagProvider extends BlockTagsProvider{
 			.add(MineralBlocks.RUBY_BLOCK.get())
 			.add(MineralBlocks.SAPPHIRE_BLOCK.get());
 		
-		tag(ModTags.Blocks.CRYSTAL_RESONATORS)
+		tag(MineralTags.Blocks.CRYSTAL_RESONATORS)
 			.add(Blocks.EMERALD_BLOCK)
 			.add(Blocks.EMERALD_ORE)
 			.add(Blocks.DEEPSLATE_EMERALD_ORE)
@@ -86,26 +86,26 @@ public class ModBlockTagProvider extends BlockTagsProvider{
 			.add(MineralBlocks.MEDIUM_GARNET_BUD.get())
 			.add(MineralBlocks.SMALL_GARNET_BUD.get());
 			
-		tag(ModTags.Blocks.NEEDS_MINERAL_TOOL)
+		tag(MineralTags.Blocks.NEEDS_MINERAL_TOOL)
 			.addTag(BlockTags.NEEDS_DIAMOND_TOOL);
 		
-		tag(ModTags.Blocks.INCORRECT_FOR_MINERAL_TOOL)
+		tag(MineralTags.Blocks.INCORRECT_FOR_MINERAL_TOOL)
 			.addTag(BlockTags.INCORRECT_FOR_DIAMOND_TOOL)
-			.remove(ModTags.Blocks.NEEDS_MINERAL_TOOL);
+			.remove(MineralTags.Blocks.NEEDS_MINERAL_TOOL);
 		
-		tag(ModTags.Blocks.NEEDS_FLINT_TOOL)
+		tag(MineralTags.Blocks.NEEDS_FLINT_TOOL)
 			.addTag(BlockTags.NEEDS_STONE_TOOL);
 	
-		tag(ModTags.Blocks.INCORRECT_FOR_FLINT_TOOL)
+		tag(MineralTags.Blocks.INCORRECT_FOR_FLINT_TOOL)
 			.addTag(BlockTags.INCORRECT_FOR_STONE_TOOL)
-			.remove(ModTags.Blocks.NEEDS_FLINT_TOOL);
+			.remove(MineralTags.Blocks.NEEDS_FLINT_TOOL);
 		
-		tag(ModTags.Blocks.NEEDS_SHARPENED_FLINT_TOOL)
+		tag(MineralTags.Blocks.NEEDS_SHARPENED_FLINT_TOOL)
 			.addTag(BlockTags.NEEDS_IRON_TOOL);
 
-		tag(ModTags.Blocks.INCORRECT_FOR_SHARPENED_FLINT_TOOL)
+		tag(MineralTags.Blocks.INCORRECT_FOR_SHARPENED_FLINT_TOOL)
 			.addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
-			.remove(ModTags.Blocks.NEEDS_SHARPENED_FLINT_TOOL);
+			.remove(MineralTags.Blocks.NEEDS_SHARPENED_FLINT_TOOL);
 			
 	}
 

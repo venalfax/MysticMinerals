@@ -1,0 +1,13 @@
+{
+  "asset_id": "mysticminerals:crystal_forge",
+  "author": {
+    "color": "gray",
+    "translate": "painting.mysticminerals.crystal_forge.author"
+  },
+  "height": 3,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.mysticminerals.crystal_forge.title"
+  },
+  "width": 4
+}

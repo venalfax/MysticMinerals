@@ -1,5 +1,7 @@
 package com.venalfax.mysticminerals;
 
+import com.venalfax.mysticminerals.items.MineralItems;
+
 import net.minecraft.client.Minecraft;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -7,6 +9,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
+import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
@@ -28,4 +31,22 @@ public class MysticMineralsClient {
         MysticMinerals.LOGGER.info("HELLO FROM CLIENT SETUP");
         MysticMinerals.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
     }
+    
+    @SubscribeEvent
+    public static void onComputeFovModifierEvent(ComputeFovModifierEvent event) {
+    	if(event.getPlayer().isUsingItem() && event.getPlayer().getUseItem().getItem() == MineralItems.CRYSTAL_BOW.get()) {
+    		float fovModifier = 0.8f;
+    		int ticksUsingItem = event.getPlayer().getTicksUsingItem();
+    		float deltaTicks = (float)ticksUsingItem / 20f;
+    		if(deltaTicks > 1f) {
+    			deltaTicks = 1f;
+    		} else {
+    			deltaTicks *= deltaTicks;
+    		}
+    		
+    		fovModifier *= 1f - deltaTicks * 0.15f;
+    		event.setNewFovModifier(fovModifier);
+    	}
+    }
+    
 }

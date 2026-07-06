@@ -1,7 +1,7 @@
 package com.venalfax.mysticminerals.blocks.custom;
 
 import com.venalfax.mysticminerals.items.MineralItems;
-import com.venalfax.mysticminerals.tags.ModTags;
+import com.venalfax.mysticminerals.tags.MineralTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -96,7 +96,7 @@ public class SharpenerBlock extends Block {
 	
 	private boolean isValidItem(ItemStack item) {
 		
-		return item.is(ModTags.Items.SHARPENABLE);
+		return item.is(MineralTags.Items.SHARPENABLE);
 	}
 	
 }

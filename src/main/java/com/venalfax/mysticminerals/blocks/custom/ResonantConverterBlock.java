@@ -2,7 +2,7 @@ package com.venalfax.mysticminerals.blocks.custom;
 
 import com.venalfax.mysticminerals.blocks.MineralBlocks;
 import com.venalfax.mysticminerals.items.MineralItems;
-import com.venalfax.mysticminerals.tags.ModTags;
+import com.venalfax.mysticminerals.tags.MineralTags;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
@@ -257,77 +257,77 @@ public class ResonantConverterBlock extends Block {
 	
 	private boolean isEmeraldItem(ItemStack item) {
 		
-		return item.is(ModTags.Items.EMERALD_CONVERTABLE);
+		return item.is(MineralTags.Items.EMERALD_CONVERTABLE);
 	}
 	
 	private boolean isRubyItem(ItemStack item) {
 		
-		return item.is(ModTags.Items.RUBY_CONVERTABLE);
+		return item.is(MineralTags.Items.RUBY_CONVERTABLE);
 	}
 	
 	private boolean isSapphireItem(ItemStack item) {
 		
-		return item.is(ModTags.Items.SAPPHIRE_CONVERTABLE);
+		return item.is(MineralTags.Items.SAPPHIRE_CONVERTABLE);
 	}
 
 	private boolean isAmethystItem(ItemStack item) {
 	
-		return item.is(ModTags.Items.AMETHYST_CONVERTABLE);
+		return item.is(MineralTags.Items.AMETHYST_CONVERTABLE);
 	}
 
 	private boolean isGarnetItem(ItemStack item) {
 	
-		return item.is(ModTags.Items.GARNET_CONVERTABLE);
+		return item.is(MineralTags.Items.GARNET_CONVERTABLE);
 	}
 	
 	private boolean isEmeraldOreItem(ItemStack item) {
 		
-		return item.is(ModTags.Items.EMERALD_ORE_CONVERTABLE);
+		return item.is(MineralTags.Items.EMERALD_ORE_CONVERTABLE);
 	}
 	
 	private boolean isRubyOreItem(ItemStack item) {
 		
-		return item.is(ModTags.Items.RUBY_ORE_CONVERTABLE);
+		return item.is(MineralTags.Items.RUBY_ORE_CONVERTABLE);
 	}
 	
 	private boolean isSapphireOreItem(ItemStack item) {
 		
-		return item.is(ModTags.Items.SAPPHIRE_ORE_CONVERTABLE);
+		return item.is(MineralTags.Items.SAPPHIRE_ORE_CONVERTABLE);
 	}
 	
 	private boolean isDeepslateEmeraldOreItem(ItemStack item) {
 		
-		return item.is(ModTags.Items.DEEPSLATE_EMERALD_ORE_CONVERTABLE);
+		return item.is(MineralTags.Items.DEEPSLATE_EMERALD_ORE_CONVERTABLE);
 	}
 	
 	private boolean isDeepslateRubyOreItem(ItemStack item) {
 		
-		return item.is(ModTags.Items.DEEPSLATE_RUBY_ORE_CONVERTABLE);
+		return item.is(MineralTags.Items.DEEPSLATE_RUBY_ORE_CONVERTABLE);
 	}
 	
 	private boolean isDeepslateSapphireOreItem(ItemStack item) {
 		
-		return item.is(ModTags.Items.DEEPSLATE_SAPPHIRE_ORE_CONVERTABLE);
+		return item.is(MineralTags.Items.DEEPSLATE_SAPPHIRE_ORE_CONVERTABLE);
 	}
 
 	private boolean isAmethystBlockItem(ItemStack item) {
 	
-		return item.is(ModTags.Items.AMETHYST_BLOCK_CONVERTABLE);
+		return item.is(MineralTags.Items.AMETHYST_BLOCK_CONVERTABLE);
 	}
 
 	private boolean isGarnetBlockItem(ItemStack item) {
 	
-		return item.is(ModTags.Items.GARNET_BLOCK_CONVERTABLE);
+		return item.is(MineralTags.Items.GARNET_BLOCK_CONVERTABLE);
 	}
 	
 	private boolean isBuddingAmethystItem(ItemStack item) {
 		
-		return item.is(ModTags.Items.BUDDING_AMETHYST_CONVERTABLE);
+		return item.is(MineralTags.Items.BUDDING_AMETHYST_CONVERTABLE);
 	}
 
 	private boolean isBuddingGarnetItem(ItemStack item) {
 	
-		return item.is(ModTags.Items.BUDDING_GARNET_CONVERTABLE);
+		return item.is(MineralTags.Items.BUDDING_GARNET_CONVERTABLE);
 	}
 	
 	@Override

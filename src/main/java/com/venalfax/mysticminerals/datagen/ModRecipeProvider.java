@@ -159,7 +159,20 @@ public class ModRecipeProvider extends RecipeProvider {
 			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE))
 			.unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
 			.unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
-			.group("tools")
+			.save(output);
+		
+		shaped(RecipeCategory.TOOLS, MineralItems.RUBY_SCEPTER.get())
+			.pattern(" gR")
+			.pattern("gBg")
+			.pattern("Gg ")
+			.define('g', Items.GOLD_INGOT)
+			.define('R', MineralItems.RUBY.get())
+			.define('B', Items.BLAZE_ROD)
+			.define('G', MineralItems.GARNET_SHARD.get())
+			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY))
+			.unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
+			.unlockedBy(getHasName(Items.BLAZE_ROD), has(Items.BLAZE_ROD))
+			.unlockedBy(getHasName(MineralItems.GARNET_SHARD.get()), has(MineralItems.GARNET_SHARD))
 			.save(output);
 		
 		shaped(RecipeCategory.MISC, MineralBlocks.SHARPENER_BLOCK.get())
@@ -192,7 +205,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern(" g ")
 			.define('g', MineralItems.GARNET_SHARD.get())
 			.define('R', Blocks.REDSTONE_LAMP)
-			.unlockedBy(getHasName(MineralItems.GARNET_SHARD.get()), has(MineralItems.GARNET_SHARD.get()))
+			.unlockedBy(getHasName(MineralItems.GARNET_SHARD.get()), has(MineralItems.GARNET_SHARD))
 			.unlockedBy(getHasName(Blocks.REDSTONE_LAMP), has(Blocks.REDSTONE_LAMP))
 			.save(output);
 			
@@ -211,7 +224,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("RRR")
 			.define('R', MineralBlocks.RUBY_BLOCK.get())
 			.define('P', Items.BAKED_POTATO)
-			.unlockedBy(getHasName(MineralBlocks.RUBY_BLOCK.get()), has(MineralBlocks.RUBY_BLOCK.get()))
+			.unlockedBy(getHasName(MineralBlocks.RUBY_BLOCK.get()), has(MineralBlocks.RUBY_BLOCK))
 			.group("food")
 			.save(output);
 
@@ -221,7 +234,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("SSS")
 			.define('S', MineralBlocks.SAPPHIRE_BLOCK.get())
 			.define('M', Items.MUSHROOM_STEW)
-			.unlockedBy(getHasName(MineralBlocks.SAPPHIRE_BLOCK.get()), has(MineralBlocks.SAPPHIRE_BLOCK.get()))
+			.unlockedBy(getHasName(MineralBlocks.SAPPHIRE_BLOCK.get()), has(MineralBlocks.SAPPHIRE_BLOCK))
 			.group("food")
 			.save(output);
 
@@ -237,13 +250,24 @@ public class ModRecipeProvider extends RecipeProvider {
 		
 		/* TOOLS */
 		
+		shaped(RecipeCategory.COMBAT, MineralItems.CRYSTAL_BOW.get())
+			.pattern(" GS")
+			.pattern("s S")
+			.pattern(" GS")
+			.define('G', MineralItems.GARNET_SHARD.get())
+			.define('S', Items.STRING)
+			.define('s', Items.STICK)
+			.unlockedBy(getHasName(MineralItems.GARNET_SHARD.get()), has(MineralItems.GARNET_SHARD))
+			.unlockedBy(getHasName(Items.STRING), has(Items.STRING))
+			.save(output);
+		
 		shaped(RecipeCategory.COMBAT, MineralItems.RUBY_SWORD.get())
 			.pattern("R")
 			.pattern("R")
 			.pattern("S")
 			.define('R', MineralItems.RUBY.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY.get()))
+			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("ruby")
 			.save(output);
@@ -254,7 +278,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern(" S ")
 			.define('R', MineralItems.RUBY.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY.get()))
+			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("ruby")
 			.save(output);
@@ -265,7 +289,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern(" S")
 			.define('R', MineralItems.RUBY.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY.get()))
+			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("ruby")
 			.save(output);
@@ -276,7 +300,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("S")
 			.define('R', MineralItems.RUBY.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY.get()))
+			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("ruby")
 			.save(output);
@@ -287,7 +311,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern(" S")
 			.define('R', MineralItems.RUBY.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY.get()))
+			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("ruby")
 			.save(output);
@@ -298,7 +322,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("S  ")
 			.define('R', MineralItems.RUBY.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY.get()))
+			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("ruby")
 			.save(output);
@@ -309,7 +333,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("S")
 			.define('R', MineralItems.SAPPHIRE.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE.get()))
+			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("sapphire")
 			.save(output);
@@ -320,7 +344,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern(" S ")
 			.define('R', MineralItems.SAPPHIRE.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE.get()))
+			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("sapphire")
 			.save(output);
@@ -331,7 +355,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern(" S")
 			.define('R', MineralItems.SAPPHIRE.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE.get()))
+			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("sapphire")
 			.save(output);
@@ -342,7 +366,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("S")
 			.define('R', MineralItems.SAPPHIRE.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE.get()))
+			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("sapphire")
 			.save(output);
@@ -353,7 +377,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern(" S")
 			.define('R', MineralItems.SAPPHIRE.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE.get()))
+			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("sapphire")
 			.save(output);
@@ -364,7 +388,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("S  ")
 			.define('R', MineralItems.SAPPHIRE.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE.get()))
+			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("sapphire")
 			.save(output);
@@ -507,7 +531,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("S")
 			.define('F', MineralItems.SHARPENED_FLINT.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.SHARPENED_FLINT.get()), has(MineralItems.SHARPENED_FLINT.get()))
+			.unlockedBy(getHasName(MineralItems.SHARPENED_FLINT.get()), has(MineralItems.SHARPENED_FLINT))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("sharpened_flint")
 			.save(output);
@@ -518,7 +542,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern(" S ")
 			.define('F', MineralItems.SHARPENED_FLINT.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.SHARPENED_FLINT.get()), has(MineralItems.SHARPENED_FLINT.get()))
+			.unlockedBy(getHasName(MineralItems.SHARPENED_FLINT.get()), has(MineralItems.SHARPENED_FLINT))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("sharpened_flint")
 			.save(output);
@@ -529,7 +553,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern(" S")
 			.define('F', MineralItems.SHARPENED_FLINT.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.SHARPENED_FLINT.get()), has(MineralItems.SHARPENED_FLINT.get()))
+			.unlockedBy(getHasName(MineralItems.SHARPENED_FLINT.get()), has(MineralItems.SHARPENED_FLINT))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("sharpened_flint")
 			.save(output);
@@ -540,7 +564,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("S")
 			.define('F', MineralItems.SHARPENED_FLINT.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.SHARPENED_FLINT.get()), has(MineralItems.SHARPENED_FLINT.get()))
+			.unlockedBy(getHasName(MineralItems.SHARPENED_FLINT.get()), has(MineralItems.SHARPENED_FLINT))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("sharpened_flint")
 			.save(output);
@@ -551,7 +575,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern(" S")
 			.define('F', MineralItems.SHARPENED_FLINT.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.SHARPENED_FLINT.get()), has(MineralItems.SHARPENED_FLINT.get()))
+			.unlockedBy(getHasName(MineralItems.SHARPENED_FLINT.get()), has(MineralItems.SHARPENED_FLINT))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("sharpened_flint")
 			.save(output);
@@ -562,7 +586,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("S  ")
 			.define('F', MineralItems.SHARPENED_FLINT.get())
 			.define('S', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.SHARPENED_FLINT.get()), has(MineralItems.SHARPENED_FLINT.get()))
+			.unlockedBy(getHasName(MineralItems.SHARPENED_FLINT.get()), has(MineralItems.SHARPENED_FLINT))
 			.unlockedBy(getHasName(Items.STICK), has(Items.STICK))
 			.group("sharpened_flint")
 			.save(output);
@@ -573,7 +597,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("RRR")
 			.pattern("R R")
 			.define('R', MineralItems.RUBY.get())
-			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY.get()))
+			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY))
 			.group("ruby_armor")
 			.save(output);
 		
@@ -582,7 +606,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("RRR")
 			.pattern("RRR")
 			.define('R', MineralItems.RUBY.get())
-			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY.get()))
+			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY))
 			.group("ruby_armor")
 			.save(output);
 		
@@ -591,7 +615,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("R R")
 			.pattern("R R")
 			.define('R', MineralItems.RUBY.get())
-			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY.get()))
+			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY))
 			.group("ruby_armor")
 			.save(output);
 		
@@ -599,7 +623,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("R R")
 			.pattern("R R")
 			.define('R', MineralItems.RUBY.get())
-			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY.get()))
+			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY))
 			.group("ruby_armor")
 			.save(output);
 		
@@ -607,7 +631,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("SSS")
 			.pattern("S S")
 			.define('S', MineralItems.SAPPHIRE.get())
-			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE.get()))
+			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE))
 			.group("sapphire_armor")
 			.save(output);
 		
@@ -616,7 +640,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("SSS")
 			.pattern("SSS")
 			.define('S', MineralItems.SAPPHIRE.get())
-			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE.get()))
+			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE))
 			.group("sapphire_armor")
 			.save(output);
 		
@@ -625,7 +649,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("S S")
 			.pattern("S S")
 			.define('S', MineralItems.SAPPHIRE.get())
-			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE.get()))
+			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE))
 			.group("sapphire_armor")
 			.save(output);
 		
@@ -633,7 +657,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("S S")
 			.pattern("S S")
 			.define('S', MineralItems.SAPPHIRE.get())
-			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE.get()))
+			.unlockedBy(getHasName(MineralItems.SAPPHIRE.get()), has(MineralItems.SAPPHIRE))
 			.group("sapphire_armor")
 			.save(output);
 		
@@ -709,7 +733,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("FFF")
 			.pattern("F F")
 			.define('F', MineralItems.TEMPERED_FLINT.get())
-			.unlockedBy(getHasName(MineralItems.TEMPERED_FLINT.get()), has(MineralItems.TEMPERED_FLINT.get()))
+			.unlockedBy(getHasName(MineralItems.TEMPERED_FLINT.get()), has(MineralItems.TEMPERED_FLINT))
 			.group("tflint_armor")
 			.save(output);
 		
@@ -718,7 +742,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("FFF")
 			.pattern("FFF")
 			.define('F', MineralItems.TEMPERED_FLINT.get())
-			.unlockedBy(getHasName(MineralItems.TEMPERED_FLINT.get()), has(MineralItems.TEMPERED_FLINT.get()))
+			.unlockedBy(getHasName(MineralItems.TEMPERED_FLINT.get()), has(MineralItems.TEMPERED_FLINT))
 			.group("tflint_armor")
 			.save(output);
 		
@@ -727,7 +751,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("F F")
 			.pattern("F F")
 			.define('F', MineralItems.TEMPERED_FLINT.get())
-			.unlockedBy(getHasName(MineralItems.TEMPERED_FLINT.get()), has(MineralItems.TEMPERED_FLINT.get()))
+			.unlockedBy(getHasName(MineralItems.TEMPERED_FLINT.get()), has(MineralItems.TEMPERED_FLINT))
 			.group("tflint_armor")
 			.save(output);
 		
@@ -735,7 +759,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("F F")
 			.pattern("F F")
 			.define('F', MineralItems.TEMPERED_FLINT.get())
-			.unlockedBy(getHasName(MineralItems.TEMPERED_FLINT.get()), has(MineralItems.TEMPERED_FLINT.get()))
+			.unlockedBy(getHasName(MineralItems.TEMPERED_FLINT.get()), has(MineralItems.TEMPERED_FLINT))
 			.group("tflint_armor")
 			.save(output);
 		

@@ -10,11 +10,14 @@
 	"item.mysticminerals.ruby_potato": "Ruby Potato",
 	"item.mysticminerals.sapphire_stew": "Sapphire Stew",
 	"item.mysticminerals.emerald_honey": "Emerald Honey",
-		
-	"item.mysticminerals.crystal_resonator": "Crystal Resonator",
-	"item.mysticminerals.crystal_resonator.no_valuables": "No Valuables Found",	
 	
 	/* TOOLS */
+
+	"item.mysticminerals.crystal_resonator": "Crystal Resonator",
+	"item.mysticminerals.crystal_resonator.no_valuables": "No Valuables Found",	
+	"item.mysticminerals.ruby_scepter": "Ruby Scepter",
+	
+	"item.mysticminerals.crystal_bow": "Crystal Bow",
 	
 	"item.mysticminerals.ruby_sword": "Ruby Sword",
 	"item.mysticminerals.ruby_pickaxe": "Ruby Pickaxe",
@@ -85,6 +88,11 @@
 	"tooltip.mysticminerals.garnet_shard.tooltip": "Mystical fuel",
 	"tooltip.mysticminerals.sharpener_block.tooltip": "The sharp gets sharper",
 	"tooltip.mysticminerals.resonant_converter.tooltip": "Resonates gems to alter material",
+	
+	/* PAINTINGS */
+	
+	"painting.mysticminerals.crystal_forge.title": "Crystal Forge",
+	"painting.mysticminerals.crystal_forge.author": "Venal Fax",
 	
 	/* STATS */
 	

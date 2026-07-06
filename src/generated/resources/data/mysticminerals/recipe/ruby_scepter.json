@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": "minecraft:blaze_rod",
+    "G": "mysticminerals:garnet_shard",
+    "R": "mysticminerals:ruby",
+    "g": "minecraft:gold_ingot"
+  },
+  "pattern": [
+    " gR",
+    "gBg",
+    "Gg "
+  ],
+  "result": {
+    "id": "mysticminerals:ruby_scepter"
+  }
+}
