@@ -3,7 +3,7 @@
 	
 	"item.mysticminerals.ruby": "Ruby",
 	"item.mysticminerals.sapphire": "Sapphire",
-	"item.mysticminerals.garnet_shard": "Garnet Shard",
+	"item.mysticminerals.citrine_shard": "Citrine Shard",
 	"item.mysticminerals.sharpened_flint": "Sharpened Flint",
 	"item.mysticminerals.tempered_flint": "Tempered Flint",
 	
@@ -102,12 +102,12 @@
 	
 	"block.mysticminerals.ruby_block": "Block of Ruby",
 	"block.mysticminerals.sapphire_block": "Block of Sapphire",
-	"block.mysticminerals.garnet_block": "Block of Garnet",
-	"block.mysticminerals.budding_garnet": "Budding Garnet",
-	"block.mysticminerals.garnet_cluster": "Garnet Cluster",
-	"block.mysticminerals.large_garnet_bud": "Large Garnet Bud",
-	"block.mysticminerals.medium_garnet_bud": "Medium Garnet Bud",
-	"block.mysticminerals.small_garnet_bud": "Small Garnet Bud",
+	"block.mysticminerals.citrine_block": "Block of Citrine",
+	"block.mysticminerals.budding_citrine": "Budding Citrine",
+	"block.mysticminerals.citrine_cluster": "Citrine Cluster",
+	"block.mysticminerals.large_citrine_bud": "Large Citrine Bud",
+	"block.mysticminerals.medium_citrine_bud": "Medium Citrine Bud",
+	"block.mysticminerals.small_citrine_bud": "Small Citrine Bud",
 	"block.mysticminerals.ruby_ore": "Ruby Ore",
 	"block.mysticminerals.sapphire_ore": "Sapphire Ore",
 	"block.mysticminerals.deepslate_ruby_ore": "Deepslate Ruby Ore",

@@ -21,8 +21,8 @@ public class ModDataMapProvider extends DataMapProvider {
 	@Override
 	protected void gather(Provider provider) {
 		builder(NeoForgeDataMaps.FURNACE_FUELS)
-			.add(MineralItems.GARNET_SHARD.getId(), new FurnaceFuel(3200), false)
-			.add(MineralBlocks.GARNET_BLOCK.getId(), new FurnaceFuel(12800), false);
+			.add(MineralItems.CITRINE_SHARD.getId(), new FurnaceFuel(3200), false)
+			.add(MineralBlocks.CITRINE_BLOCK.getId(), new FurnaceFuel(12800), false);
 	}
 
 }

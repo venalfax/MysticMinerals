@@ -81,24 +81,23 @@ public class ModRecipeProvider extends RecipeProvider {
 			.group("gem")
 			.save(output);
 		
-		shaped(RecipeCategory.BUILDING_BLOCKS, MineralBlocks.GARNET_BLOCK.get())
-			.pattern("GG")
-			.pattern("GG")
-			.define('G', MineralItems.GARNET_SHARD.get())
-			.unlockedBy(getHasName(MineralItems.GARNET_SHARD.get()), has(MineralItems.GARNET_SHARD))
-			.group("gem_block")
+		shaped(RecipeCategory.BUILDING_BLOCKS, MineralBlocks.CITRINE_BLOCK.get())
+			.pattern("CC")
+			.pattern("CC")
+			.define('C', MineralItems.CITRINE_SHARD.get())
+			.unlockedBy(getHasName(MineralItems.CITRINE_SHARD.get()), has(MineralItems.CITRINE_SHARD))
 			.save(output);
 
-		shapeless(RecipeCategory.MISC, MineralItems.GARNET_SHARD, 4)
-			.requires(MineralBlocks.GARNET_BLOCK)
-			.unlockedBy(getHasName(MineralBlocks.GARNET_BLOCK.get()), has(MineralBlocks.GARNET_BLOCK))
-			.group("gem")
+		shapeless(RecipeCategory.MISC, MineralItems.CITRINE_SHARD, 4)
+			.requires(MineralBlocks.CITRINE_BLOCK)
+			.unlockedBy(getHasName(MineralBlocks.CITRINE_BLOCK.get()), has(MineralBlocks.CITRINE_BLOCK))
+			.group("quartz")
 			.save(output);
 		
 		shapeless(RecipeCategory.MISC, Items.AMETHYST_SHARD, 4)
 			.requires(Blocks.AMETHYST_BLOCK)
 			.unlockedBy(getHasName(Blocks.AMETHYST_BLOCK), has(Blocks.AMETHYST_BLOCK))
-			.group("gem")
+			.group("quartz")
 			.save(output, MysticMinerals.MOD_ID + ":" + getSimpleRecipeName(Items.AMETHYST_SHARD));
 	
 		shaped(RecipeCategory.BUILDING_BLOCKS, MineralBlocks.FLINT_BLOCK.get())
@@ -162,17 +161,17 @@ public class ModRecipeProvider extends RecipeProvider {
 			.save(output);
 		
 		shaped(RecipeCategory.TOOLS, MineralItems.RUBY_SCEPTER.get())
-			.pattern(" gR")
-			.pattern("gBg")
-			.pattern("Gg ")
-			.define('g', Items.GOLD_INGOT)
+			.pattern(" GR")
+			.pattern("GBG")
+			.pattern("CG ")
+			.define('G', Items.GOLD_INGOT)
 			.define('R', MineralItems.RUBY.get())
 			.define('B', Items.BLAZE_ROD)
-			.define('G', MineralItems.GARNET_SHARD.get())
+			.define('C', MineralItems.CITRINE_SHARD.get())
 			.unlockedBy(getHasName(MineralItems.RUBY.get()), has(MineralItems.RUBY))
 			.unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
 			.unlockedBy(getHasName(Items.BLAZE_ROD), has(Items.BLAZE_ROD))
-			.unlockedBy(getHasName(MineralItems.GARNET_SHARD.get()), has(MineralItems.GARNET_SHARD))
+			.unlockedBy(getHasName(MineralItems.CITRINE_SHARD.get()), has(MineralItems.CITRINE_SHARD))
 			.save(output);
 		
 		shaped(RecipeCategory.MISC, MineralBlocks.SHARPENER_BLOCK.get())
@@ -200,12 +199,12 @@ public class ModRecipeProvider extends RecipeProvider {
 			.save(output);
 		
 		shaped(RecipeCategory.REDSTONE, MineralBlocks.GEM_LAMP.get())
-			.pattern(" g ")
-			.pattern("gRg")
-			.pattern(" g ")
-			.define('g', MineralItems.GARNET_SHARD.get())
+			.pattern(" C ")
+			.pattern("CRC")
+			.pattern(" C ")
+			.define('C', MineralItems.CITRINE_SHARD.get())
 			.define('R', Blocks.REDSTONE_LAMP)
-			.unlockedBy(getHasName(MineralItems.GARNET_SHARD.get()), has(MineralItems.GARNET_SHARD))
+			.unlockedBy(getHasName(MineralItems.CITRINE_SHARD.get()), has(MineralItems.CITRINE_SHARD))
 			.unlockedBy(getHasName(Blocks.REDSTONE_LAMP), has(Blocks.REDSTONE_LAMP))
 			.save(output);
 			
@@ -251,13 +250,13 @@ public class ModRecipeProvider extends RecipeProvider {
 		/* TOOLS */
 		
 		shaped(RecipeCategory.COMBAT, MineralItems.CRYSTAL_BOW.get())
-			.pattern(" GS")
+			.pattern(" CS")
 			.pattern("s S")
-			.pattern(" GS")
-			.define('G', MineralItems.GARNET_SHARD.get())
+			.pattern(" CS")
+			.define('C', MineralItems.CITRINE_SHARD.get())
 			.define('S', Items.STRING)
 			.define('s', Items.STICK)
-			.unlockedBy(getHasName(MineralItems.GARNET_SHARD.get()), has(MineralItems.GARNET_SHARD))
+			.unlockedBy(getHasName(MineralItems.CITRINE_SHARD.get()), has(MineralItems.CITRINE_SHARD))
 			.unlockedBy(getHasName(Items.STRING), has(Items.STRING))
 			.save(output);
 		

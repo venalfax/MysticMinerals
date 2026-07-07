@@ -37,7 +37,7 @@ public class MineralItems extends Items {
 	public static final DeferredItem<Item> SHARPENED_FLINT = ITEMS.registerSimpleItem("sharpened_flint");
 	public static final DeferredItem<Item> TEMPERED_FLINT = ITEMS.registerSimpleItem("tempered_flint");
 	
-	public static final DeferredItem<Item> GARNET_SHARD = ITEMS.registerItem("garnet_shard", 
+	public static final DeferredItem<Item> CITRINE_SHARD = ITEMS.registerItem("citrine_shard", 
 			properties -> new Item(properties.fireResistant()) {
 				@Override
 				public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
@@ -55,7 +55,7 @@ public class MineralItems extends Items {
 			properties -> new RubyCaster(properties.durability(500).enchantable(20).repairable(MineralItems.RUBY.get())));
 	
 	public static final DeferredItem<Item> CRYSTAL_BOW = ITEMS.registerItem("crystal_bow", 
-			properties -> new BowItem(properties.durability(640).enchantable(20).repairable(MineralItems.GARNET_SHARD.get())));
+			properties -> new BowItem(properties.durability(640).enchantable(20).repairable(MineralItems.CITRINE_SHARD.get())));
 	
 	public static final DeferredItem<Item> RUBY_SWORD = ITEMS.registerItem("ruby_sword", 
 			properties -> new Item(properties.sword(MineralToolTiers.RUBY, 3.0f, -2.4f)));
@@ -183,17 +183,17 @@ public class MineralItems extends Items {
 	public static final DeferredItem<BlockItem> RUBY_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.RUBY_BLOCK);
 	public static final DeferredItem<BlockItem> SAPPHIRE_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.SAPPHIRE_BLOCK);
 	// Testing properties to make Garnet Block immune to fire
-	public static final DeferredItem<BlockItem> GARNET_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.GARNET_BLOCK,
+	public static final DeferredItem<BlockItem> CITRINE_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.CITRINE_BLOCK,
 			properties -> new Item.Properties().fireResistant());
-	public static final DeferredItem<BlockItem> BUDDING_GARNET = ITEMS.registerSimpleBlockItem(MineralBlocks.BUDDING_GARNET, 
+	public static final DeferredItem<BlockItem> BUDDING_CITRINE = ITEMS.registerSimpleBlockItem(MineralBlocks.BUDDING_CITRINE, 
 			properties -> new Item.Properties().fireResistant());
-	public static final DeferredItem<BlockItem> GARNET_CLUSTER = ITEMS.registerSimpleBlockItem(MineralBlocks.GARNET_CLUSTER, 
+	public static final DeferredItem<BlockItem> CITRINE_CLUSTER = ITEMS.registerSimpleBlockItem(MineralBlocks.CITRINE_CLUSTER, 
 			properties -> new Item.Properties().fireResistant());
-	public static final DeferredItem<BlockItem> LARGE_GARNET_BUD = ITEMS.registerSimpleBlockItem(MineralBlocks.LARGE_GARNET_BUD, 
+	public static final DeferredItem<BlockItem> LARGE_CITRINE_BUD = ITEMS.registerSimpleBlockItem(MineralBlocks.LARGE_CITRINE_BUD, 
 			properties -> new Item.Properties().fireResistant());
-	public static final DeferredItem<BlockItem> MEDIUM_GARNET_BUD = ITEMS.registerSimpleBlockItem(MineralBlocks.MEDIUM_GARNET_BUD, 
+	public static final DeferredItem<BlockItem> MEDIUM_CITRINE_BUD = ITEMS.registerSimpleBlockItem(MineralBlocks.MEDIUM_CITRINE_BUD, 
 			properties -> new Item.Properties().fireResistant());
-	public static final DeferredItem<BlockItem> SMALL_GARNET_BUD = ITEMS.registerSimpleBlockItem(MineralBlocks.SMALL_GARNET_BUD, 
+	public static final DeferredItem<BlockItem> SMALL_CITRINE_BUD = ITEMS.registerSimpleBlockItem(MineralBlocks.SMALL_CITRINE_BUD, 
 			properties -> new Item.Properties().fireResistant());
 	public static final DeferredItem<BlockItem> RUBY_ORE = ITEMS.registerSimpleBlockItem(MineralBlocks.RUBY_ORE);
 	public static final DeferredItem<BlockItem> SAPPHIRE_ORE = ITEMS.registerSimpleBlockItem(MineralBlocks.SAPPHIRE_ORE);

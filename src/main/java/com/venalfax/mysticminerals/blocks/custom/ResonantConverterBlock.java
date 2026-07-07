@@ -105,7 +105,7 @@ public class ResonantConverterBlock extends Block {
 				}
 				if(interactionProgress >= requiredInteractionTime) {
 					resonated(level, pos);
-					itemEntity.setItem(new ItemStack(MineralItems.GARNET_SHARD.get(), itemEntity.getItem().getCount()));
+					itemEntity.setItem(new ItemStack(MineralItems.CITRINE_SHARD.get(), itemEntity.getItem().getCount()));
 				}
 			}
 			else if(isGarnetItem(itemEntity.getItem())) {
@@ -201,7 +201,7 @@ public class ResonantConverterBlock extends Block {
 				}
 				if(interactionProgress >= requiredInteractionTime) {
 					resonated(level, pos);
-					itemEntity.setItem(new ItemStack(MineralBlocks.GARNET_BLOCK.get(), itemEntity.getItem().getCount()));
+					itemEntity.setItem(new ItemStack(MineralBlocks.CITRINE_BLOCK.get(), itemEntity.getItem().getCount()));
 				}
 			}
 			else if(isGarnetBlockItem(itemEntity.getItem())) {
@@ -225,7 +225,7 @@ public class ResonantConverterBlock extends Block {
 				}
 				if(interactionProgress >= requiredInteractionTime) {
 					resonated(level, pos);
-					itemEntity.setItem(new ItemStack(MineralBlocks.BUDDING_GARNET.get(), itemEntity.getItem().getCount()));
+					itemEntity.setItem(new ItemStack(MineralBlocks.BUDDING_CITRINE.get(), itemEntity.getItem().getCount()));
 				}
 			}
 			else if(isBuddingGarnetItem(itemEntity.getItem())) {
@@ -277,7 +277,7 @@ public class ResonantConverterBlock extends Block {
 
 	private boolean isGarnetItem(ItemStack item) {
 	
-		return item.is(MineralTags.Items.GARNET_CONVERTABLE);
+		return item.is(MineralTags.Items.CITRINE_CONVERTABLE);
 	}
 	
 	private boolean isEmeraldOreItem(ItemStack item) {
@@ -317,7 +317,7 @@ public class ResonantConverterBlock extends Block {
 
 	private boolean isGarnetBlockItem(ItemStack item) {
 	
-		return item.is(MineralTags.Items.GARNET_BLOCK_CONVERTABLE);
+		return item.is(MineralTags.Items.CITRINE_BLOCK_CONVERTABLE);
 	}
 	
 	private boolean isBuddingAmethystItem(ItemStack item) {
@@ -327,7 +327,7 @@ public class ResonantConverterBlock extends Block {
 
 	private boolean isBuddingGarnetItem(ItemStack item) {
 	
-		return item.is(MineralTags.Items.BUDDING_GARNET_CONVERTABLE);
+		return item.is(MineralTags.Items.BUDDING_CITRINE_CONVERTABLE);
 	}
 	
 	@Override

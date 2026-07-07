@@ -26,7 +26,7 @@ public class MineralTab {
 						
 						output.accept(MineralItems.RUBY);
 						output.accept(MineralItems.SAPPHIRE);
-						output.accept(MineralItems.GARNET_SHARD);
+						output.accept(MineralItems.CITRINE_SHARD);
 						output.accept(MineralItems.SHARPENED_FLINT);
 						output.accept(MineralItems.TEMPERED_FLINT);
 						
@@ -107,12 +107,12 @@ public class MineralTab {
 						
 						output.accept(MineralBlocks.RUBY_BLOCK);
 						output.accept(MineralBlocks.SAPPHIRE_BLOCK);
-						output.accept(MineralBlocks.GARNET_BLOCK);
-						output.accept(MineralBlocks.BUDDING_GARNET);
-						output.accept(MineralBlocks.GARNET_CLUSTER);
-						output.accept(MineralBlocks.LARGE_GARNET_BUD);
-						output.accept(MineralBlocks.MEDIUM_GARNET_BUD);
-						output.accept(MineralBlocks.SMALL_GARNET_BUD);
+						output.accept(MineralBlocks.CITRINE_BLOCK);
+						output.accept(MineralBlocks.BUDDING_CITRINE);
+						output.accept(MineralBlocks.CITRINE_CLUSTER);
+						output.accept(MineralBlocks.LARGE_CITRINE_BUD);
+						output.accept(MineralBlocks.MEDIUM_CITRINE_BUD);
+						output.accept(MineralBlocks.SMALL_CITRINE_BUD);
 						output.accept(MineralBlocks.RUBY_ORE);
 						output.accept(MineralBlocks.DEEPSLATE_RUBY_ORE);
 						output.accept(MineralBlocks.SAPPHIRE_ORE);

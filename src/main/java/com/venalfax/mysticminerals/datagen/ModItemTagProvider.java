@@ -35,8 +35,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
 			.add(MineralItems.getRK(MineralItems.SAPPHIRE.get()));
 		tag(MineralTags.Items.AMETHYST_CONVERTABLE)
 			.add(ItemIds.AMETHYST_SHARD);
-		tag(MineralTags.Items.GARNET_CONVERTABLE)
-			.add(MineralItems.getRK(MineralItems.GARNET_SHARD.get()));
+		tag(MineralTags.Items.CITRINE_CONVERTABLE)
+			.add(MineralItems.getRK(MineralItems.CITRINE_SHARD.get()));
 		
 		tag(MineralTags.Items.EMERALD_ORE_CONVERTABLE)
 			.add(BlockItemIds.EMERALD_ORE.item());
@@ -52,12 +52,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
 			.add(MineralItems.getRK(MineralItems.DEEPSLATE_SAPPHIRE_ORE.get()));
 		tag(MineralTags.Items.AMETHYST_BLOCK_CONVERTABLE)
 			.add(BlockItemIds.AMETHYST_BLOCK.item());
-		tag(MineralTags.Items.GARNET_BLOCK_CONVERTABLE)
-			.add(MineralItems.getRK(MineralItems.GARNET_BLOCK.get()));
+		tag(MineralTags.Items.CITRINE_BLOCK_CONVERTABLE)
+			.add(MineralItems.getRK(MineralItems.CITRINE_BLOCK.get()));
 		tag(MineralTags.Items.BUDDING_AMETHYST_CONVERTABLE)
 			.add(BlockItemIds.BUDDING_AMETHYST.item());
-		tag(MineralTags.Items.BUDDING_GARNET_CONVERTABLE)
-			.add(MineralItems.getRK(MineralItems.BUDDING_GARNET.get()));
+		tag(MineralTags.Items.BUDDING_CITRINE_CONVERTABLE)
+			.add(MineralItems.getRK(MineralItems.BUDDING_CITRINE.get()));
 		
 		tag(MineralTags.Items.RUBY_REPAIRABLE)
 			.add(MineralItems.getRK(MineralItems.RUBY.get()));
@@ -79,9 +79,9 @@ public class ModItemTagProvider extends ItemTagsProvider {
 		
 		tag(ItemTags.BOW_ENCHANTABLE).add(MineralItems.getRK(MineralItems.CRYSTAL_BOW.get()));
 		
-		tag(ItemTags.BREWING_FUEL).add(MineralItems.getRK(MineralItems.GARNET_SHARD.get()));
-		tag(ItemTags.FURNACE_MINECART_FUEL).add(MineralItems.getRK(MineralItems.GARNET_SHARD.get()));
-		tag(ItemTags.DUPLICATES_ALLAYS).add(MineralItems.getRK(MineralItems.GARNET_SHARD.get()));
+		tag(ItemTags.BREWING_FUEL).add(MineralItems.getRK(MineralItems.CITRINE_SHARD.get()));
+		tag(ItemTags.FURNACE_MINECART_FUEL).add(MineralItems.getRK(MineralItems.CITRINE_SHARD.get()));
+		tag(ItemTags.DUPLICATES_ALLAYS).add(MineralItems.getRK(MineralItems.CITRINE_SHARD.get()));
 		
 		tag(ItemTags.SWORDS).add(MineralItems.getRK(MineralItems.RUBY_SWORD.get()));
 		tag(ItemTags.PICKAXES).add(MineralItems.getRK(MineralItems.RUBY_PICKAXE.get()));

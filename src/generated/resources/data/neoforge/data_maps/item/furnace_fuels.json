@@ -1,9 +1,9 @@
 {
   "values": {
-    "mysticminerals:garnet_block": {
+    "mysticminerals:citrine_block": {
       "burn_time": 12800
     },
-    "mysticminerals:garnet_shard": {
+    "mysticminerals:citrine_shard": {
       "burn_time": 3200
     }
   }

@@ -3,10 +3,10 @@
   "category": "misc",
   "group": "quartz",
   "ingredients": [
-    "minecraft:amethyst_block"
+    "mysticminerals:citrine_block"
   ],
   "result": {
     "count": 4,
-    "id": "minecraft:amethyst_shard"
+    "id": "mysticminerals:citrine_shard"
   }
 }

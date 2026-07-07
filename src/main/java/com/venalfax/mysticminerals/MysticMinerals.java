@@ -58,7 +58,7 @@ public class MysticMinerals {
     	if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
     		event.accept(MineralItems.RUBY);
     		event.accept(MineralItems.SAPPHIRE);
-    		event.accept(MineralItems.GARNET_SHARD);
+    		event.accept(MineralItems.CITRINE_SHARD);
     		event.accept(MineralItems.SHARPENED_FLINT);
     		event.accept(MineralItems.TEMPERED_FLINT);
     	}
@@ -66,19 +66,19 @@ public class MysticMinerals {
     	if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
     		event.accept(MineralBlocks.RUBY_BLOCK);
     		event.accept(MineralBlocks.SAPPHIRE_BLOCK);
-    		event.accept(MineralBlocks.GARNET_BLOCK);
+    		event.accept(MineralBlocks.CITRINE_BLOCK);
     		event.accept(MineralBlocks.FLINT_BLOCK);
     		event.accept(MineralBlocks.SHARPENED_FLINT_BLOCK);
     		event.accept(MineralBlocks.TEMPERED_FLINT_BLOCK);
     	}
     	
     	if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-    		event.accept(MineralBlocks.GARNET_BLOCK);
-    		event.accept(MineralBlocks.BUDDING_GARNET);
-    		event.accept(MineralBlocks.GARNET_CLUSTER);
-    		event.accept(MineralBlocks.LARGE_GARNET_BUD);
-    		event.accept(MineralBlocks.MEDIUM_GARNET_BUD);
-    		event.accept(MineralBlocks.SMALL_GARNET_BUD);
+    		event.accept(MineralBlocks.CITRINE_BLOCK);
+    		event.accept(MineralBlocks.BUDDING_CITRINE);
+    		event.accept(MineralBlocks.CITRINE_CLUSTER);
+    		event.accept(MineralBlocks.LARGE_CITRINE_BUD);
+    		event.accept(MineralBlocks.MEDIUM_CITRINE_BUD);
+    		event.accept(MineralBlocks.SMALL_CITRINE_BUD);
     		event.accept(MineralBlocks.RUBY_ORE);
     		event.accept(MineralBlocks.SAPPHIRE_ORE);
     		event.accept(MineralBlocks.DEEPSLATE_RUBY_ORE);

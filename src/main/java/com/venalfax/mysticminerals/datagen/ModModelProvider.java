@@ -29,7 +29,7 @@ public class ModModelProvider extends ModelProvider {
 		
 		itemModels.generateFlatItem(MineralItems.RUBY.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.SAPPHIRE.get(), ModelTemplates.FLAT_ITEM);
-		itemModels.generateFlatItem(MineralItems.GARNET_SHARD.get(), ModelTemplates.FLAT_ITEM);
+		itemModels.generateFlatItem(MineralItems.CITRINE_SHARD.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.SHARPENED_FLINT.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.TEMPERED_FLINT.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.RUBY_POTATO.get(), ModelTemplates.FLAT_ITEM);
@@ -110,12 +110,12 @@ public class ModModelProvider extends ModelProvider {
 		
 		blockModels.createTrivialCube(MineralBlocks.RUBY_BLOCK.get());
 		blockModels.createTrivialCube(MineralBlocks.SAPPHIRE_BLOCK.get());
-		blockModels.createTrivialCube(MineralBlocks.GARNET_BLOCK.get());
-		blockModels.createTrivialCube(MineralBlocks.BUDDING_GARNET.get());
-		blockModels.createAmethystCluster(MineralBlocks.GARNET_CLUSTER.get());
-		blockModels.createAmethystCluster(MineralBlocks.LARGE_GARNET_BUD.get());
-		blockModels.createAmethystCluster(MineralBlocks.MEDIUM_GARNET_BUD.get());
-		blockModels.createAmethystCluster(MineralBlocks.SMALL_GARNET_BUD.get());
+		blockModels.createTrivialCube(MineralBlocks.CITRINE_BLOCK.get());
+		blockModels.createTrivialCube(MineralBlocks.BUDDING_CITRINE.get());
+		blockModels.createAmethystCluster(MineralBlocks.CITRINE_CLUSTER.get());
+		blockModels.createAmethystCluster(MineralBlocks.LARGE_CITRINE_BUD.get());
+		blockModels.createAmethystCluster(MineralBlocks.MEDIUM_CITRINE_BUD.get());
+		blockModels.createAmethystCluster(MineralBlocks.SMALL_CITRINE_BUD.get());
 		blockModels.createTrivialCube(MineralBlocks.RUBY_ORE.get());
 		blockModels.createTrivialCube(MineralBlocks.SAPPHIRE_ORE.get());
 		blockModels.createTrivialCube(MineralBlocks.DEEPSLATE_RUBY_ORE.get());

@@ -3,9 +3,9 @@ package com.venalfax.mysticminerals.blocks;
 import java.util.function.Function;
 
 import com.venalfax.mysticminerals.MysticMinerals;
-import com.venalfax.mysticminerals.blocks.custom.BuddingGarnetBlock;
-import com.venalfax.mysticminerals.blocks.custom.GarnetBlock;
-import com.venalfax.mysticminerals.blocks.custom.GarnetClusterBlock;
+import com.venalfax.mysticminerals.blocks.custom.BuddingCitrineBlock;
+import com.venalfax.mysticminerals.blocks.custom.CitrineBlock;
+import com.venalfax.mysticminerals.blocks.custom.CitrineClusterBlock;
 import com.venalfax.mysticminerals.blocks.custom.GemLampBlock;
 import com.venalfax.mysticminerals.blocks.custom.ResonantConverterBlock;
 import com.venalfax.mysticminerals.blocks.custom.SharpenerBlock;
@@ -43,15 +43,15 @@ public class MineralBlocks {
 					.mapColor(MapColor.COLOR_BLUE)
 					.sound(SoundType.METAL)));
 	
-	public static final DeferredBlock<Block> GARNET_BLOCK = registerBlock("garnet_block", 
-			properties -> new GarnetBlock(properties
+	public static final DeferredBlock<Block> CITRINE_BLOCK = registerBlock("citrine_block", 
+			properties -> new CitrineBlock(properties
 					.strength(2f)
 					.requiresCorrectToolForDrops()
 					.mapColor(MapColor.COLOR_ORANGE)
 					.sound(SoundType.AMETHYST)));
 	
-	public static final DeferredBlock<Block> BUDDING_GARNET = registerBlock("budding_garnet",
-			properties -> new BuddingGarnetBlock(properties
+	public static final DeferredBlock<Block> BUDDING_CITRINE = registerBlock("budding_citrine",
+			properties -> new BuddingCitrineBlock(properties
 					.strength(2f)
 					.randomTicks()
 					.requiresCorrectToolForDrops()
@@ -59,8 +59,8 @@ public class MineralBlocks {
 					.sound(SoundType.AMETHYST)
 					.pushReaction(PushReaction.DESTROY)));
 	
-	public static final DeferredBlock<Block> GARNET_CLUSTER = registerBlock("garnet_cluster",
-			properties -> new GarnetClusterBlock(7.0f, 10.0f, properties
+	public static final DeferredBlock<Block> CITRINE_CLUSTER = registerBlock("citrine_cluster",
+			properties -> new CitrineClusterBlock(7.0f, 10.0f, properties
 					.strength(2f)
 					.forceSolidOn()
 					.noOcclusion()
@@ -69,8 +69,8 @@ public class MineralBlocks {
 					.sound(SoundType.AMETHYST_CLUSTER)
 					.pushReaction(PushReaction.DESTROY)));
 	
-	public static final DeferredBlock<Block> LARGE_GARNET_BUD = registerBlock("large_garnet_bud",
-			properties -> new GarnetClusterBlock(5.0f, 10.0f, properties
+	public static final DeferredBlock<Block> LARGE_CITRINE_BUD = registerBlock("large_citrine_bud",
+			properties -> new CitrineClusterBlock(5.0f, 10.0f, properties
 					.strength(2f)
 					.forceSolidOn()
 					.noOcclusion()
@@ -79,8 +79,8 @@ public class MineralBlocks {
 					.sound(SoundType.LARGE_AMETHYST_BUD)
 					.pushReaction(PushReaction.DESTROY)));
 	
-	public static final DeferredBlock<Block> MEDIUM_GARNET_BUD = registerBlock("medium_garnet_bud",
-			properties -> new GarnetClusterBlock(4.0f, 10.0f, properties
+	public static final DeferredBlock<Block> MEDIUM_CITRINE_BUD = registerBlock("medium_citrine_bud",
+			properties -> new CitrineClusterBlock(4.0f, 10.0f, properties
 					.strength(2f)
 					.forceSolidOn()
 					.noOcclusion()
@@ -89,8 +89,8 @@ public class MineralBlocks {
 					.sound(SoundType.MEDIUM_AMETHYST_BUD)
 					.pushReaction(PushReaction.DESTROY)));
 	
-	public static final DeferredBlock<Block> SMALL_GARNET_BUD = registerBlock("small_garnet_bud",
-			properties -> new GarnetClusterBlock(3.0f, 8.0f, properties
+	public static final DeferredBlock<Block> SMALL_CITRINE_BUD = registerBlock("small_citrine_bud",
+			properties -> new CitrineClusterBlock(3.0f, 8.0f, properties
 					.strength(2f)
 					.forceSolidOn()
 					.noOcclusion()

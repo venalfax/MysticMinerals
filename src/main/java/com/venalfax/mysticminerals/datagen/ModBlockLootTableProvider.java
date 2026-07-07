@@ -35,7 +35,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 	    HolderLookup.RegistryLookup<Item> items = this.registries.lookupOrThrow(Registries.ITEM);
 		dropSelf(MineralBlocks.RUBY_BLOCK.get());
 		dropSelf(MineralBlocks.SAPPHIRE_BLOCK.get());
-		dropSelf(MineralBlocks.GARNET_BLOCK.get());
+		dropSelf(MineralBlocks.CITRINE_BLOCK.get());
 		dropSelf(MineralBlocks.FLINT_BLOCK.get());
 		dropSelf(MineralBlocks.SHARPENED_FLINT_BLOCK.get());
 		dropSelf(MineralBlocks.TEMPERED_FLINT_BLOCK.get());
@@ -53,26 +53,26 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 		add(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get(), 
 				createOreDrop(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get(), MineralItems.SAPPHIRE.get()));
 		
-		add(MineralBlocks.GARNET_CLUSTER.get(),
+		add(MineralBlocks.CITRINE_CLUSTER.get(),
 				block -> createSilkTouchDispatchTable(
 		                block,
-		                LootItem.lootTableItem(MineralItems.GARNET_SHARD.get())
+		                LootItem.lootTableItem(MineralItems.CITRINE_SHARD.get())
 		                    .apply(SetItemCountFunction.setCount(ConstantValue.exactly(4.0F)))
 		                    .apply(ApplyBonusCount.addOreBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE)))
 		                    .when(MatchTool.toolMatches(ItemPredicate.Builder.item().of(items, ItemTags.CLUSTER_MAX_HARVESTABLES)))
 		                    .otherwise(
 		                        (LootPoolEntryContainer.Builder<?>)applyExplosionDecay(
-		                            block, LootItem.lootTableItem(MineralItems.GARNET_SHARD.get()).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))
+		                            block, LootItem.lootTableItem(MineralItems.CITRINE_SHARD.get()).apply(SetItemCountFunction.setCount(ConstantValue.exactly(2.0F)))
 		                        )
 		                    )
 						)
 		);
 		
-		dropWhenSilkTouch(MineralBlocks.SMALL_GARNET_BUD.get());
-		dropWhenSilkTouch(MineralBlocks.MEDIUM_GARNET_BUD.get());
-		dropWhenSilkTouch(MineralBlocks.LARGE_GARNET_BUD.get());
+		dropWhenSilkTouch(MineralBlocks.SMALL_CITRINE_BUD.get());
+		dropWhenSilkTouch(MineralBlocks.MEDIUM_CITRINE_BUD.get());
+		dropWhenSilkTouch(MineralBlocks.LARGE_CITRINE_BUD.get());
 
-		add(MineralBlocks.BUDDING_GARNET.get(), noDrop());
+		add(MineralBlocks.BUDDING_CITRINE.get(), noDrop());
 	}
 	
 	@Override

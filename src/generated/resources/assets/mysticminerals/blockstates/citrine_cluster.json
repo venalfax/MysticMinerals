@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "mysticminerals:block/citrine_cluster",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "mysticminerals:block/citrine_cluster",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "mysticminerals:block/citrine_cluster",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "mysticminerals:block/citrine_cluster",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "mysticminerals:block/citrine_cluster"
+    },
+    "facing=west": {
+      "model": "mysticminerals:block/citrine_cluster",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

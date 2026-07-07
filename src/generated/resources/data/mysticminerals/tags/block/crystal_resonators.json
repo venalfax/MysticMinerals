@@ -17,11 +17,11 @@
     "mysticminerals:sapphire_block",
     "mysticminerals:sapphire_ore",
     "mysticminerals:deepslate_sapphire_ore",
-    "mysticminerals:garnet_block",
-    "mysticminerals:budding_garnet",
-    "mysticminerals:garnet_cluster",
-    "mysticminerals:large_garnet_bud",
-    "mysticminerals:medium_garnet_bud",
-    "mysticminerals:small_garnet_bud"
+    "mysticminerals:citrine_block",
+    "mysticminerals:budding_citrine",
+    "mysticminerals:citrine_cluster",
+    "mysticminerals:large_citrine_bud",
+    "mysticminerals:medium_citrine_bud",
+    "mysticminerals:small_citrine_bud"
   ]
 }

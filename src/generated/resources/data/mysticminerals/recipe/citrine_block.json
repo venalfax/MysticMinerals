@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "C": "mysticminerals:citrine_shard"
+  },
+  "pattern": [
+    "CC",
+    "CC"
+  ],
+  "result": {
+    "id": "mysticminerals:citrine_block"
+  }
+}
