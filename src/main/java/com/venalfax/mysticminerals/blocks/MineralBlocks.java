@@ -11,7 +11,9 @@ import com.venalfax.mysticminerals.blocks.custom.ResonantConverterBlock;
 import com.venalfax.mysticminerals.blocks.custom.SharpenerBlock;
 
 import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.PressurePlateBlock;
@@ -179,6 +181,9 @@ public class MineralBlocks {
 					.strength(0.5F)
 					.pushReaction(PushReaction.DESTROY)));
 	
+	public static ResourceKey<Block> getRK(Block block) {
+		return BuiltInRegistries.BLOCK.getResourceKey(block).get();
+	}
 	
 	private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function, Component... components){
 		DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);

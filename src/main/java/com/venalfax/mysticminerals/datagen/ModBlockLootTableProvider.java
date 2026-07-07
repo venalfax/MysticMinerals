@@ -5,7 +5,7 @@ import java.util.Set;
 import com.venalfax.mysticminerals.blocks.MineralBlocks;
 import com.venalfax.mysticminerals.items.MineralItems;
 
-import net.minecraft.advancements.criterion.ItemPredicate;
+import net.minecraft.advancements.predicates.ItemPredicate;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;

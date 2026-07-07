@@ -8,7 +8,9 @@ import com.venalfax.mysticminerals.foods.MineralFoods;
 import com.venalfax.mysticminerals.items.custom.GemDetectorItem;
 import com.venalfax.mysticminerals.items.custom.RubyCaster;
 
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.BowItem;
@@ -205,6 +207,9 @@ public class MineralItems extends Items {
 	public static final DeferredItem<BlockItem> GEM_LAMP = ITEMS.registerSimpleBlockItem(MineralBlocks.GEM_LAMP);
 	public static final DeferredItem<BlockItem> AMETHYST_PRESSURE_PLATE = ITEMS.registerSimpleBlockItem(MineralBlocks.AMETHYST_PRESSURE_PLATE);
 	
+	public static ResourceKey<Item> getRK(Item item) {
+		return BuiltInRegistries.ITEM.getResourceKey(item).get()
+;	}
 	
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

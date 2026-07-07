@@ -8,6 +8,8 @@ import com.venalfax.mysticminerals.tags.MineralTags;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.references.BlockItemIds;
+import net.minecraft.references.ItemIds;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.data.ItemTagsProvider;
@@ -22,132 +24,132 @@ public class ModItemTagProvider extends ItemTagsProvider {
 	@Override
 	protected void addTags(HolderLookup.Provider registries) {
 		tag(MineralTags.Items.SHARPENABLE) 
-			.add(Items.FLINT)
-			.add(MineralItems.TEMPERED_FLINT.get());
+			.add(ItemIds.FLINT)
+			.add(MineralItems.getRK(MineralItems.TEMPERED_FLINT.get()));
 		
 		tag(MineralTags.Items.EMERALD_CONVERTABLE)
-			.add(Items.EMERALD);
+			.add(ItemIds.EMERALD);
 		tag(MineralTags.Items.RUBY_CONVERTABLE)
-			.add(MineralItems.RUBY.get());
+			.add(MineralItems.getRK(MineralItems.RUBY.get()));
 		tag(MineralTags.Items.SAPPHIRE_CONVERTABLE)
-			.add(MineralItems.SAPPHIRE.get());
+			.add(MineralItems.getRK(MineralItems.SAPPHIRE.get()));
 		tag(MineralTags.Items.AMETHYST_CONVERTABLE)
-			.add(Items.AMETHYST_SHARD);
+			.add(ItemIds.AMETHYST_SHARD);
 		tag(MineralTags.Items.GARNET_CONVERTABLE)
-			.add(MineralItems.GARNET_SHARD.get());
+			.add(MineralItems.getRK(MineralItems.GARNET_SHARD.get()));
 		
 		tag(MineralTags.Items.EMERALD_ORE_CONVERTABLE)
-			.add(Items.EMERALD_ORE);
+			.add(BlockItemIds.EMERALD_ORE.item());
 		tag(MineralTags.Items.RUBY_ORE_CONVERTABLE)
-			.add(MineralItems.RUBY_ORE.get());
+			.add(MineralItems.getRK(MineralItems.RUBY_ORE.get()));
 		tag(MineralTags.Items.SAPPHIRE_ORE_CONVERTABLE)
-			.add(MineralItems.SAPPHIRE_ORE.get());
+			.add(MineralItems.getRK(MineralItems.SAPPHIRE_ORE.get()));
 		tag(MineralTags.Items.DEEPSLATE_EMERALD_ORE_CONVERTABLE)
-			.add(Items.DEEPSLATE_EMERALD_ORE);
+			.add(BlockItemIds.DEEPSLATE_EMERALD_ORE.item());
 		tag(MineralTags.Items.DEEPSLATE_RUBY_ORE_CONVERTABLE)
-			.add(MineralItems.DEEPSLATE_RUBY_ORE.get());
+			.add(MineralItems.getRK(MineralItems.DEEPSLATE_RUBY_ORE.get()));
 		tag(MineralTags.Items.DEEPSLATE_SAPPHIRE_ORE_CONVERTABLE)
-			.add(MineralItems.DEEPSLATE_SAPPHIRE_ORE.get());
+			.add(MineralItems.getRK(MineralItems.DEEPSLATE_SAPPHIRE_ORE.get()));
 		tag(MineralTags.Items.AMETHYST_BLOCK_CONVERTABLE)
-			.add(Items.AMETHYST_BLOCK);
+			.add(BlockItemIds.AMETHYST_BLOCK.item());
 		tag(MineralTags.Items.GARNET_BLOCK_CONVERTABLE)
-			.add(MineralItems.GARNET_BLOCK.get());
+			.add(MineralItems.getRK(MineralItems.GARNET_BLOCK.get()));
 		tag(MineralTags.Items.BUDDING_AMETHYST_CONVERTABLE)
-			.add(Items.BUDDING_AMETHYST);
+			.add(BlockItemIds.BUDDING_AMETHYST.item());
 		tag(MineralTags.Items.BUDDING_GARNET_CONVERTABLE)
-			.add(MineralItems.BUDDING_GARNET.get());
+			.add(MineralItems.getRK(MineralItems.BUDDING_GARNET.get()));
 		
 		tag(MineralTags.Items.RUBY_REPAIRABLE)
-			.add(MineralItems.RUBY.get());
+			.add(MineralItems.getRK(MineralItems.RUBY.get()));
 		tag(MineralTags.Items.SAPPHIRE_REPAIRABLE)
-			.add(MineralItems.SAPPHIRE.get());
+			.add(MineralItems.getRK(MineralItems.SAPPHIRE.get()));
 		tag(MineralTags.Items.EMERALD_REPAIRABLE)
-			.add(Items.EMERALD);
+			.add(ItemIds.EMERALD);
 		tag(MineralTags.Items.FLINT_REPAIRABLE)
-			.add(Items.FLINT);
+			.add(ItemIds.FLINT);
 		tag(MineralTags.Items.SHARPENED_FLINT_REPAIRABLE)
-			.add(MineralItems.SHARPENED_FLINT.get());
+			.add(MineralItems.getRK(MineralItems.SHARPENED_FLINT.get()));
 		tag(MineralTags.Items.TEMPERED_FLINT_REPAIRABLE)
-			.add(MineralItems.TEMPERED_FLINT.get());
+			.add(MineralItems.getRK(MineralItems.TEMPERED_FLINT.get()));
 		
 		/* TOOLS */
 		
-		tag(ItemTags.DURABILITY_ENCHANTABLE).add(MineralItems.CRYSTAL_RESONATOR.get());
-		tag(ItemTags.DURABILITY_ENCHANTABLE).add(MineralItems.RUBY_SCEPTER.get());
+		tag(ItemTags.DURABILITY_ENCHANTABLE).add(MineralItems.getRK(MineralItems.CRYSTAL_RESONATOR.get()));
+		tag(ItemTags.DURABILITY_ENCHANTABLE).add(MineralItems.getRK(MineralItems.RUBY_SCEPTER.get()));
 		
-		tag(ItemTags.BOW_ENCHANTABLE).add(MineralItems.CRYSTAL_BOW.get());
+		tag(ItemTags.BOW_ENCHANTABLE).add(MineralItems.getRK(MineralItems.CRYSTAL_BOW.get()));
 		
-		tag(ItemTags.BREWING_FUEL).add(MineralItems.GARNET_SHARD.get());
-		tag(ItemTags.FURNACE_MINECART_FUEL).add(MineralItems.GARNET_SHARD.get());
-		tag(ItemTags.DUPLICATES_ALLAYS).add(MineralItems.GARNET_SHARD.get());
+		tag(ItemTags.BREWING_FUEL).add(MineralItems.getRK(MineralItems.GARNET_SHARD.get()));
+		tag(ItemTags.FURNACE_MINECART_FUEL).add(MineralItems.getRK(MineralItems.GARNET_SHARD.get()));
+		tag(ItemTags.DUPLICATES_ALLAYS).add(MineralItems.getRK(MineralItems.GARNET_SHARD.get()));
 		
-		tag(ItemTags.SWORDS).add(MineralItems.RUBY_SWORD.get());
-		tag(ItemTags.PICKAXES).add(MineralItems.RUBY_PICKAXE.get());
-		tag(ItemTags.AXES).add(MineralItems.RUBY_AXE.get());
-		tag(ItemTags.SHOVELS).add(MineralItems.RUBY_SHOVEL.get());
-		tag(ItemTags.HOES).add(MineralItems.RUBY_HOE.get());
-		tag(ItemTags.SPEARS).add(MineralItems.RUBY_SPEAR.get());
+		tag(ItemTags.SWORDS).add(MineralItems.getRK(MineralItems.RUBY_SWORD.get()));
+		tag(ItemTags.PICKAXES).add(MineralItems.getRK(MineralItems.RUBY_PICKAXE.get()));
+		tag(ItemTags.AXES).add(MineralItems.getRK(MineralItems.RUBY_AXE.get()));
+		tag(ItemTags.SHOVELS).add(MineralItems.getRK(MineralItems.RUBY_SHOVEL.get()));
+		tag(ItemTags.HOES).add(MineralItems.getRK(MineralItems.RUBY_HOE.get()));
+		tag(ItemTags.SPEARS).add(MineralItems.getRK(MineralItems.RUBY_SPEAR.get()));
 		
-		tag(ItemTags.SWORDS).add(MineralItems.SAPPHIRE_SWORD.get());
-		tag(ItemTags.PICKAXES).add(MineralItems.SAPPHIRE_PICKAXE.get());
-		tag(ItemTags.AXES).add(MineralItems.SAPPHIRE_AXE.get());
-		tag(ItemTags.SHOVELS).add(MineralItems.SAPPHIRE_SHOVEL.get());
-		tag(ItemTags.HOES).add(MineralItems.SAPPHIRE_HOE.get());
-		tag(ItemTags.SPEARS).add(MineralItems.SAPPHIRE_SPEAR.get());
+		tag(ItemTags.SWORDS).add(MineralItems.getRK(MineralItems.SAPPHIRE_SWORD.get()));
+		tag(ItemTags.PICKAXES).add(MineralItems.getRK(MineralItems.SAPPHIRE_PICKAXE.get()));
+		tag(ItemTags.AXES).add(MineralItems.getRK(MineralItems.SAPPHIRE_AXE.get()));
+		tag(ItemTags.SHOVELS).add(MineralItems.getRK(MineralItems.SAPPHIRE_SHOVEL.get()));
+		tag(ItemTags.HOES).add(MineralItems.getRK(MineralItems.SAPPHIRE_HOE.get()));
+		tag(ItemTags.SPEARS).add(MineralItems.getRK(MineralItems.SAPPHIRE_SPEAR.get()));
 		
-		tag(ItemTags.SWORDS).add(MineralItems.EMERALD_SWORD.get());
-		tag(ItemTags.PICKAXES).add(MineralItems.EMERALD_PICKAXE.get());
-		tag(ItemTags.AXES).add(MineralItems.EMERALD_AXE.get());
-		tag(ItemTags.SHOVELS).add(MineralItems.EMERALD_SHOVEL.get());
-		tag(ItemTags.HOES).add(MineralItems.EMERALD_HOE.get());
-		tag(ItemTags.SPEARS).add(MineralItems.EMERALD_SPEAR.get());
+		tag(ItemTags.SWORDS).add(MineralItems.getRK(MineralItems.EMERALD_SWORD.get()));
+		tag(ItemTags.PICKAXES).add(MineralItems.getRK(MineralItems.EMERALD_PICKAXE.get()));
+		tag(ItemTags.AXES).add(MineralItems.getRK(MineralItems.EMERALD_AXE.get()));
+		tag(ItemTags.SHOVELS).add(MineralItems.getRK(MineralItems.EMERALD_SHOVEL.get()));
+		tag(ItemTags.HOES).add(MineralItems.getRK(MineralItems.EMERALD_HOE.get()));
+		tag(ItemTags.SPEARS).add(MineralItems.getRK(MineralItems.EMERALD_SPEAR.get()));
 		
-		tag(ItemTags.SWORDS).add(MineralItems.FLINT_SWORD.get());
-		tag(ItemTags.PICKAXES).add(MineralItems.FLINT_PICKAXE.get());
-		tag(ItemTags.AXES).add(MineralItems.FLINT_AXE.get());
-		tag(ItemTags.SHOVELS).add(MineralItems.FLINT_SHOVEL.get());
-		tag(ItemTags.HOES).add(MineralItems.FLINT_HOE.get());
-		tag(ItemTags.SPEARS).add(MineralItems.FLINT_SPEAR.get());
+		tag(ItemTags.SWORDS).add(MineralItems.getRK(MineralItems.FLINT_SWORD.get()));
+		tag(ItemTags.PICKAXES).add(MineralItems.getRK(MineralItems.FLINT_PICKAXE.get()));
+		tag(ItemTags.AXES).add(MineralItems.getRK(MineralItems.FLINT_AXE.get()));
+		tag(ItemTags.SHOVELS).add(MineralItems.getRK(MineralItems.FLINT_SHOVEL.get()));
+		tag(ItemTags.HOES).add(MineralItems.getRK(MineralItems.FLINT_HOE.get()));
+		tag(ItemTags.SPEARS).add(MineralItems.getRK(MineralItems.FLINT_SPEAR.get()));
 		
-		tag(ItemTags.SWORDS).add(MineralItems.SHARPENED_FLINT_SWORD.get());
-		tag(ItemTags.PICKAXES).add(MineralItems.SHARPENED_FLINT_PICKAXE.get());
-		tag(ItemTags.AXES).add(MineralItems.SHARPENED_FLINT_AXE.get());
-		tag(ItemTags.SHOVELS).add(MineralItems.SHARPENED_FLINT_SHOVEL.get());
-		tag(ItemTags.HOES).add(MineralItems.SHARPENED_FLINT_HOE.get());
-		tag(ItemTags.SPEARS).add(MineralItems.SHARPENED_FLINT_SPEAR.get());
+		tag(ItemTags.SWORDS).add(MineralItems.getRK(MineralItems.SHARPENED_FLINT_SWORD.get()));
+		tag(ItemTags.PICKAXES).add(MineralItems.getRK(MineralItems.SHARPENED_FLINT_PICKAXE.get()));
+		tag(ItemTags.AXES).add(MineralItems.getRK(MineralItems.SHARPENED_FLINT_AXE.get()));
+		tag(ItemTags.SHOVELS).add(MineralItems.getRK(MineralItems.SHARPENED_FLINT_SHOVEL.get()));
+		tag(ItemTags.HOES).add(MineralItems.getRK(MineralItems.SHARPENED_FLINT_HOE.get()));
+		tag(ItemTags.SPEARS).add(MineralItems.getRK(MineralItems.SHARPENED_FLINT_SPEAR.get()));
 		
-		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.RUBY_PICKAXE.get());
-		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.SAPPHIRE_PICKAXE.get());
-		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.EMERALD_PICKAXE.get());
-		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.FLINT_PICKAXE.get());
-		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.SHARPENED_FLINT_PICKAXE.get());
+		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.getRK(MineralItems.RUBY_PICKAXE.get()));
+		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.getRK(MineralItems.SAPPHIRE_PICKAXE.get()));
+		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.getRK(MineralItems.EMERALD_PICKAXE.get()));
+		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.getRK(MineralItems.FLINT_PICKAXE.get()));
+		tag(ItemTags.CLUSTER_MAX_HARVESTABLES).add(MineralItems.getRK(MineralItems.SHARPENED_FLINT_PICKAXE.get()));
 		
 		/* ARMOR */
 		
-		tag(ItemTags.HEAD_ARMOR).add(MineralItems.RUBY_HELMET.get());
-		tag(ItemTags.CHEST_ARMOR).add(MineralItems.RUBY_CHESTPLATE.get());
-		tag(ItemTags.LEG_ARMOR).add(MineralItems.RUBY_LEGGINGS.get());
-		tag(ItemTags.FOOT_ARMOR).add(MineralItems.RUBY_BOOTS.get());
+		tag(ItemTags.HEAD_ARMOR).add(MineralItems.getRK(MineralItems.RUBY_HELMET.get()));
+		tag(ItemTags.CHEST_ARMOR).add(MineralItems.getRK(MineralItems.RUBY_CHESTPLATE.get()));
+		tag(ItemTags.LEG_ARMOR).add(MineralItems.getRK(MineralItems.RUBY_LEGGINGS.get()));
+		tag(ItemTags.FOOT_ARMOR).add(MineralItems.getRK(MineralItems.RUBY_BOOTS.get()));
 		
-		tag(ItemTags.HEAD_ARMOR).add(MineralItems.SAPPHIRE_HELMET.get());
-		tag(ItemTags.CHEST_ARMOR).add(MineralItems.SAPPHIRE_CHESTPLATE.get());
-		tag(ItemTags.LEG_ARMOR).add(MineralItems.SAPPHIRE_LEGGINGS.get());
-		tag(ItemTags.FOOT_ARMOR).add(MineralItems.SAPPHIRE_BOOTS.get());
+		tag(ItemTags.HEAD_ARMOR).add(MineralItems.getRK(MineralItems.SAPPHIRE_HELMET.get()));
+		tag(ItemTags.CHEST_ARMOR).add(MineralItems.getRK(MineralItems.SAPPHIRE_CHESTPLATE.get()));
+		tag(ItemTags.LEG_ARMOR).add(MineralItems.getRK(MineralItems.SAPPHIRE_LEGGINGS.get()));
+		tag(ItemTags.FOOT_ARMOR).add(MineralItems.getRK(MineralItems.SAPPHIRE_BOOTS.get()));
 		
-		tag(ItemTags.HEAD_ARMOR).add(MineralItems.EMERALD_HELMET.get());
-		tag(ItemTags.CHEST_ARMOR).add(MineralItems.EMERALD_CHESTPLATE.get());
-		tag(ItemTags.LEG_ARMOR).add(MineralItems.EMERALD_LEGGINGS.get());
-		tag(ItemTags.FOOT_ARMOR).add(MineralItems.EMERALD_BOOTS.get());
+		tag(ItemTags.HEAD_ARMOR).add(MineralItems.getRK(MineralItems.EMERALD_HELMET.get()));
+		tag(ItemTags.CHEST_ARMOR).add(MineralItems.getRK(MineralItems.EMERALD_CHESTPLATE.get()));
+		tag(ItemTags.LEG_ARMOR).add(MineralItems.getRK(MineralItems.EMERALD_LEGGINGS.get()));
+		tag(ItemTags.FOOT_ARMOR).add(MineralItems.getRK(MineralItems.EMERALD_BOOTS.get()));
 		
-		tag(ItemTags.HEAD_ARMOR).add(MineralItems.FLINT_HELMET.get());
-		tag(ItemTags.CHEST_ARMOR).add(MineralItems.FLINT_CHESTPLATE.get());
-		tag(ItemTags.LEG_ARMOR).add(MineralItems.FLINT_LEGGINGS.get());
-		tag(ItemTags.FOOT_ARMOR).add(MineralItems.FLINT_BOOTS.get());
+		tag(ItemTags.HEAD_ARMOR).add(MineralItems.getRK(MineralItems.FLINT_HELMET.get()));
+		tag(ItemTags.CHEST_ARMOR).add(MineralItems.getRK(MineralItems.FLINT_CHESTPLATE.get()));
+		tag(ItemTags.LEG_ARMOR).add(MineralItems.getRK(MineralItems.FLINT_LEGGINGS.get()));
+		tag(ItemTags.FOOT_ARMOR).add(MineralItems.getRK(MineralItems.FLINT_BOOTS.get()));
 		
-		tag(ItemTags.HEAD_ARMOR).add(MineralItems.TEMPERED_FLINT_HELMET.get());
-		tag(ItemTags.CHEST_ARMOR).add(MineralItems.TEMPERED_FLINT_CHESTPLATE.get());
-		tag(ItemTags.LEG_ARMOR).add(MineralItems.TEMPERED_FLINT_LEGGINGS.get());
-		tag(ItemTags.FOOT_ARMOR).add(MineralItems.TEMPERED_FLINT_BOOTS.get());
+		tag(ItemTags.HEAD_ARMOR).add(MineralItems.getRK(MineralItems.TEMPERED_FLINT_HELMET.get()));
+		tag(ItemTags.CHEST_ARMOR).add(MineralItems.getRK(MineralItems.TEMPERED_FLINT_CHESTPLATE.get()));
+		tag(ItemTags.LEG_ARMOR).add(MineralItems.getRK(MineralItems.TEMPERED_FLINT_LEGGINGS.get()));
+		tag(ItemTags.FOOT_ARMOR).add(MineralItems.getRK(MineralItems.TEMPERED_FLINT_BOOTS.get()));
 		
 	}
 
