@@ -11,6 +11,8 @@ import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 
 public class MineralFoods {
 	
+	public static final FoodProperties IOLITE_BULB = new FoodProperties.Builder().nutrition(2).saturationModifier(0.4f).build();
+	
 	public static final FoodProperties RUBY_POTATO = new FoodProperties.Builder().nutrition(6).saturationModifier(1.2F).alwaysEdible().build();
 	public static final FoodProperties SAPPHIRE_STEW = new FoodProperties.Builder().nutrition(6).saturationModifier(1.2f).alwaysEdible().build();
 	public static final FoodProperties EMERALD_HONEY = new FoodProperties.Builder().nutrition(6).saturationModifier(1.2f).alwaysEdible().build();

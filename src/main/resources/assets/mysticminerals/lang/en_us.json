@@ -7,6 +7,8 @@
 	"item.mysticminerals.sharpened_flint": "Sharpened Flint",
 	"item.mysticminerals.tempered_flint": "Tempered Flint",
 	
+	"item.mysticminerals.iolite_bulb": "Iolite Bulb",
+	
 	"item.mysticminerals.ruby_potato": "Ruby Potato",
 	"item.mysticminerals.sapphire_stew": "Sapphire Stew",
 	"item.mysticminerals.emerald_honey": "Emerald Honey",
@@ -85,7 +87,7 @@
 	
 	"tooltip.mysticminerals.crystal_resonator.tooltip": "Press §eShift§r for more information",
 	"tooltip.mysticminerals.crystal_resonator.shift_down": "Right click blocks to detect nearby crystals",
-	"tooltip.mysticminerals.garnet_shard.tooltip": "Mystical fuel",
+	"tooltip.mysticminerals.citrine_shard.tooltip": "Mystical fuel",
 	"tooltip.mysticminerals.sharpener_block.tooltip": "The sharp gets sharper",
 	"tooltip.mysticminerals.resonant_converter.tooltip": "Resonates gems to alter material",
 	
@@ -121,6 +123,10 @@
 	"block.mysticminerals.gem_lamp": "Gem Lamp",
 	
 	"block.mysticminerals.amethyst_pressure_plate": "Amethyst Pressure Plate",
+	
+	/* CROPS */
+	
+	"block.mysticminerals.iolite_bulb_crop": "Iolite Bulb Crop",
 	
 	/* TABS */
 	

@@ -9,11 +9,8 @@ import com.venalfax.mysticminerals.tags.MineralTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
-import net.minecraft.references.BlockIds;
-import net.minecraft.references.BlockItemId;
 import net.minecraft.references.BlockItemIds;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 
 public class ModBlockTagProvider extends BlockTagsProvider{
@@ -109,6 +106,9 @@ public class ModBlockTagProvider extends BlockTagsProvider{
 		tag(MineralTags.Blocks.INCORRECT_FOR_SHARPENED_FLINT_TOOL)
 			.addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
 			.remove(MineralTags.Blocks.NEEDS_SHARPENED_FLINT_TOOL);
+		
+		tag(BlockTags.CROPS)
+			.add(MineralBlocks.getRK(MineralBlocks.IOLITE_BULB_CROP.get()));
 			
 	}
 

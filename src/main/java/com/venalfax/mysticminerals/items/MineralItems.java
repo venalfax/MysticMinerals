@@ -41,7 +41,7 @@ public class MineralItems extends Items {
 			properties -> new Item(properties.fireResistant()) {
 				@Override
 				public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
-					builder.accept(Component.translatable("tooltip.mysticminerals.garnet_shard.tooltip"));
+					builder.accept(Component.translatable("tooltip.mysticminerals.citrine_shard.tooltip"));
 					super.appendHoverText(itemStack, context, display, builder, tooltipFlag);
 				}
 			});
@@ -177,6 +177,11 @@ public class MineralItems extends Items {
 			properties -> new Item(properties.food(MineralFoods.SAPPHIRE_STEW, MineralFoods.SAPPHIRE_STEW_CONSUMABLE)));
 	public static final DeferredItem<Item> EMERALD_HONEY = ITEMS.registerItem("emerald_honey", 
 			properties -> new Item(properties.food(MineralFoods.EMERALD_HONEY, MineralFoods.EMERALD_HONEY_CONSUMABLE)));
+	
+	/* CROPS */
+	
+	public static final DeferredItem<Item> IOLITE_BULB = ITEMS.registerItem("iolite_bulb",
+			properties -> new BlockItem(MineralBlocks.IOLITE_BULB_CROP.get(), properties.food(MineralFoods.IOLITE_BULB)));
 	
 	/* BLOCKS */
 	

@@ -11,7 +11,6 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.references.BlockItemIds;
 import net.minecraft.references.ItemIds;
 import net.minecraft.tags.ItemTags;
-import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.data.ItemTagsProvider;
 
 public class ModItemTagProvider extends ItemTagsProvider {

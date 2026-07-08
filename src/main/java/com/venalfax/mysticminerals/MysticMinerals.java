@@ -163,6 +163,7 @@ public class MysticMinerals {
     	}
     	
     	if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+    		event.accept(MineralItems.IOLITE_BULB);
     		event.accept(MineralItems.RUBY_POTATO);
     		event.accept(MineralItems.SAPPHIRE_STEW);
     		event.accept(MineralItems.EMERALD_HONEY);

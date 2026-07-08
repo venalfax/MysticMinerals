@@ -7,6 +7,7 @@ import com.venalfax.mysticminerals.blocks.custom.BuddingCitrineBlock;
 import com.venalfax.mysticminerals.blocks.custom.CitrineBlock;
 import com.venalfax.mysticminerals.blocks.custom.CitrineClusterBlock;
 import com.venalfax.mysticminerals.blocks.custom.GemLampBlock;
+import com.venalfax.mysticminerals.blocks.custom.IoliteBulbCropBlock;
 import com.venalfax.mysticminerals.blocks.custom.ResonantConverterBlock;
 import com.venalfax.mysticminerals.blocks.custom.SharpenerBlock;
 
@@ -127,8 +128,6 @@ public class MineralBlocks {
 					.mapColor(MapColor.DEEPSLATE)
 					.sound(SoundType.DEEPSLATE)));
 	
-	
-	
 	public static final DeferredBlock<Block> FLINT_BLOCK = registerBlock("flint_block", 
 			properties -> new Block(properties
 					.strength(2f)
@@ -169,8 +168,7 @@ public class MineralBlocks {
 					.strength(1f)
 					.requiresCorrectToolForDrops()
 					.sound(SoundType.AMETHYST_CLUSTER)
-					.lightLevel(state -> state.getValue(GemLampBlock.CLICKED) ? 15 : 0)
-					));
+					.lightLevel(state -> state.getValue(GemLampBlock.CLICKED) ? 15 : 0)));
 
 	public static final DeferredBlock<Block> AMETHYST_PRESSURE_PLATE = registerBlock("amethyst_pressure_plate", 
 			properties -> new PressurePlateBlock(BlockSetType.IRON, properties
@@ -179,6 +177,14 @@ public class MineralBlocks {
 					.forceSolidOn()
 					.noCollision()
 					.strength(0.5F)
+					.pushReaction(PushReaction.DESTROY)));
+	
+	public static final DeferredBlock<Block> IOLITE_BULB_CROP = BLOCKS.registerBlock("iolite_bulb_crop", 
+			properties -> new IoliteBulbCropBlock(properties
+					.randomTicks()
+					.sound(SoundType.CROP)
+					.instabreak()
+					.noCollision()
 					.pushReaction(PushReaction.DESTROY)));
 	
 	public static ResourceKey<Block> getRK(Block block) {

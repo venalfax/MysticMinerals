@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "mysticminerals:block/iolite_bulb_crop_stage1"
+  }
+}

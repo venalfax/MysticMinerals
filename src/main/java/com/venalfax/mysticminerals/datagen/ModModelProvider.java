@@ -3,6 +3,7 @@ package com.venalfax.mysticminerals.datagen;
 import com.venalfax.mysticminerals.MysticMinerals;
 import com.venalfax.mysticminerals.blocks.MineralBlocks;
 import com.venalfax.mysticminerals.blocks.custom.GemLampBlock;
+import com.venalfax.mysticminerals.blocks.custom.IoliteBulbCropBlock;
 import com.venalfax.mysticminerals.items.MineralItems;
 import com.venalfax.mysticminerals.items.MineralArmorMaterials;
 
@@ -32,6 +33,9 @@ public class ModModelProvider extends ModelProvider {
 		itemModels.generateFlatItem(MineralItems.CITRINE_SHARD.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.SHARPENED_FLINT.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.TEMPERED_FLINT.get(), ModelTemplates.FLAT_ITEM);
+		
+		itemModels.generateFlatItem(MineralItems.IOLITE_BULB.get(), ModelTemplates.FLAT_ITEM);
+		
 		itemModels.generateFlatItem(MineralItems.RUBY_POTATO.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.SAPPHIRE_STEW.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.EMERALD_HONEY.get(), ModelTemplates.FLAT_ITEM);
@@ -134,8 +138,11 @@ public class ModModelProvider extends ModelProvider {
 		
 		blockModels.family(Blocks.AMETHYST_BLOCK)
 			.pressurePlate(MineralBlocks.AMETHYST_PRESSURE_PLATE.get());
+		
+		/* CROPS */
+		
+		blockModels.createCropBlock(MineralBlocks.IOLITE_BULB_CROP.get(), IoliteBulbCropBlock.AGE, 0, 1, 2, 3);
+		
 	}
-	
-	
 	
 }

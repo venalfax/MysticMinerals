@@ -30,6 +30,12 @@ public class MineralTab {
 						output.accept(MineralItems.SHARPENED_FLINT);
 						output.accept(MineralItems.TEMPERED_FLINT);
 						
+						/* CROPS */
+						
+						output.accept(MineralItems.IOLITE_BULB);
+						
+						/* FOODS */
+						
 						output.accept(MineralItems.RUBY_POTATO);
 						output.accept(MineralItems.SAPPHIRE_STEW);
 						output.accept(MineralItems.EMERALD_HONEY);
