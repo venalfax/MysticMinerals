@@ -9,8 +9,8 @@ import com.venalfax.mysticminerals.tags.MineralTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
 import net.minecraft.data.PackOutput;
-import net.minecraft.references.BlockItemIds;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 
 public class ModBlockTagProvider extends BlockTagsProvider{
@@ -22,69 +22,74 @@ public class ModBlockTagProvider extends BlockTagsProvider{
 	@Override
 	protected void addTags(HolderLookup.Provider provider) {
 		tag(BlockTags.MINEABLE_WITH_PICKAXE)
-			.add(MineralBlocks.getRK(MineralBlocks.RUBY_BLOCK.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.RUBY_ORE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.DEEPSLATE_RUBY_ORE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.SAPPHIRE_BLOCK.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.SAPPHIRE_ORE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.CITRINE_BLOCK.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.BUDDING_CITRINE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.CITRINE_CLUSTER.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.LARGE_CITRINE_BUD.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.MEDIUM_CITRINE_BUD.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.SMALL_CITRINE_BUD.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.FLINT_BLOCK.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.SHARPENED_FLINT_BLOCK.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.TEMPERED_FLINT_BLOCK.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.GEM_LAMP.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.RESONANT_CONVERTER.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.AMETHYST_PRESSURE_PLATE.get()));
+			.add(MineralBlocks.RUBY_BLOCK.get())
+			.add(MineralBlocks.RUBY_ORE.get())
+			.add(MineralBlocks.DEEPSLATE_RUBY_ORE.get())
+			.add(MineralBlocks.SAPPHIRE_BLOCK.get())
+			.add(MineralBlocks.SAPPHIRE_ORE.get())
+			.add(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get())
+			.add(MineralBlocks.CITRINE_BLOCK.get())
+			.add(MineralBlocks.BUDDING_CITRINE.get())
+			.add(MineralBlocks.CITRINE_CLUSTER.get())
+			.add(MineralBlocks.LARGE_CITRINE_BUD.get())
+			.add(MineralBlocks.MEDIUM_CITRINE_BUD.get())
+			.add(MineralBlocks.SMALL_CITRINE_BUD.get())
+			.add(MineralBlocks.FLINT_BLOCK.get())
+			.add(MineralBlocks.SHARPENED_FLINT_BLOCK.get())
+			.add(MineralBlocks.TEMPERED_FLINT_BLOCK.get())
+			.add(MineralBlocks.GEM_LAMP.get())
+			.add(MineralBlocks.RESONANT_CONVERTER.get())
+			.add(MineralBlocks.AMETHYST_PRESSURE_PLATE.get());
 		
 		tag(BlockTags.MINEABLE_WITH_AXE)
-			.add(MineralBlocks.getRK(MineralBlocks.SHARPENER_BLOCK.get()));
+			.add(MineralBlocks.CRYSTAL_RESEARCH_TABLE.get())
+			.add(MineralBlocks.SHARPENER_BLOCK.get());
 		
 		tag(BlockTags.NEEDS_IRON_TOOL)
-			.add(MineralBlocks.getRK(MineralBlocks.RUBY_BLOCK.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.RUBY_ORE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.DEEPSLATE_RUBY_ORE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.SAPPHIRE_BLOCK.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.SAPPHIRE_ORE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.RESONANT_CONVERTER.get()));
+			.add(MineralBlocks.RUBY_BLOCK.get())
+			.add(MineralBlocks.RUBY_ORE.get())
+			.add(MineralBlocks.DEEPSLATE_RUBY_ORE.get())
+			.add(MineralBlocks.SAPPHIRE_BLOCK.get())
+			.add(MineralBlocks.SAPPHIRE_ORE.get())
+			.add(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get())
+			.add(MineralBlocks.RESONANT_CONVERTER.get());
+		
+		tag(BlockTags.STONE_ORE_REPLACEABLES)
+			.add(MineralBlocks.RUBY_ORE.get())
+			.add(MineralBlocks.SAPPHIRE_ORE.get());
 		
 		tag(BlockTags.DEEPSLATE_ORE_REPLACEABLES)
-			.add(MineralBlocks.getRK(MineralBlocks.DEEPSLATE_RUBY_ORE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get()));
+			.add(MineralBlocks.DEEPSLATE_RUBY_ORE.get())
+			.add(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get());
 		
 		tag(BlockTags.BEACON_BASE_BLOCKS)
-			.add(MineralBlocks.getRK(MineralBlocks.RUBY_BLOCK.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.SAPPHIRE_BLOCK.get()));
+			.add(MineralBlocks.RUBY_BLOCK.get())
+			.add(MineralBlocks.SAPPHIRE_BLOCK.get());
 		
 		tag(MineralTags.Blocks.CRYSTAL_RESONATORS)
-			.add(BlockItemIds.EMERALD_BLOCK.block())
-			.add(BlockItemIds.EMERALD_ORE.block())
-			.add(BlockItemIds.DEEPSLATE_EMERALD_ORE.block())
-			.add(BlockItemIds.AMETHYST_BLOCK.block())
-			.add(BlockItemIds.BUDDING_AMETHYST.block())
-			.add(BlockItemIds.AMETHYST_CLUSTER.block())
-			.add(BlockItemIds.LARGE_AMETHYST_BUD.block())
-			.add(BlockItemIds.MEDIUM_AMETHYST_BUD.block())
-			.add(BlockItemIds.SMALL_AMETHYST_BUD.block())
-			.add(BlockItemIds.QUARTZ_BLOCK.block())
-			.add(BlockItemIds.NETHER_QUARTZ_ORE.block())
-			.add(MineralBlocks.getRK(MineralBlocks.RUBY_BLOCK.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.RUBY_ORE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.DEEPSLATE_RUBY_ORE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.SAPPHIRE_BLOCK.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.SAPPHIRE_ORE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.CITRINE_BLOCK.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.BUDDING_CITRINE.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.CITRINE_CLUSTER.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.LARGE_CITRINE_BUD.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.MEDIUM_CITRINE_BUD.get()))
-			.add(MineralBlocks.getRK(MineralBlocks.SMALL_CITRINE_BUD.get()));
+			.add(Blocks.EMERALD_BLOCK)
+			.add(Blocks.EMERALD_ORE)
+			.add(Blocks.DEEPSLATE_EMERALD_ORE)
+			.add(Blocks.AMETHYST_BLOCK)
+			.add(Blocks.BUDDING_AMETHYST)
+			.add(Blocks.AMETHYST_CLUSTER)
+			.add(Blocks.LARGE_AMETHYST_BUD)
+			.add(Blocks.MEDIUM_AMETHYST_BUD)
+			.add(Blocks.SMALL_AMETHYST_BUD)
+			.add(Blocks.QUARTZ_BLOCK)
+			.add(Blocks.NETHER_QUARTZ_ORE)
+			.add(MineralBlocks.RUBY_BLOCK.get())
+			.add(MineralBlocks.RUBY_ORE.get())
+			.add(MineralBlocks.DEEPSLATE_RUBY_ORE.get())
+			.add(MineralBlocks.SAPPHIRE_BLOCK.get())
+			.add(MineralBlocks.SAPPHIRE_ORE.get())
+			.add(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE.get())
+			.add(MineralBlocks.CITRINE_BLOCK.get())
+			.add(MineralBlocks.BUDDING_CITRINE.get())
+			.add(MineralBlocks.CITRINE_CLUSTER.get())
+			.add(MineralBlocks.LARGE_CITRINE_BUD.get())
+			.add(MineralBlocks.MEDIUM_CITRINE_BUD.get())
+			.add(MineralBlocks.SMALL_CITRINE_BUD.get());
 			
 		tag(MineralTags.Blocks.NEEDS_MINERAL_TOOL)
 			.addTag(BlockTags.NEEDS_DIAMOND_TOOL);
@@ -108,7 +113,9 @@ public class ModBlockTagProvider extends BlockTagsProvider{
 			.remove(MineralTags.Blocks.NEEDS_SHARPENED_FLINT_TOOL);
 		
 		tag(BlockTags.CROPS)
-			.add(MineralBlocks.getRK(MineralBlocks.IOLITE_BULB_CROP.get()));
+			.add(MineralBlocks.IOLITE_BULB_CROP.get())
+			.add(MineralBlocks.JASPEROOT_CROP.get())
+			.add(MineralBlocks.SODALITE_CROP.get());
 			
 	}
 

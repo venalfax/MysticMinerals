@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_garnet_shard": {
+    "has_citrine_shard": {
       "conditions": {
         "items": [
           {
-            "items": "mysticminerals:garnet_shard"
+            "items": "mysticminerals:citrine_shard"
           }
         ]
       },
@@ -31,7 +31,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_garnet_shard",
+      "has_citrine_shard",
       "has_string"
     ]
   ],

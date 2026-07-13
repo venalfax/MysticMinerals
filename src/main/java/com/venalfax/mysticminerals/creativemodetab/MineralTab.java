@@ -14,6 +14,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class MineralTab {
+	
 	public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = 
 			DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MysticMinerals.MOD_ID);
 	
@@ -33,9 +34,15 @@ public class MineralTab {
 						/* CROPS */
 						
 						output.accept(MineralItems.IOLITE_BULB);
+						output.accept(MineralItems.JASPEROOT);
+						output.accept(MineralItems.SODALITE_LEAVES);
+						output.accept(MineralItems.SODALITE_SEEDS);
+						output.accept(MineralItems.ONYX_BERRIES);
 						
 						/* FOODS */
 						
+						output.accept(MineralItems.ROASTED_JASPEROOT);
+						output.accept(MineralItems.CRYSTAL_DINNER);
 						output.accept(MineralItems.RUBY_POTATO);
 						output.accept(MineralItems.SAPPHIRE_STEW);
 						output.accept(MineralItems.EMERALD_HONEY);
@@ -43,7 +50,7 @@ public class MineralTab {
 						/* TOOLS */
 
 						output.accept(MineralItems.CRYSTAL_RESONATOR);
-						output.accept(MineralItems.RUBY_SCEPTER);
+						output.accept(MineralItems.CRYSTAL_SCEPTER);
 						
 						output.accept(MineralItems.CRYSTAL_BOW);
 						
@@ -127,6 +134,7 @@ public class MineralTab {
 						output.accept(MineralBlocks.SHARPENED_FLINT_BLOCK);
 						output.accept(MineralBlocks.TEMPERED_FLINT_BLOCK);
 						
+						output.accept(MineralBlocks.CRYSTAL_RESEARCH_TABLE);
 						output.accept(MineralBlocks.SHARPENER_BLOCK);
 						output.accept(MineralBlocks.RESONANT_CONVERTER);
 						output.accept(MineralBlocks.GEM_LAMP);
@@ -138,4 +146,5 @@ public class MineralTab {
 	public static void register(IEventBus eventBus) {
 		CREATIVE_MODE_TABS.register(eventBus);
 	}
+	
 }

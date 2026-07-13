@@ -1,9 +1,11 @@
 package com.venalfax.mysticminerals.blocks.custom;
 
+import com.mojang.serialization.MapCodec;
 import com.venalfax.mysticminerals.items.MineralItems;
 import com.venalfax.mysticminerals.tags.MineralTags;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
@@ -13,15 +15,20 @@ import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.Rotation;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
+import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraft.world.phys.BlockHitResult;
 
-public class SharpenerBlock extends Block {
+public class SharpenerBlock extends HorizontalDirectionalBlock {
 	
 	public SharpenerBlock(Properties properties) {
 		super(properties);
 	}
+	
+	public static final EnumProperty<Direction> FACING = BlockStateProperties.HORIZONTAL_FACING;
 	
 	private int interactionProgress = 0;
 	// Set for 30 seconds 
@@ -97,6 +104,16 @@ public class SharpenerBlock extends Block {
 	private boolean isValidItem(ItemStack item) {
 		
 		return item.is(MineralTags.Items.SHARPENABLE);
+	}
+	
+	@Override
+	protected BlockState rotate(BlockState state, Rotation rotation) {
+		return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
+	}
+
+	@Override
+	protected MapCodec<? extends HorizontalDirectionalBlock> codec() {
+		return null;
 	}
 	
 }

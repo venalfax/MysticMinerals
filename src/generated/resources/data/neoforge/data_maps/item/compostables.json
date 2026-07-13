@@ -1,0 +1,19 @@
+{
+  "values": {
+    "mysticminerals:iolite_bulb": {
+      "chance": 0.65
+    },
+    "mysticminerals:jasperoot": {
+      "chance": 0.65
+    },
+    "mysticminerals:onyx_berries": {
+      "chance": 0.3
+    },
+    "mysticminerals:sodalite_leaves": {
+      "chance": 0.65
+    },
+    "mysticminerals:sodalite_seeds": {
+      "chance": 0.3
+    }
+  }
+}

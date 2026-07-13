@@ -1,41 +1,31 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_blaze_rod": {
+    "has_iolite_bulb": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:blaze_rod"
+            "items": "mysticminerals:iolite_bulb"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_garnet_shard": {
+    "has_roasted_jasperoot": {
       "conditions": {
         "items": [
           {
-            "items": "mysticminerals:garnet_shard"
+            "items": "mysticminerals:roasted_jasperoot"
           }
         ]
       },
       "trigger": "minecraft:inventory_changed"
     },
-    "has_gold_ingot": {
+    "has_sodalite_leaves": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:gold_ingot"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
-    },
-    "has_ruby": {
-      "conditions": {
-        "items": [
-          {
-            "items": "mysticminerals:ruby"
+            "items": "mysticminerals:sodalite_leaves"
           }
         ]
       },
@@ -43,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mysticminerals:ruby_scepter"
+        "recipe": "mysticminerals:crystal_dinner"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -51,15 +41,14 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_ruby",
-      "has_gold_ingot",
-      "has_blaze_rod",
-      "has_garnet_shard"
+      "has_iolite_bulb",
+      "has_roasted_jasperoot",
+      "has_sodalite_leaves"
     ]
   ],
   "rewards": {
     "recipes": [
-      "mysticminerals:ruby_scepter"
+      "mysticminerals:crystal_dinner"
     ]
   }
 }

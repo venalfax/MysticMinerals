@@ -1,0 +1,12 @@
+{
+  "gives": {
+    "id": "mysticminerals:ruby"
+  },
+  "max_uses": 16.0,
+  "reputation_discount": 0.06,
+  "wants": {
+    "count": 3.0,
+    "id": "minecraft:emerald"
+  },
+  "xp": 12.0
+}

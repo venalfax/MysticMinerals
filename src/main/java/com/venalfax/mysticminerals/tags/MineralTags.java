@@ -2,16 +2,18 @@ package com.venalfax.mysticminerals.tags;
 
 import com.venalfax.mysticminerals.MysticMinerals;
 
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.trading.VillagerTrade;
 import net.minecraft.world.level.block.Block;
 
 public class MineralTags {
 	
-	public static class Blocks{
+	public static class Blocks {
 		public static final TagKey<Block> MYSTIC_MINERALS_BLOCKS = createTag("mystic_minerals_blocks");
 		
 		public static final TagKey<Block> CRYSTAL_RESONATORS = createTag("crystal_resonators");
@@ -28,17 +30,18 @@ public class MineralTags {
 		}
 	}
 	
-	public static class Items{
+	public static class Items {
 		public static final TagKey<Item> MYSTIC_MINERALS_ITEMS = createTag("mystic_minerals_items");
 		
 		public static final TagKey<Item> SHARPENABLE = createTag("sharpenable");
+		
+		public static final TagKey<Item> DINNER_MEATS = createTag("dinner_meats");
 		
 		public static final TagKey<Item> EMERALD_CONVERTABLE = createTag("emerald_convertable");
 		public static final TagKey<Item> RUBY_CONVERTABLE = createTag("ruby_convertable");
 		public static final TagKey<Item> SAPPHIRE_CONVERTABLE = createTag("sapphire_convertable");
 		public static final TagKey<Item> AMETHYST_CONVERTABLE = createTag("amethyst_convertable");
 		public static final TagKey<Item> CITRINE_CONVERTABLE = createTag("citrine_convertable");
-		
 		public static final TagKey<Item> EMERALD_ORE_CONVERTABLE = createTag("emerald_ore_convertable");
 		public static final TagKey<Item> RUBY_ORE_CONVERTABLE = createTag("ruby_ore_convertable");
 		public static final TagKey<Item> SAPPHIRE_ORE_CONVERTABLE = createTag("sapphire_ore_convertable");
@@ -62,6 +65,16 @@ public class MineralTags {
 		}
 	}
 	
-	
+	public static class Trades {
+		public static final TagKey<VillagerTrade> GEOLOGIST_LEVEL_1 = createTag("geologist/level_1");
+		public static final TagKey<VillagerTrade> GEOLOGIST_LEVEL_2 = createTag("geologist/level_2");
+		public static final TagKey<VillagerTrade> GEOLOGIST_LEVEL_3 = createTag("geologist/level_3");
+		public static final TagKey<VillagerTrade> GEOLOGIST_LEVEL_4 = createTag("geologist/level_4");
+		public static final TagKey<VillagerTrade> GEOLOGIST_LEVEL_5 = createTag("geologist/level_5");
+		
+		private static TagKey<VillagerTrade> createTag(String name) {
+			return TagKey.create(Registries.VILLAGER_TRADE, Identifier.fromNamespaceAndPath(MysticMinerals.MOD_ID, name));
+		}
+	}
 	
 }

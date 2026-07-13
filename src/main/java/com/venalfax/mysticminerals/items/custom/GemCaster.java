@@ -9,9 +9,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 
-public class RubyCaster extends Item{
+public class GemCaster extends Item{
 
-	public RubyCaster(Properties properties) {
+	public GemCaster(Properties properties) {
 		super(properties);
 	}
 	

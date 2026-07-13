@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "group": "food",
+  "group": "gemmed_food",
   "key": {
     "M": "minecraft:mushroom_stew",
     "S": "mysticminerals:sapphire_block"

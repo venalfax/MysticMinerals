@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
-  "group": "food",
+  "group": "gemmed_food",
   "key": {
     "P": "minecraft:baked_potato",
     "R": "mysticminerals:ruby_block"

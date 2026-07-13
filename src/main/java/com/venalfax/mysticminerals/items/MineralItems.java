@@ -6,7 +6,7 @@ import com.venalfax.mysticminerals.MysticMinerals;
 import com.venalfax.mysticminerals.blocks.MineralBlocks;
 import com.venalfax.mysticminerals.foods.MineralFoods;
 import com.venalfax.mysticminerals.items.custom.GemDetectorItem;
-import com.venalfax.mysticminerals.items.custom.RubyCaster;
+import com.venalfax.mysticminerals.items.custom.GemCaster;
 
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -49,10 +49,10 @@ public class MineralItems extends Items {
 	/* TOOLS */
 	
 	public static final DeferredItem<Item> CRYSTAL_RESONATOR = ITEMS.registerItem("crystal_resonator", 
-			properties -> new GemDetectorItem(properties.durability(500).enchantable(17).repairable(Items.AMETHYST_SHARD)));
+			properties -> new GemDetectorItem(properties.durability(500).enchantable(17).repairable(Items.AMETHYST_SHARD).useCooldown(5.0f)));
 	
-	public static final DeferredItem<Item> RUBY_SCEPTER = ITEMS.registerItem("ruby_scepter", 
-			properties -> new RubyCaster(properties.durability(500).enchantable(20).repairable(MineralItems.RUBY.get())));
+	public static final DeferredItem<Item> CRYSTAL_SCEPTER = ITEMS.registerItem("crystal_scepter", 
+			properties -> new GemCaster(properties.durability(500).enchantable(20).repairable(MineralItems.CITRINE_SHARD.get())));
 	
 	public static final DeferredItem<Item> CRYSTAL_BOW = ITEMS.registerItem("crystal_bow", 
 			properties -> new BowItem(properties.durability(640).enchantable(20).repairable(MineralItems.CITRINE_SHARD.get())));
@@ -171,23 +171,33 @@ public class MineralItems extends Items {
 	
 	/* FOOD */
 	
+	public static final DeferredItem<Item> ROASTED_JASPEROOT = ITEMS.registerItem("roasted_jasperoot", 
+			properties -> new Item(properties.food(MineralFoods.ROASTED_JASPEROOT)));
+	public static final DeferredItem<Item> CRYSTAL_DINNER = ITEMS.registerItem("crystal_dinner", 
+			properties -> new Item(properties.food(MineralFoods.CRYSTAL_DINNER).usingConvertsTo(Items.BOWL)));
 	public static final DeferredItem<Item> RUBY_POTATO = ITEMS.registerItem("ruby_potato", 
 			properties -> new Item(properties.food(MineralFoods.RUBY_POTATO, MineralFoods.RUBY_POTATO_CONSUMABLE)));
 	public static final DeferredItem<Item> SAPPHIRE_STEW = ITEMS.registerItem("sapphire_stew", 
-			properties -> new Item(properties.food(MineralFoods.SAPPHIRE_STEW, MineralFoods.SAPPHIRE_STEW_CONSUMABLE)));
+			properties -> new Item(properties.food(MineralFoods.SAPPHIRE_STEW, MineralFoods.SAPPHIRE_STEW_CONSUMABLE).usingConvertsTo(Items.BOWL)));
 	public static final DeferredItem<Item> EMERALD_HONEY = ITEMS.registerItem("emerald_honey", 
-			properties -> new Item(properties.food(MineralFoods.EMERALD_HONEY, MineralFoods.EMERALD_HONEY_CONSUMABLE)));
+			properties -> new Item(properties.food(MineralFoods.EMERALD_HONEY, MineralFoods.EMERALD_HONEY_CONSUMABLE).usingConvertsTo(Items.GLASS_BOTTLE)));
 	
 	/* CROPS */
 	
 	public static final DeferredItem<Item> IOLITE_BULB = ITEMS.registerItem("iolite_bulb",
 			properties -> new BlockItem(MineralBlocks.IOLITE_BULB_CROP.get(), properties.food(MineralFoods.IOLITE_BULB)));
+	public static final DeferredItem<Item> JASPEROOT = ITEMS.registerItem("jasperoot", 
+			properties -> new BlockItem(MineralBlocks.JASPEROOT_CROP.get(), properties.food(MineralFoods.JASPEROOT)));
+	public static final DeferredItem<Item> SODALITE_LEAVES = ITEMS.registerSimpleItem("sodalite_leaves");
+	public static final DeferredItem<Item> SODALITE_SEEDS = ITEMS.registerItem("sodalite_seeds", 
+			properties -> new BlockItem(MineralBlocks.SODALITE_CROP.get(), properties));
+	public static final DeferredItem<Item> ONYX_BERRIES = ITEMS.registerItem("onyx_berries",
+			properties -> new BlockItem(MineralBlocks.ONYX_BERRY_BUSH.get(), properties.food(MineralFoods.ONYX_BERRY, MineralFoods.ONYX_BERRY_CONSUMABLE)));
 	
 	/* BLOCKS */
 	
 	public static final DeferredItem<BlockItem> RUBY_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.RUBY_BLOCK);
 	public static final DeferredItem<BlockItem> SAPPHIRE_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.SAPPHIRE_BLOCK);
-	// Testing properties to make Garnet Block immune to fire
 	public static final DeferredItem<BlockItem> CITRINE_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.CITRINE_BLOCK,
 			properties -> new Item.Properties().fireResistant());
 	public static final DeferredItem<BlockItem> BUDDING_CITRINE = ITEMS.registerSimpleBlockItem(MineralBlocks.BUDDING_CITRINE, 
@@ -207,14 +217,15 @@ public class MineralItems extends Items {
 	public static final DeferredItem<BlockItem> FLINT_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.FLINT_BLOCK);
 	public static final DeferredItem<BlockItem> SHARPENED_FLINT_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.SHARPENED_FLINT_BLOCK);
 	public static final DeferredItem<BlockItem> TEMPERED_FLINT_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.TEMPERED_FLINT_BLOCK);
+	public static final DeferredItem<BlockItem>	CRYSTAL_RESEARCH_TABLE = ITEMS.registerSimpleBlockItem(MineralBlocks.CRYSTAL_RESEARCH_TABLE);
 	public static final DeferredItem<BlockItem> SHARPENER_BLOCK = ITEMS.registerSimpleBlockItem(MineralBlocks.SHARPENER_BLOCK);
 	public static final DeferredItem<BlockItem> RESONANT_CONVERTER = ITEMS.registerSimpleBlockItem(MineralBlocks.RESONANT_CONVERTER);
 	public static final DeferredItem<BlockItem> GEM_LAMP = ITEMS.registerSimpleBlockItem(MineralBlocks.GEM_LAMP);
 	public static final DeferredItem<BlockItem> AMETHYST_PRESSURE_PLATE = ITEMS.registerSimpleBlockItem(MineralBlocks.AMETHYST_PRESSURE_PLATE);
 	
 	public static ResourceKey<Item> getRK(Item item) {
-		return BuiltInRegistries.ITEM.getResourceKey(item).get()
-;	}
+		return BuiltInRegistries.ITEM.getResourceKey(item).get();
+	}
 	
 	public static void register(IEventBus eventBus) {
 		ITEMS.register(eventBus);

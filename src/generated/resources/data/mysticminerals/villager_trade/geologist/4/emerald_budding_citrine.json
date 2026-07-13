@@ -1,0 +1,11 @@
+{
+  "gives": {
+    "id": "mysticminerals:budding_citrine"
+  },
+  "reputation_discount": 0.07,
+  "wants": {
+    "count": 32.0,
+    "id": "minecraft:emerald"
+  },
+  "xp": 16.0
+}

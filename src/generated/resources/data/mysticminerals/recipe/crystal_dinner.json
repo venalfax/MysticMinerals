@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:bowl",
+    "mysticminerals:iolite_bulb",
+    "mysticminerals:roasted_jasperoot",
+    "mysticminerals:sodalite_leaves",
+    "#mysticminerals:dinner_meats"
+  ],
+  "result": {
+    "id": "mysticminerals:crystal_dinner"
+  }
+}

@@ -8,8 +8,11 @@ import com.venalfax.mysticminerals.blocks.custom.CitrineBlock;
 import com.venalfax.mysticminerals.blocks.custom.CitrineClusterBlock;
 import com.venalfax.mysticminerals.blocks.custom.GemLampBlock;
 import com.venalfax.mysticminerals.blocks.custom.IoliteBulbCropBlock;
+import com.venalfax.mysticminerals.blocks.custom.JasperootCropBlock;
+import com.venalfax.mysticminerals.blocks.custom.OnyxBerryBushBlock;
 import com.venalfax.mysticminerals.blocks.custom.ResonantConverterBlock;
 import com.venalfax.mysticminerals.blocks.custom.SharpenerBlock;
+import com.venalfax.mysticminerals.blocks.custom.SodaliteCropBlock;
 
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -28,6 +31,7 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class MineralBlocks {
+	
 	public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(MysticMinerals.MOD_ID);
 	
 	public static final DeferredBlock<Block> RUBY_BLOCK = registerBlock("ruby_block", 
@@ -65,7 +69,7 @@ public class MineralBlocks {
 					.strength(2f)
 					.forceSolidOn()
 					.noOcclusion()
-					.lightLevel(statex -> 5)
+					.lightLevel(statex -> 10)
 					.mapColor(MapColor.COLOR_ORANGE)
 					.sound(SoundType.AMETHYST_CLUSTER)
 					.pushReaction(PushReaction.DESTROY)));
@@ -75,7 +79,7 @@ public class MineralBlocks {
 					.strength(2f)
 					.forceSolidOn()
 					.noOcclusion()
-					.lightLevel(statex -> 4)
+					.lightLevel(statex -> 8)
 					.mapColor(MapColor.COLOR_ORANGE)
 					.sound(SoundType.LARGE_AMETHYST_BUD)
 					.pushReaction(PushReaction.DESTROY)));
@@ -85,7 +89,7 @@ public class MineralBlocks {
 					.strength(2f)
 					.forceSolidOn()
 					.noOcclusion()
-					.lightLevel(statex -> 2)
+					.lightLevel(statex -> 4)
 					.mapColor(MapColor.COLOR_ORANGE)
 					.sound(SoundType.MEDIUM_AMETHYST_BUD)
 					.pushReaction(PushReaction.DESTROY)));
@@ -95,7 +99,7 @@ public class MineralBlocks {
 					.strength(2f)
 					.forceSolidOn()
 					.noOcclusion()
-					.lightLevel(statex -> 1)
+					.lightLevel(statex -> 2)
 					.mapColor(MapColor.COLOR_ORANGE)
 					.sound(SoundType.SMALL_AMETHYST_BUD)
 					.pushReaction(PushReaction.DESTROY)));
@@ -149,6 +153,13 @@ public class MineralBlocks {
 					.mapColor(MapColor.COLOR_GRAY)
 					.sound(SoundType.STONE)));
 	
+	public static final DeferredBlock<Block> CRYSTAL_RESEARCH_TABLE = registerBlock("crystal_research_table",
+			properties -> new Block(properties
+					.strength(2f)
+					.requiresCorrectToolForDrops()
+					.mapColor(MapColor.WOOD)
+					.sound(SoundType.WOOD)));
+	
 	public static final DeferredBlock<Block> SHARPENER_BLOCK = registerBlock("sharpener_block", 
 			properties -> new SharpenerBlock(properties
 					.strength(2f)
@@ -187,6 +198,30 @@ public class MineralBlocks {
 					.noCollision()
 					.pushReaction(PushReaction.DESTROY)));
 	
+	public static final DeferredBlock<Block> JASPEROOT_CROP = BLOCKS.registerBlock("jasperoot_crop", 
+			properties -> new JasperootCropBlock(properties
+					.randomTicks()
+					.sound(SoundType.CROP)
+					.instabreak()
+					.noCollision()
+					.pushReaction(PushReaction.DESTROY)));
+	
+	public static final DeferredBlock<Block> SODALITE_CROP = BLOCKS.registerBlock("sodalite_crop", 
+			properties -> new SodaliteCropBlock(properties
+					.randomTicks()
+					.sound(SoundType.CROP)
+					.instabreak()
+					.noCollision()
+					.pushReaction(PushReaction.DESTROY)));
+	
+	public static final DeferredBlock<Block> ONYX_BERRY_BUSH = BLOCKS.registerBlock("onyx_berry_bush",
+			properties -> new OnyxBerryBushBlock(properties
+					.randomTicks()
+					.sound(SoundType.SWEET_BERRY_BUSH)
+					.noCollision()
+					.mapColor(MapColor.PLANT)
+					.pushReaction(PushReaction.DESTROY)));
+	
 	public static ResourceKey<Block> getRK(Block block) {
 		return BuiltInRegistries.BLOCK.getResourceKey(block).get();
 	}
@@ -206,4 +241,5 @@ public class MineralBlocks {
 	public static void register(IEventBus eventBus) {
 		BLOCKS.register(eventBus);
 	}
+	
 }

@@ -2,13 +2,13 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "R": "minecraft:redstone_lamp",
-    "g": "mysticminerals:garnet_shard"
+    "C": "mysticminerals:citrine_shard",
+    "R": "minecraft:redstone_lamp"
   },
   "pattern": [
-    " g ",
-    "gRg",
-    " g "
+    " C ",
+    "CRC",
+    " C "
   ],
   "result": {
     "id": "mysticminerals:gem_lamp"

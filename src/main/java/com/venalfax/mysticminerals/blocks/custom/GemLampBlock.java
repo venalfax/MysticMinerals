@@ -11,8 +11,8 @@ import net.minecraft.world.level.block.state.properties.BooleanProperty;
 import net.minecraft.world.phys.BlockHitResult;
 
 public class GemLampBlock extends Block{
-	public static final BooleanProperty CLICKED = BooleanProperty.create("clicked");
 	
+	public static final BooleanProperty CLICKED = BooleanProperty.create("clicked");
 	
 	public GemLampBlock(Properties properties) {
 		super(properties);
@@ -21,11 +21,9 @@ public class GemLampBlock extends Block{
 	
 	@Override
 	protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-		
 		if(!level.isClientSide()) {
 			level.setBlockAndUpdate(pos, state.cycle(CLICKED));
 		}
-		
 		return InteractionResult.SUCCESS;
 	}
 

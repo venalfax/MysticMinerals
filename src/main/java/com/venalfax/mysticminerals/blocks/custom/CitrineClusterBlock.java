@@ -34,85 +34,87 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class CitrineClusterBlock extends CitrineBlock implements SimpleWaterloggedBlock {
+	
 	public static final MapCodec<CitrineClusterBlock> CODEC = RecordCodecBuilder.mapCodec(
 	        i -> i.group(Codec.FLOAT.fieldOf("height").forGetter(b -> b.height), Codec.FLOAT.fieldOf("width").forGetter(b -> b.width), propertiesCodec())
 	            .apply(i, CitrineClusterBlock::new)
-	    );
-	    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
-	    public static final EnumProperty<Direction> FACING = BlockStateProperties.FACING;
-	    private final float height;
-	    private final float width;
-	    private final Map<Direction, VoxelShape> shapes;
+	);
+	
+	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+	public static final EnumProperty<Direction> FACING = BlockStateProperties.FACING;
+	private final float height;
+	private final float width;
+	private final Map<Direction, VoxelShape> shapes;
 
-	    @Override
-	    public MapCodec<CitrineClusterBlock> codec() {
-	        return CODEC;
-	    }
+	@Override
+	public MapCodec<CitrineClusterBlock> codec() {
+		return CODEC;
+	}
 
-	    public CitrineClusterBlock(float height, float width, BlockBehaviour.Properties props) {
-	        super(props);
-	        this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, false).setValue(FACING, Direction.UP));
-	        this.shapes = Shapes.rotateAll(Block.boxZ(width, 16.0F - height, 16.0));
-	        this.height = height;
-	        this.width = width;
-	    }
+	public CitrineClusterBlock(float height, float width, BlockBehaviour.Properties props) {
+	    super(props);
+	    this.registerDefaultState(this.defaultBlockState().setValue(WATERLOGGED, false).setValue(FACING, Direction.UP));
+	    this.shapes = Shapes.rotateAll(Block.boxZ(width, 16.0F - height, 16.0));
+	    this.height = height;
+	    this.width = width;
+	}
 
-	    @Override
-	    protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
-	        return this.shapes.get(state.getValue(FACING));
-	    }
+	@Override
+	protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
+	    return this.shapes.get(state.getValue(FACING));
+	}
 
-	    @Override
-	    protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
-	        Direction direction = state.getValue(FACING);
-	        BlockPos adjacentPos = pos.relative(direction.getOpposite());
-	        return level.getBlockState(adjacentPos).isFaceSturdy(level, adjacentPos, direction);
-	    }
+	@Override
+	protected boolean canSurvive(BlockState state, LevelReader level, BlockPos pos) {
+	    Direction direction = state.getValue(FACING);
+	    BlockPos adjacentPos = pos.relative(direction.getOpposite());
+	    return level.getBlockState(adjacentPos).isFaceSturdy(level, adjacentPos, direction);
+	}
 
-	    @Override
-	    protected BlockState updateShape(
-	        BlockState state,
-	        LevelReader level,
-	        ScheduledTickAccess ticks,
-	        BlockPos pos,
-	        Direction directionToNeighbour,
-	        BlockPos neighbourPos,
-	        BlockState neighbourState,
-	        RandomSource random
-	    ) {
-	        if (state.getValue(WATERLOGGED)) {
-	            ticks.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
-	        }
+	@Override
+	protected BlockState updateShape(
+	    BlockState state,
+	    LevelReader level,
+	    ScheduledTickAccess ticks,
+	    BlockPos pos,
+	    Direction directionToNeighbour,
+	    BlockPos neighbourPos,
+	    BlockState neighbourState,
+	    RandomSource random
+    ) {
+        if (state.getValue(WATERLOGGED)) {
+            ticks.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+        }
 
-	        return directionToNeighbour == state.getValue(FACING).getOpposite() && !state.canSurvive(level, pos)
-	            ? Blocks.AIR.defaultBlockState()
-	            : super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
-	    }
+        return directionToNeighbour == state.getValue(FACING).getOpposite() && !state.canSurvive(level, pos)
+            ? Blocks.AIR.defaultBlockState()
+            : super.updateShape(state, level, ticks, pos, directionToNeighbour, neighbourPos, neighbourState, random);
+    }
 
-	    @Override
-	    public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
-	        LevelAccessor level = context.getLevel();
-	        BlockPos pos = context.getClickedPos();
-	        return this.defaultBlockState().setValue(WATERLOGGED, level.getFluidState(pos).is(Fluids.WATER)).setValue(FACING, context.getClickedFace());
-	    }
+    @Override
+    public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
+        LevelAccessor level = context.getLevel();
+        BlockPos pos = context.getClickedPos();
+        return this.defaultBlockState().setValue(WATERLOGGED, level.getFluidState(pos).is(Fluids.WATER)).setValue(FACING, context.getClickedFace());
+    }
 
-	    @Override
-	    protected BlockState rotate(BlockState state, Rotation rotation) {
-	        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
-	    }
+    @Override
+    protected BlockState rotate(BlockState state, Rotation rotation) {
+        return state.setValue(FACING, rotation.rotate(state.getValue(FACING)));
+    }
 
-	    @Override
-	    protected BlockState mirror(BlockState state, Mirror mirror) {
-	        return state.rotate(mirror.getRotation(state.getValue(FACING)));
-	    }
+    @Override
+    protected BlockState mirror(BlockState state, Mirror mirror) {
+        return state.rotate(mirror.getRotation(state.getValue(FACING)));
+    }
 
-	    @Override
-	    protected FluidState getFluidState(BlockState state) {
-	        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
-	    }
+    @Override
+    protected FluidState getFluidState(BlockState state) {
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+    }
 
-	    @Override
-	    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-	        builder.add(WATERLOGGED, FACING);
-	    }
+    @Override
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(WATERLOGGED, FACING);
+    }
 }

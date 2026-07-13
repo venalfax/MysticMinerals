@@ -1,0 +1,12 @@
+{
+  "gives": {
+    "id": "mysticminerals:deepslate_ruby_ore"
+  },
+  "max_uses": 10.0,
+  "reputation_discount": 0.07,
+  "wants": {
+    "count": 10.0,
+    "id": "minecraft:emerald"
+  },
+  "xp": 16.0
+}

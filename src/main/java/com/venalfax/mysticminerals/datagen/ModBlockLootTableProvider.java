@@ -4,10 +4,13 @@ import java.util.Set;
 
 import com.venalfax.mysticminerals.blocks.MineralBlocks;
 import com.venalfax.mysticminerals.blocks.custom.IoliteBulbCropBlock;
+import com.venalfax.mysticminerals.blocks.custom.JasperootCropBlock;
+import com.venalfax.mysticminerals.blocks.custom.OnyxBerryBushBlock;
+import com.venalfax.mysticminerals.blocks.custom.SodaliteCropBlock;
 import com.venalfax.mysticminerals.items.MineralItems;
 
-import net.minecraft.advancements.predicates.ItemPredicate;
-import net.minecraft.advancements.predicates.StatePropertiesPredicate;
+import net.minecraft.advancements.criterion.ItemPredicate;
+import net.minecraft.advancements.criterion.StatePropertiesPredicate;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -28,6 +31,7 @@ import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePrope
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
 import net.minecraft.world.level.storage.loot.predicates.MatchTool;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
+import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
@@ -42,6 +46,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 	    
 	    LootItemCondition.Builder isIoliteBulbMaxAge = LootItemBlockStatePropertyCondition.hasBlockStateProperties(MineralBlocks.IOLITE_BULB_CROP.get())
 				.setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(IoliteBulbCropBlock.AGE, 3));
+	    LootItemCondition.Builder isJasperootCropMaxAge = LootItemBlockStatePropertyCondition.hasBlockStateProperties(MineralBlocks.JASPEROOT_CROP.get())
+				.setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(JasperootCropBlock.AGE, 7));
+	    LootItemCondition.Builder isSodaliteCropMaxAge = LootItemBlockStatePropertyCondition.hasBlockStateProperties(MineralBlocks.SODALITE_CROP.get())
+				.setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(SodaliteCropBlock.AGE, 7));
 		
 	    dropSelf(MineralBlocks.RUBY_BLOCK.get());
 		dropSelf(MineralBlocks.SAPPHIRE_BLOCK.get());
@@ -49,6 +57,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 		dropSelf(MineralBlocks.FLINT_BLOCK.get());
 		dropSelf(MineralBlocks.SHARPENED_FLINT_BLOCK.get());
 		dropSelf(MineralBlocks.TEMPERED_FLINT_BLOCK.get());
+		dropSelf(MineralBlocks.CRYSTAL_RESEARCH_TABLE.get());
 		dropSelf(MineralBlocks.SHARPENER_BLOCK.get());
 		dropSelf(MineralBlocks.GEM_LAMP.get());
 		dropSelf(MineralBlocks.RESONANT_CONVERTER.get());
@@ -94,6 +103,43 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 						)
 				)
 		));
+		
+		add(MineralBlocks.JASPEROOT_CROP.get(), applyExplosionDecay(MineralBlocks.JASPEROOT_CROP.get(), LootTable.lootTable()
+				.withPool(LootPool.lootPool().add(LootItem.lootTableItem(MineralItems.JASPEROOT.get())))
+				.withPool(LootPool.lootPool()
+						.when(isJasperootCropMaxAge)
+						.add(LootItem.lootTableItem(MineralItems.JASPEROOT.get())
+								.apply(ApplyBonusCount.addBonusBinomialDistributionCount(enchantments.getOrThrow(Enchantments.FORTUNE), 0.5714286F, 3))
+						
+						)
+				)
+		));
+		
+		add(MineralBlocks.SODALITE_CROP.get(), applyExplosionDecay(MineralBlocks.SODALITE_CROP.get(), LootTable.lootTable()
+				.withPool(LootPool.lootPool().add(LootItem.lootTableItem(MineralItems.SODALITE_LEAVES.get()).when(isSodaliteCropMaxAge).otherwise(LootItem.lootTableItem(MineralItems.SODALITE_SEEDS.get()))))
+                .withPool(LootPool.lootPool()
+                        .when(isSodaliteCropMaxAge)
+                        .add(LootItem.lootTableItem(MineralItems.SODALITE_SEEDS.get())
+                                .apply(ApplyBonusCount.addBonusBinomialDistributionCount(enchantments.getOrThrow(Enchantments.FORTUNE), 0.5714286F, 3))
+                        )
+                )
+        ));
+		
+		add(MineralBlocks.ONYX_BERRY_BUSH.get(), applyExplosionDecay(MineralBlocks.ONYX_BERRY_BUSH.get(), LootTable.lootTable()
+				.withPool(LootPool.lootPool()
+						.when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(MineralBlocks.ONYX_BERRY_BUSH.get())
+								.setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(OnyxBerryBushBlock.AGE, 3)))
+						.add(LootItem.lootTableItem(MineralItems.ONYX_BERRIES.get()))
+						.apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0f, 3.0f)))
+						.apply(ApplyBonusCount.addUniformBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE))))
+				.withPool(LootPool.lootPool()
+						.when(LootItemBlockStatePropertyCondition.hasBlockStateProperties(MineralBlocks.ONYX_BERRY_BUSH.get())
+								.setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(OnyxBerryBushBlock.AGE, 2)))
+						.add(LootItem.lootTableItem(MineralItems.ONYX_BERRIES.get()))
+						.apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f, 2.0f)))
+						.apply(ApplyBonusCount.addUniformBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE))))
+		));
+		
 	}
 	
 	@Override

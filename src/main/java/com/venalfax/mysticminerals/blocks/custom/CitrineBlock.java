@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 
 public class CitrineBlock extends Block {
+	
 	public static final MapCodec<CitrineBlock> CODEC = simpleCodec(CitrineBlock::new);
 	
 	@Override

@@ -7,6 +7,7 @@ import com.venalfax.mysticminerals.blocks.MineralBlocks;
 import com.venalfax.mysticminerals.creativemodetab.MineralTab;
 import com.venalfax.mysticminerals.items.MineralItems;
 import com.venalfax.mysticminerals.stat.MineralStats;
+import com.venalfax.mysticminerals.villager.MineralVillagers;
 
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -22,6 +23,7 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 
 @Mod(MysticMinerals.MOD_ID)
 public class MysticMinerals {
+	
     public static final String MOD_ID = "mysticminerals";
     public static final Logger LOGGER = LogUtils.getLogger();
     
@@ -41,6 +43,7 @@ public class MysticMinerals {
         MineralBlocks.register(modEventBus);
         
         MineralStats.register(modEventBus);
+        MineralVillagers.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
         // Register the item to a creative tab
@@ -83,11 +86,17 @@ public class MysticMinerals {
     		event.accept(MineralBlocks.SAPPHIRE_ORE);
     		event.accept(MineralBlocks.DEEPSLATE_RUBY_ORE);
     		event.accept(MineralBlocks.DEEPSLATE_SAPPHIRE_ORE);
+    		event.accept(MineralItems.SODALITE_SEEDS);
+    		event.accept(MineralItems.ONYX_BERRIES);
+    	}
+    	
+    	if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+    		event.accept(MineralBlocks.CRYSTAL_RESEARCH_TABLE);
     	}
     	
     	if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
     		event.accept(MineralItems.CRYSTAL_RESONATOR);
-    		event.accept(MineralItems.RUBY_SCEPTER);
+    		event.accept(MineralItems.CRYSTAL_SCEPTER);
     		
     		event.accept(MineralItems.RUBY_SHOVEL);
     		event.accept(MineralItems.RUBY_PICKAXE);
@@ -164,6 +173,11 @@ public class MysticMinerals {
     	
     	if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
     		event.accept(MineralItems.IOLITE_BULB);
+    		event.accept(MineralItems.JASPEROOT);
+    		event.accept(MineralItems.SODALITE_LEAVES);
+    		event.accept(MineralItems.ONYX_BERRIES);
+    		event.accept(MineralItems.ROASTED_JASPEROOT);
+    		event.accept(MineralItems.CRYSTAL_DINNER);
     		event.accept(MineralItems.RUBY_POTATO);
     		event.accept(MineralItems.SAPPHIRE_STEW);
     		event.accept(MineralItems.EMERALD_HONEY);

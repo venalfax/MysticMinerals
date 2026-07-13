@@ -15,6 +15,7 @@ import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.item.equipment.EquipmentAsset;
 
 public class MineralArmorMaterials {
+	
 	public static final ResourceKey<? extends Registry<EquipmentAsset>> ROOT_ID = ResourceKey.createRegistryKey(Identifier.withDefaultNamespace("equipment_asset"));
 	
 	public static final ResourceKey<EquipmentAsset> RUBY_KEY = ResourceKey.create(ROOT_ID, Identifier.fromNamespaceAndPath(MysticMinerals.MOD_ID, "ruby"));
@@ -33,7 +34,7 @@ public class MineralArmorMaterials {
 	
 	public static final ArmorMaterial EMERALD_ARMOR_MATERIAL = new ArmorMaterial(38, 
 			makeDefense(3, 6, 8, 4, 15), 30, SoundEvents.ARMOR_EQUIP_DIAMOND,
-			2.75f, 0.2f, MineralTags.Items.EMERALD_REPAIRABLE, EMERALD_KEY);
+			2.75f, 0.05f, MineralTags.Items.EMERALD_REPAIRABLE, EMERALD_KEY);
 	
 	public static final ArmorMaterial FLINT_ARMOR_MATERIAL = new ArmorMaterial(13, 
 			makeDefense(1, 3, 4, 2, 4), 10, SoundEvents.ARMOR_EQUIP_GENERIC,

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_jasperoot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "mysticminerals:jasperoot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "mysticminerals:roasted_jasperoot_from_smelting_jasperoot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_jasperoot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "mysticminerals:roasted_jasperoot_from_smelting_jasperoot"
+    ]
+  }
+}

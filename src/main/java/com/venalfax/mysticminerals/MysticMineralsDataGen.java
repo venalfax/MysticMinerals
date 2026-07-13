@@ -12,6 +12,8 @@ import com.venalfax.mysticminerals.datagen.ModDatapackProvider;
 import com.venalfax.mysticminerals.datagen.ModItemTagProvider;
 import com.venalfax.mysticminerals.datagen.ModModelProvider;
 import com.venalfax.mysticminerals.datagen.ModRecipeProvider;
+import com.venalfax.mysticminerals.datagen.villager.ModPOITags;
+import com.venalfax.mysticminerals.datagen.villager.ModVillagerTradeTags;
 
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -23,8 +25,10 @@ import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 @EventBusSubscriber(modid = MysticMinerals.MOD_ID)
 public class MysticMineralsDataGen {
+	
 	@SubscribeEvent
 	public static void gatherClientData(GatherDataEvent.Client event) {
+		
 		DataGenerator generator = event.getGenerator();
 		PackOutput packOutput = generator.getPackOutput();
 		
@@ -42,6 +46,9 @@ public class MysticMineralsDataGen {
 		generator.addProvider(true, new ModEquipmentAssetProvider(packOutput));
 		generator.addProvider(true, new ModDatapackProvider(packOutput, lookupProvider));
 		generator.addProvider(true, new ModPaintingTagsProvider(packOutput,lookupProvider));
+
+		generator.addProvider(true, new ModVillagerTradeTags(packOutput, lookupProvider));
+		generator.addProvider(true, new ModPOITags(packOutput, lookupProvider));
 		
 	}
 	

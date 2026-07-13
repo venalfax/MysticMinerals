@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "mysticminerals:block/sodalite_crop_stage0"
+  }
+}

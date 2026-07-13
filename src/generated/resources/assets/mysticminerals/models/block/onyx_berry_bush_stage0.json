@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "mysticminerals:block/onyx_berry_bush_stage0"
+  }
+}

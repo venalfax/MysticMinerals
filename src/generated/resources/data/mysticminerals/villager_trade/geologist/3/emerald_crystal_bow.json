@@ -1,0 +1,11 @@
+{
+  "gives": {
+    "id": "mysticminerals:crystal_bow"
+  },
+  "reputation_discount": 0.06,
+  "wants": {
+    "count": 18.0,
+    "id": "minecraft:emerald"
+  },
+  "xp": 16.0
+}

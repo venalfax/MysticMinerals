@@ -6,6 +6,7 @@ import java.util.concurrent.CompletableFuture;
 import com.venalfax.mysticminerals.MysticMinerals;
 import com.venalfax.mysticminerals.blocks.MineralBlocks;
 import com.venalfax.mysticminerals.items.MineralItems;
+import com.venalfax.mysticminerals.tags.MineralTags;
 
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.HolderLookup.Provider;
@@ -160,7 +161,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.unlockedBy(getHasName(Items.AMETHYST_SHARD), has(Items.AMETHYST_SHARD))
 			.save(output);
 		
-		shaped(RecipeCategory.TOOLS, MineralItems.RUBY_SCEPTER.get())
+		shaped(RecipeCategory.TOOLS, MineralItems.CRYSTAL_SCEPTER.get())
 			.pattern(" GR")
 			.pattern("GBG")
 			.pattern("CG ")
@@ -172,6 +173,15 @@ public class ModRecipeProvider extends RecipeProvider {
 			.unlockedBy(getHasName(Items.GOLD_INGOT), has(Items.GOLD_INGOT))
 			.unlockedBy(getHasName(Items.BLAZE_ROD), has(Items.BLAZE_ROD))
 			.unlockedBy(getHasName(MineralItems.CITRINE_SHARD.get()), has(MineralItems.CITRINE_SHARD))
+			.save(output);
+		
+		shaped(RecipeCategory.MISC, MineralBlocks.CRYSTAL_RESEARCH_TABLE.get())
+			.pattern(" S")
+			.pattern("PP")
+			.pattern("PP")
+			.define('S', Items.SPYGLASS)
+			.define('P', ItemTags.PLANKS)
+			.unlockedBy(getHasName(Items.SPYGLASS), has(Items.SPYGLASS))
 			.save(output);
 		
 		shaped(RecipeCategory.MISC, MineralBlocks.SHARPENER_BLOCK.get())
@@ -212,10 +222,20 @@ public class ModRecipeProvider extends RecipeProvider {
 			.pattern("AA")
 			.define('A', Blocks.AMETHYST_BLOCK)
 			.unlockedBy(getHasName(Blocks.AMETHYST_BLOCK), has(Blocks.AMETHYST_BLOCK))
-			.group("amethyst")
 			.save(output);
 		
 		/* FOOD */
+		
+		shapeless(RecipeCategory.FOOD, MineralItems.CRYSTAL_DINNER.get(), 1)
+			.requires(Items.BOWL)
+			.requires(MineralItems.IOLITE_BULB.get())
+			.requires(MineralItems.ROASTED_JASPEROOT.get())
+			.requires(MineralItems.SODALITE_LEAVES.get())
+			.requires(MineralTags.Items.DINNER_MEATS)
+			.unlockedBy(getHasName(MineralItems.IOLITE_BULB.get()), has(MineralItems.IOLITE_BULB))
+			.unlockedBy(getHasName(MineralItems.ROASTED_JASPEROOT.get()), has(MineralItems.ROASTED_JASPEROOT))
+			.unlockedBy(getHasName(MineralItems.SODALITE_LEAVES.get()), has(MineralItems.SODALITE_LEAVES))
+			.save(output);
 		
 		shaped(RecipeCategory.FOOD, MineralItems.RUBY_POTATO.get())
 			.pattern("RRR")
@@ -224,7 +244,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.define('R', MineralBlocks.RUBY_BLOCK.get())
 			.define('P', Items.BAKED_POTATO)
 			.unlockedBy(getHasName(MineralBlocks.RUBY_BLOCK.get()), has(MineralBlocks.RUBY_BLOCK))
-			.group("food")
+			.group("gemmed_food")
 			.save(output);
 
 		shaped(RecipeCategory.FOOD, MineralItems.SAPPHIRE_STEW.get())
@@ -234,7 +254,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.define('S', MineralBlocks.SAPPHIRE_BLOCK.get())
 			.define('M', Items.MUSHROOM_STEW)
 			.unlockedBy(getHasName(MineralBlocks.SAPPHIRE_BLOCK.get()), has(MineralBlocks.SAPPHIRE_BLOCK))
-			.group("food")
+			.group("gemmed_food")
 			.save(output);
 
 		shaped(RecipeCategory.FOOD, MineralItems.EMERALD_HONEY.get())
@@ -244,7 +264,7 @@ public class ModRecipeProvider extends RecipeProvider {
 			.define('E', Blocks.EMERALD_BLOCK)
 			.define('H', Items.HONEY_BOTTLE)
 			.unlockedBy(getHasName(Blocks.EMERALD_BLOCK), has(Blocks.EMERALD_BLOCK))
-			.group("food")
+			.group("gemmed_food")
 			.save(output);
 		
 		/* TOOLS */
@@ -771,22 +791,24 @@ public class ModRecipeProvider extends RecipeProvider {
 		List<ItemLike> RUBY_SMELTABLES = List.of(MineralBlocks.RUBY_ORE, MineralBlocks.DEEPSLATE_RUBY_ORE);
 		List<ItemLike> SAPPHIRE_SMELTABLES = List.of(MineralBlocks.SAPPHIRE_ORE, MineralBlocks.DEEPSLATE_SAPPHIRE_ORE);
 		List<ItemLike> FLINT_SMELTABLES = List.of(Items.FLINT);
+		List<ItemLike> JASPEROOT_SMELTABLES = List.of(MineralItems.JASPEROOT);
 		
 		oreSmelting(RUBY_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, MineralItems.RUBY, 0.25f, 200, "ruby");
 		oreBlasting(RUBY_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, MineralItems.RUBY, 0.25f, 100, "ruby");
 		oreSmelting(SAPPHIRE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, MineralItems.SAPPHIRE, 0.25f, 200, "sapphire");
 		oreBlasting(SAPPHIRE_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, MineralItems.SAPPHIRE, 0.25f, 100, "sapphire");
 		oreSmelting(FLINT_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.MISC, MineralItems.TEMPERED_FLINT, 0.25f, 200, "tempered_flint");
+		oreSmelting(JASPEROOT_SMELTABLES, RecipeCategory.FOOD, CookingBookCategory.FOOD, MineralItems.ROASTED_JASPEROOT, 0.25f, 200, "jasperoot");
 	}
 	
-	 @Override
-	 protected <T extends AbstractCookingRecipe> void oreCooking(AbstractCookingRecipe.Factory<T> factory, List<ItemLike> smeltables,
+	@Override
+	protected <T extends AbstractCookingRecipe> void oreCooking(AbstractCookingRecipe.Factory<T> factory, List<ItemLike> smeltables,
 			 														RecipeCategory craftingCategory, CookingBookCategory cookingCategory, ItemLike result,
 	                                                                float experience, int cookingTime, String group, String fromDesc) {
 	        for(ItemLike itemlike : smeltables) {
 	            SimpleCookingRecipeBuilder.generic(Ingredient.of(itemlike), craftingCategory, cookingCategory, result, experience, cookingTime, factory).group(group).unlockedBy(getHasName(itemlike), has(itemlike))
 	                    .save(output, MysticMinerals.MOD_ID + ":" + getItemName(result) + fromDesc + "_" + getItemName(itemlike));
 	        }
-	    }
+	}
 
 }

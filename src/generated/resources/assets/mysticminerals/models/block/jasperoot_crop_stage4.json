@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "mysticminerals:block/jasperoot_crop_stage4"
+  }
+}

@@ -4,6 +4,8 @@ import com.venalfax.mysticminerals.MysticMinerals;
 import com.venalfax.mysticminerals.blocks.MineralBlocks;
 import com.venalfax.mysticminerals.blocks.custom.GemLampBlock;
 import com.venalfax.mysticminerals.blocks.custom.IoliteBulbCropBlock;
+import com.venalfax.mysticminerals.blocks.custom.JasperootCropBlock;
+import com.venalfax.mysticminerals.blocks.custom.SodaliteCropBlock;
 import com.venalfax.mysticminerals.items.MineralItems;
 import com.venalfax.mysticminerals.items.MineralArmorMaterials;
 
@@ -11,14 +13,16 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
+import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.minecraft.client.data.models.model.TextureMapping;
 import net.minecraft.client.data.models.model.TexturedModel;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 
 public class ModModelProvider extends ModelProvider {
-
+	
 	public ModModelProvider(PackOutput output) {
 		super(output, MysticMinerals.MOD_ID);
 	}
@@ -34,7 +38,11 @@ public class ModModelProvider extends ModelProvider {
 		itemModels.generateFlatItem(MineralItems.SHARPENED_FLINT.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.TEMPERED_FLINT.get(), ModelTemplates.FLAT_ITEM);
 		
-		itemModels.generateFlatItem(MineralItems.IOLITE_BULB.get(), ModelTemplates.FLAT_ITEM);
+		itemModels.generateFlatItem(MineralItems.SODALITE_LEAVES.get(), ModelTemplates.FLAT_ITEM);
+		itemModels.generateFlatItem(MineralItems.ONYX_BERRIES.get(), ModelTemplates.FLAT_ITEM);
+		
+		itemModels.generateFlatItem(MineralItems.ROASTED_JASPEROOT.get(), ModelTemplates.FLAT_ITEM);
+		itemModels.generateFlatItem(MineralItems.CRYSTAL_DINNER.get(), ModelTemplates.FLAT_ITEM);
 		
 		itemModels.generateFlatItem(MineralItems.RUBY_POTATO.get(), ModelTemplates.FLAT_ITEM);
 		itemModels.generateFlatItem(MineralItems.SAPPHIRE_STEW.get(), ModelTemplates.FLAT_ITEM);
@@ -43,7 +51,7 @@ public class ModModelProvider extends ModelProvider {
 		/* TOOLS */
 		
 		itemModels.declareCustomModelItem(MineralItems.CRYSTAL_RESONATOR.get());
-		itemModels.declareCustomModelItem(MineralItems.RUBY_SCEPTER.get());
+		itemModels.declareCustomModelItem(MineralItems.CRYSTAL_SCEPTER.get());
 		
 		itemModels.createFlatItemModel(MineralItems.CRYSTAL_BOW.get(), ModelTemplates.BOW);
 		itemModels.generateBow(MineralItems.CRYSTAL_BOW.get());
@@ -120,6 +128,10 @@ public class ModModelProvider extends ModelProvider {
 		blockModels.createAmethystCluster(MineralBlocks.LARGE_CITRINE_BUD.get());
 		blockModels.createAmethystCluster(MineralBlocks.MEDIUM_CITRINE_BUD.get());
 		blockModels.createAmethystCluster(MineralBlocks.SMALL_CITRINE_BUD.get());
+		itemModels.createFlatItemModel(MineralItems.CITRINE_CLUSTER.get(), ModelTemplates.FLAT_ITEM);
+		itemModels.createFlatItemModel(MineralItems.LARGE_CITRINE_BUD.get(), ModelTemplates.FLAT_ITEM);
+		itemModels.createFlatItemModel(MineralItems.MEDIUM_CITRINE_BUD.get(), ModelTemplates.FLAT_ITEM);
+		itemModels.createFlatItemModel(MineralItems.SMALL_CITRINE_BUD.get(), ModelTemplates.FLAT_ITEM);
 		blockModels.createTrivialCube(MineralBlocks.RUBY_ORE.get());
 		blockModels.createTrivialCube(MineralBlocks.SAPPHIRE_ORE.get());
 		blockModels.createTrivialCube(MineralBlocks.DEEPSLATE_RUBY_ORE.get());
@@ -128,6 +140,7 @@ public class ModModelProvider extends ModelProvider {
 		blockModels.createTrivialCube(MineralBlocks.SHARPENED_FLINT_BLOCK.get());
 		blockModels.createTrivialCube(MineralBlocks.TEMPERED_FLINT_BLOCK.get());
 		
+		blockModels.createTrivialCube(MineralBlocks.CRYSTAL_RESEARCH_TABLE.get());
 		blockModels.createTrivialCube(MineralBlocks.SHARPENER_BLOCK.get());
 		blockModels.createNonTemplateModelBlock(MineralBlocks.RESONANT_CONVERTER.get());
 		
@@ -142,6 +155,13 @@ public class ModModelProvider extends ModelProvider {
 		/* CROPS */
 		
 		blockModels.createCropBlock(MineralBlocks.IOLITE_BULB_CROP.get(), IoliteBulbCropBlock.AGE, 0, 1, 2, 3);
+		blockModels.createCropBlock(MineralBlocks.SODALITE_CROP.get(), SodaliteCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
+		blockModels.createCropBlock(MineralBlocks.JASPEROOT_CROP.get(), JasperootCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
+		
+		blockModels.blockStateOutput.accept(
+				MultiVariantGenerator.dispatch(MineralBlocks.ONYX_BERRY_BUSH.get())
+					.with(PropertyDispatch.initial(BlockStateProperties.AGE_3)
+							.generate(age -> BlockModelGenerators.plainVariant(blockModels.createSuffixedVariant(MineralBlocks.ONYX_BERRY_BUSH.get(), "_stage" + age, ModelTemplates.CROSS, TextureMapping::cross)))));
 		
 	}
 	

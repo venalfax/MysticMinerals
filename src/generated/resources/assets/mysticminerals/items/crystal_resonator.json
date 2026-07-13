@@ -1,6 +1,6 @@
 {
-	"model": {
-		"type": "minecraft:model",
-		"model": "mysticminerals:item/crystal_resonator"
-	}
+  "model": {
+    "type": "minecraft:model",
+    "model": "mysticminerals:item/crystal_resonator"
+  }
 }

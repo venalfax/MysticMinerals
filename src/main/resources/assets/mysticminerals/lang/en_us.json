@@ -6,8 +6,15 @@
 	"item.mysticminerals.citrine_shard": "Citrine Shard",
 	"item.mysticminerals.sharpened_flint": "Sharpened Flint",
 	"item.mysticminerals.tempered_flint": "Tempered Flint",
-	
+		
 	"item.mysticminerals.iolite_bulb": "Iolite Bulb",
+	"item.mysticminerals.jasperoot": "Jasperoot",
+	"item.mysticminerals.sodalite_leaves": "Sodalite Leaves",
+	"item.mysticminerals.sodalite_seeds": "Sodalite Seeds",
+	"item.mysticminerals.onyx_berries": "Onyx Berries",
+	
+	"item.mysticminerals.roasted_jasperoot": "Roasted Jasperoot",
+	"item.mysticminerals.crystal_dinner": "Crystal Dinner",
 	
 	"item.mysticminerals.ruby_potato": "Ruby Potato",
 	"item.mysticminerals.sapphire_stew": "Sapphire Stew",
@@ -17,7 +24,7 @@
 
 	"item.mysticminerals.crystal_resonator": "Crystal Resonator",
 	"item.mysticminerals.crystal_resonator.no_valuables": "No Valuables Found",	
-	"item.mysticminerals.ruby_scepter": "Ruby Scepter",
+	"item.mysticminerals.crystal_scepter": "Crystal Scepter",
 	
 	"item.mysticminerals.crystal_bow": "Crystal Bow",
 	
@@ -100,6 +107,10 @@
 	
 	"stat.mysticminerals.gems_resonated": "Gems Resonated",	
 	
+	/* ENTITIES */
+	
+	"entity.minecraft.villager.mysticminerals.geologist": "Geologist",
+	
 	/* BLOCKS */
 	
 	"block.mysticminerals.ruby_block": "Block of Ruby",
@@ -118,6 +129,7 @@
 	"block.mysticminerals.sharpened_flint_block": "Block of Sharpened Flint",
 	"block.mysticminerals.tempered_flint_block": "Block of Tempered Flint",
 	
+	"block.mysticminerals.crystal_research_table": "Crystal Research Table",
 	"block.mysticminerals.sharpener_block": "Sharpener",
 	"block.mysticminerals.resonant_converter": "Resonant Converter",
 	"block.mysticminerals.gem_lamp": "Gem Lamp",
@@ -127,6 +139,9 @@
 	/* CROPS */
 	
 	"block.mysticminerals.iolite_bulb_crop": "Iolite Bulb Crop",
+	"block.mysticminerals.jasperoot_crop": "Jasperoot Crop",
+	"block.mysticminerals.sodalite_crop": "Sodalite Crop",
+	"block.mysticminerals.onyx_berry_bush": "Onyx Berry Bush",
 	
 	/* TABS */
 	
