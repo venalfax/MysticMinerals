@@ -45,30 +45,30 @@ public class ModItemTagProvider extends ItemTagsProvider {
 		tag(MineralTags.Items.DEEPSLATE_EMERALD_ORE_CONVERTABLE)
 			.add(Items.DEEPSLATE_EMERALD_ORE);
 		tag(MineralTags.Items.DEEPSLATE_RUBY_ORE_CONVERTABLE)
-		.add(MineralItems.DEEPSLATE_RUBY_ORE.get());
-	tag(MineralTags.Items.DEEPSLATE_SAPPHIRE_ORE_CONVERTABLE)
-		.add(MineralItems.DEEPSLATE_SAPPHIRE_ORE.get());
-	tag(MineralTags.Items.AMETHYST_BLOCK_CONVERTABLE)
-		.add(Items.AMETHYST_BLOCK);
-	tag(MineralTags.Items.CITRINE_BLOCK_CONVERTABLE)
-		.add(MineralItems.CITRINE_BLOCK.get());
-	tag(MineralTags.Items.BUDDING_AMETHYST_CONVERTABLE)
-		.add(Items.BUDDING_AMETHYST);
-	tag(MineralTags.Items.BUDDING_CITRINE_CONVERTABLE)
-		.add(MineralItems.BUDDING_CITRINE.get());
-	
-	tag(MineralTags.Items.RUBY_REPAIRABLE)
-		.add(MineralItems.RUBY.get());
-	tag(MineralTags.Items.SAPPHIRE_REPAIRABLE)
-		.add(MineralItems.SAPPHIRE.get());
-	tag(MineralTags.Items.EMERALD_REPAIRABLE)
-		.add(Items.EMERALD);
-	tag(MineralTags.Items.FLINT_REPAIRABLE)
-		.add(Items.FLINT);
-	tag(MineralTags.Items.SHARPENED_FLINT_REPAIRABLE)
-		.add(MineralItems.SHARPENED_FLINT.get());
-	tag(MineralTags.Items.TEMPERED_FLINT_REPAIRABLE)
-		.add(MineralItems.TEMPERED_FLINT.get());
+			.add(MineralItems.DEEPSLATE_RUBY_ORE.get());
+		tag(MineralTags.Items.DEEPSLATE_SAPPHIRE_ORE_CONVERTABLE)
+			.add(MineralItems.DEEPSLATE_SAPPHIRE_ORE.get());
+		tag(MineralTags.Items.AMETHYST_BLOCK_CONVERTABLE)
+			.add(Items.AMETHYST_BLOCK);
+		tag(MineralTags.Items.CITRINE_BLOCK_CONVERTABLE)
+			.add(MineralItems.CITRINE_BLOCK.get());
+		tag(MineralTags.Items.BUDDING_AMETHYST_CONVERTABLE)
+			.add(Items.BUDDING_AMETHYST);
+		tag(MineralTags.Items.BUDDING_CITRINE_CONVERTABLE)
+			.add(MineralItems.BUDDING_CITRINE.get());
+		
+		tag(MineralTags.Items.RUBY_REPAIRABLE)
+			.add(MineralItems.RUBY.get());
+		tag(MineralTags.Items.SAPPHIRE_REPAIRABLE)
+			.add(MineralItems.SAPPHIRE.get());
+		tag(MineralTags.Items.EMERALD_REPAIRABLE)
+			.add(Items.EMERALD);
+		tag(MineralTags.Items.FLINT_REPAIRABLE)
+			.add(Items.FLINT);
+		tag(MineralTags.Items.SHARPENED_FLINT_REPAIRABLE)
+			.add(MineralItems.SHARPENED_FLINT.get());
+		tag(MineralTags.Items.TEMPERED_FLINT_REPAIRABLE)
+			.add(MineralItems.TEMPERED_FLINT.get());
 		
 		tag(ItemTags.BREWING_FUEL).add(MineralItems.CITRINE_SHARD.get());
 		tag(ItemTags.FURNACE_MINECART_FUEL).add(MineralItems.CITRINE_SHARD.get());
@@ -89,10 +89,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
 		tag(ItemTags.DURABILITY_ENCHANTABLE).add(MineralItems.CRYSTAL_SCEPTER.get());
 		
 		tag(ItemTags.BOW_ENCHANTABLE).add(MineralItems.CRYSTAL_BOW.get());
-		
-		tag(ItemTags.BREWING_FUEL).add(MineralItems.CITRINE_SHARD.get());
-		tag(ItemTags.FURNACE_MINECART_FUEL).add(MineralItems.CITRINE_SHARD.get());
-		tag(ItemTags.DUPLICATES_ALLAYS).add(MineralItems.CITRINE_SHARD.get());
 		
 		tag(ItemTags.SWORDS).add(MineralItems.RUBY_SWORD.get());
 		tag(ItemTags.PICKAXES).add(MineralItems.RUBY_PICKAXE.get());
